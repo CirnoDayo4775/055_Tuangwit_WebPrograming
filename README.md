@@ -1,7 +1,9 @@
-# WebPrograming
+# Nee Dorodoro San
  
 # souzoushii ne banbiinaa banbiinaa
+# ช่างแสนหนวกหูนะ บะบีนา บะบีนา
 # tantantantan dansuhooru ashi o narase
+# 
 
 # kocchi e oide banbiinoo banbiinoo
 # sono chi wa dare no nan dakke
@@ -69,24 +71,23 @@
 
 
 # koufuku o kesou fukou o umanai you ni
-ubugoe o sakende ita bokura wa
-nani o nozomaretan da
+# nani o nozomaretan da
 
-kimi o chikaraippai dakishimete ita tte
-inochi wa hitotsu dake
+# kimi o chikaraippai dakishimete ita tte
+# inochi wa hitotsu dake
 
 
-anhappii raundo raundo
-paatii wa tomannaize
-tsumi mo uso mo datsuhou mo chuu ni
-matte ita
-ai nante poi shite motto higenjitsu no
-suteeji de
-odorou
+# anhappii raundo raundo
+# paatii wa tomannaize
+# tsumi mo uso mo datsuhou mo chuu ni
+# matte ita
+# ai nante poi shite motto higenjitsu no
+# suteeji de
+# odorou
 
-hoo slowly toiki o kasaneatte
-kokkeina oto to rizumu de kuruitai no
-miwaku no hakuchuumu ni shizume
-andaaguraundo
+# hoo slowly toiki o kasaneatte
+# kokkeina oto to rizumu de kuruitai no
+# miwaku no hakuchuumu ni shizume
+# andaaguraundo
 
-wasuresasete yo
+# wasuresasete yo
