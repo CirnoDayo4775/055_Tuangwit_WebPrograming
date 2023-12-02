@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ปัสต้าพัดชิ้น - Pasta Puttanesca</title>
+    <style>
+    body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Specify a font for the text */
+            overflow-x: hidden; /* Hide horizontal scrollbar if the content overflows */
+        }
+    
+    #rightImage {
+        width: 300px; 
+        height: auto; 
+    }
+    #rightImageContainer {
+            position: fixed;
+            top: 200px;
+            right: 40px; 
+            border: 2px solid #ccc; 
+            padding: 10px; 
+            background-color: #f9f9f9; 
+            z-index: 999; 
+        }
+    </style>
+</head>
+<body>
+    <h1>ปัสต้าพัดชิ้น (Pasta Puttanesca)</h1>
+    <p>อาหารอิตาลีเก่าแก่ที่เผยแพร่เมื่อสมัยต้นศตวรรษที่ 20 มีบทบาททางประวัติศาสตร์ที่เชื่อว่ามีต้นกำเนิดจากแชมเปียนส์ในโรม ทำจากส่วนผสมเปรี้ยว-เค็ม-เผ็ด เสน่ของมันคือความอร่อยที่เข้มข้นและรสชาติที่พิเศษ</p>
+
+    <img src="image/Pasta_Puttanesca.jpg", width="350">
+    <div id="rightImageContainer">
+    <a>- </a><a href="#section1">ส่วนผสม</a><br>
+    <a>- </a><a href="#section2">ขั้นตอน</a><br>
+    <a>- </a><a href="#section3">การทำแบบอื่นๆ</a><br><br>
+
+    <a>- </a><a href="index.html">กลับหน้าแรก</a>
+    </div>
+    
+    
+
+
+    <section id="section1">
+        <h2>ส่วนผสม</h2>
+        <ol>
+            <li>ปัสต้า (Spaghetti) หรือเส้นที่คุณชอบ 200 กรัม</li>
+            <li>น้ำมันมะกอก 2 ช้อนโต๊ะ</li>
+            <li>กระเทียมสับ 4 กระทง</li>
+            <li>พริกไทยดำ 1 ช้อนชา</li>
+            <li>มะนาวคั้น 1/2 ถ้วย</li>
+            <li>พริกหยวกหรือพริกขี้หนูสับ 2 กระทง</li>
+            <li>น้ำมะเขือเทศ 1 กระทง</li>
+            <li>มะละกอสด (ตามชอบ) 6-8 ลูก</li>
+            <li>น้ำมันมะกอก (สำหรับทอด) 1 กระทง</li>
+            <li>ลูกชิ้นทูน่า (Tuna) 1 ถ้วย</li>
+            <li>อิตาลีเรกเจาโต 1/2 ถ้วย</li>
+            <li>เกลือและพริกไทย (ตามความชอบ)</li>
+          </ol>
+    </section>
+
+    <section id="section2">
+        <h2>ขั้นตอน</h2>
+        <ol>
+            <li><b>ทำน้ำซุปปลา</b> : ในกระทะ, ใส่น้ำมันมะกอก 2 ช้อนโต๊ะ,<br> กระเทียมสับ, พริกไทยดำ, และมะนาวสกปรก ทอดจนกระเทียมเปลี่ยนสีเหลือง</li>
+            <li><b>เติมน้ำมะเขือเทศ</b> : เทน้ำมะเขือเทศลงไป, ใส่มะละกอ, <br>พริกหยวก, และเติมเกลือและพริกไทยตามชอบ ปรุงรสตามความชอบ</li>
+            <li><b>ทอดชิ้นทูน่า</b> : ในกระทะอีกหลุม, ทอดชิ้นทูน่าน้ำระเหย<br>จนสุกและเปรี้ยว-เค็ม เติมเกลือและพริกไทยตามชอบ</li>
+            <li><b>ต้มปัสต้า</b> : ต้มปัสต้าในน้ำเค็มตามคำแนะนำที่บนซอง</li>
+            <li><b>ผสมทุกอย่าง</b> : เมื่อปัสต้าสุก, รวมมันกับน้ำซุป, ชิ้นทูน่า, <br>และอิตาเลียนเรกเจาโต คนให้เข้ากัน</li>
+            <li><b>เสิร์ฟ</b> : ตักใส่จาน, โรยหน้าด้วยเศษมะนาวและ<br>พาร์มีซานชีส (ถ้าชอบ)</li>
+        </ol>
+    </section>
+
+    <section id="section3">
+        <h2>การทำแบบอื่นๆ</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FxTSBJ4JsMY" frameborder="0" allowfullscreen></iframe>
+    </section>
+
+
+
+
+
+
+
+
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+    
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior : 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
