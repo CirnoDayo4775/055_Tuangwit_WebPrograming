@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News!</title>
+    <style>#rightImageContainer {
+        position: fixed;
+        top: 200px;
+        right: 40px; 
+        border: 2px solid #ccc; 
+        padding: 10px; 
+        background-color: #f9f9f9; 
+        z-index: 999; 
+    }
+    #right2ImageContainer {
+        position: fixed;
+        top: 400px;
+        right: 40px; 
+        border: 2px solid #ccc; 
+        padding: 10px; 
+        background-color: #f9f9f9; 
+        z-index: 999; 
+    }
+    #loading{display: block;}</style>
+</head>
+<body>
+
+<div id="loading">Loading. . . Please wait. . .</div>
+
+
+
+    <div id="rightImageContainer">
+        <ol>
+            <li><a href="../Products/main.html">(Not) our Products!</a></li>
+            <li><a href="../News/main.html">Lastest News!</a></li>
+            <li><a href="../Contact/main.html">Contact us!</a></li>
+        </ol><br><ul><li><a href="../index.html">Home</a></li></ul>
+        </div>
+
+        <div id="right2ImageContainer">
+            <ol>
+                <li><a href="#jp">JP News!</a></li>
+                <li><a href="#en">EN News!</a></li>
+                <li><a href="#kr">KR News!</a></li>
+            </div>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<section id="jp"><a class="twitter-timeline" data-width="600" data-height="1200" href="https://twitter.com/Blue_ArchiveJP"></a></section><br><br><br><br>
+<section id="en"><a class="twitter-timeline" data-width="600" data-height="1200" href="https://twitter.com/EN_BlueArchive"></a></section><br><br><br><br>
+<section id="kr"><a class="twitter-timeline" data-width="600" data-height="1200" href="https://twitter.com/KR_BlueArchive"></a></section>
+
+<script>document.addEventListener("DOMContentLoaaded", function(){
+    document.getElementById("loading").style.display = "none";
+});</script>
+</body>
+</html>
