@@ -12,7 +12,7 @@
         width: 100vw;
         height: 100vh;
         background-color: black;
-        opacity: 0;
+        opacity: 1;
         z-index: 50;
         transition: opacity 1s ease-in-out;
         pointer-events:none;
@@ -91,7 +91,7 @@
         padding: 5px; 
         background-color: #00ccff80;
         transition: transform 1s, opacity 0.75s;
-        
+        z-index: 99;
     }
 
     .midimg{
@@ -139,6 +139,16 @@
         transform: translateX(0);
         opacity: 255;
     }
+    .midbutton{
+        position: fixed;
+        transform: translateY(220%);
+        border: 2px solid #ccc; 
+        padding: 5px; 
+        background-color: #eeff00;
+        transition: transform 1s, opacity 0.75s;
+        z-index: 99;
+        
+    }
     
     </style>
 </head>
@@ -157,6 +167,11 @@
         <img src="image/instance/random/s.png" alt="image 7" id="image7" style="opacity: 0;"/>
         <img src="image/instance/random/u.png" alt="image 8" id="image8" style="opacity: 0;"/>
     </div>
+
+    <div class="midbutton" id="midbut">
+        <button onclick="loadingfinisher()">Close</button>
+    </div>
+
 
     <div class="textleft" id="textleft">
         <h1>Profile</h1>
@@ -222,12 +237,14 @@
     function changebgvid(videoname){
         
         document.getElementById('fade-overlay').style.opacity = '1';
+        document.getElementById('fade-overlay').style.pointerEvents = 'fill';
         setTimeout(function(){
         document.querySelector('video').src = videoname;
         document.querySelector('video').load();
         document.querySelector('video').play();
             },1050)
             setTimeout(function(){
+                document.getElementById('fade-overlay').style.pointerEvents = 'none';
                 document.getElementById('fade-overlay').style.opacity = '0';
             },1250)
 
@@ -263,16 +280,22 @@
         updateVol();
     }
     //fading song */
+    //Doesn't use anymore
+
+
+
     function loadingfinisher(){
-        var videoblur = document.querySelector('video');
-        videoblur.style.filter = 'blur(10px)';
+        document.querySelector('video').style.filter = 'blur(10px)';
+        document.querySelector('video').play();
         document.getElementById('midTitle').classList.add('hideitnow');
+        document.getElementById('midbut').classList.toggle('hideitnow');
         document.getElementById('hahaha').classList.toggle('slideinbox');
         document.getElementById('navigtor').classList.toggle('slideinboxha');
         document.getElementById('textleft').classList.toggle('slideinleftbox');
         document.getElementById('omgmid').classList.toggle('showmidimg');
+        document.getElementById('fade-overlay').style.opacity = '0';
     }
-    //blur function
+    //blur start animation
     
     const images = document.querySelectorAll('.midimg img');
 let imgindex = 0;
@@ -282,12 +305,10 @@ function fadeimg(){
     images[imgindex].style.opacity = 1;
 }
 
+
 setInterval(fadeimg,3000);
 
-        setTimeout(function(){
-            loadingfinisher();
-        },3000
-        ); //countdown 3 sec
+
 
         function unbruh(){
             document.querySelector('video').style.filter = 'blur(0px)';
