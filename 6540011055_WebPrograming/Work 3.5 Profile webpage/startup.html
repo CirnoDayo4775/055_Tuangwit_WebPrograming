@@ -199,7 +199,7 @@
         <h1>Welcome to Tuangwit's website</h1>
     </div>
     
-    <video autoplay loop><!-- Background Video -->
+    <video id="realshit" autoplay loop><!-- Background Video -->
         <source src="video/background/Reisa.mp4">
     </video>
     
@@ -243,6 +243,7 @@
         document.getElementById('textleft').style.transform='translateX(-120%)';
         document.getElementById('omgmid').style.opacity='0';
         document.getElementById('omgmid').style.transform='translateY(250%)';
+        fadeVidVol(realshit, 0, 500);
 
         setTimeout(function(){
             document.querySelector('video').src = videoname;
@@ -259,6 +260,7 @@
             document.getElementById('textleft').style.transform='translateX(0)';
             document.getElementById('omgmid').style.opacity='1';
             document.getElementById('omgmid').style.transform='translateY(140%)';
+            fadeVidVol(realshit, 1, 500);
         },1250)
     }
 
@@ -267,31 +269,30 @@
         bgm.src = songlist[curindex];
         bgm.load();
         bgm.play();
-    }
+    }*/
+
     //change bgm
-    function togglebgm(){
-        if(bgm.volume===0){
-            fadeVol(bgm, 1, 200);
-        }else{fadeVol(bgm, 0, 200);}
+    function toggleVidbgm(){
+        if(realshit.volume===0){
+            fadeVidVol(realshit, 1, 200);
+        }else{fadeVidVol(realshit, 0, 200);}
     }
     //mute
-    function fadeVol(ele, tarVol, duration){
-        var startVolume = ele.volume;
+    function fadeVidVol(ele, tarVol, duration){
         var startTime = new Date().getTime();
-
         function updateVol(){
             var currentTime = new Date().getTime();
             var elap = currentTime - startTime;
             var progress = elap / duration;
 
             if(progress<1){
-                ele.volume = startVolume + (tarVol - startVolume) * progress;
+                ele.volume = ele.volume + (tarVol - ele.volume) * progress;
                 requestAnimationFrame(updateVol);
             }else{ele.volume=tarVol;}
         }
         updateVol();
     }
-    //fading song */
+    //fading song 
     //Doesn't used anymore
 
     function loadingfinisher(){
