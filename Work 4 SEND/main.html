@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navigtors {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .beauty {
+            position: fixed;
+            top: 50px;
+            left: 20px;
+            border: 2px solid #000000;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+        .beauty2 {
+            position: fixed;
+            top: 50px;
+            left: 20px;
+            border: 2px solid #000000;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        .notresize {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navigtors" id="navigtor"><!-- Navigator for going to home page -->
+        <br>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="beauty" id="fakebox">
+        <h1>OK Work 4 is here</h1>
+        <form action="https://example.com" method="post">
+            <label for="name">Name : </label>
+            <input type="text" name="name" size="15" maxlength="30" placeholder="" />
+            <br><br>
+            <label for="sername">Lastname : </label>
+            <input type="text" name="sername" size="15" maxlength="30"  placeholder="" />
+            <br><br>
+            <label for="stdID">Student ID : </label>
+            <input type="number" name="stdID" size="15" maxlength="10" placeholder="" />
+            <br><br>
+            <label for="gender">Gender :
+            </label><br>
+            <input type="radio" name="gender" value="m" /><label for="gender">Male</label>
+            <br><input type="radio" name="gender" value="f" /><label for="gender">Female</label>
+            <br><br>
+            <label for="entYear">Entrance Year : </label>
+            <input type="date" name="entYear" size="15" maxlength="10" placeholder="" />
+            <br><br>
+            <label for="sername">Address : </label>
+            <textarea class="notresize" name="comments" cols="30" rows="6"></textarea>
+            <br><br>
+            <label for="emailer">Email : </label>
+            <input type="email" name="emailer" size="15" maxlength="50" placeholder="Email NOW" />
+            <br><br>
+
+            <textarea name="comments" cols="20" rows="4" placeholder="Big text" class="notresize"></textarea>
+            <br><br>
+            <label for="phone">Phone contact : </label>
+            <input type="number" name="phone" size="15" maxlength="10" placeholder="" />
+            <br><br>
+
+            <label for="password">
+                Major :
+            </label><br>
+
+            <input type="radio" name="gender" value="m" /><label for="gender">Male</label>
+            <br><input type="radio" name="gender" value="f" /><label for="gender">Female</label>
+
+            <br><br>
+            <label for="neverGonna">Never gonna :
+            </label><br>
+            <input type="radio" name="neverGonna" value="giveYouUp" /><label for="neverGonna">Give you up</label>
+            <br><input type="radio" name="neverGonna" value="letYouDown" /><label for="neverGonna">Let you down</label>
+            <br><input type="radio" name="neverGonna" value="runAroundAndDesertYou" /><label for="neverGonna">Run around and desert you</label>
+            <br><br>
+            <label for="neverGonna2">Never gonna :
+            </label><br>
+            <input type="checkbox" name="neverGonna2" value="makeYouCry" /><label for="neverGonna2">Make you cry</label>
+            <br><input type="checkbox" name="neverGonna2" value="sayGoodbye" /><label for="neverGonna2">Say goodbye</label>
+            <br><input type="checkbox" name="neverGonna2" value="tellALieAndHurtYou" /><label for="neverGonna2">Tell a lies and hurt you</label>
+            <br><br>
+
+            <label for="compass">My compass</label>
+            <select name="compass">
+                <option value="plzsing">Choose NOW</option>
+                <option value="sea">WAS SWALLOWED BY THE SEA</option>
+                <option value="curiosity">IS CURIOSITY</option>
+            </select>
+            <br><br>
+
+            <label for="ifIcan">If I</label>
+            <select name="ifIcan" size="4" multiple="multiple">
+                <option value="point">am a set of point</option>
+                <option value="circle">am a circle</option>
+                <option value="sine">am a sine wave</option>
+                <option value="limit">approach infinity</option>
+            </select>
+            <br><br>
+
+            <input type="file" name="mp3" /><br><br>
+
+            <input type="submit" /><br><br>
+            <input type="reset" />
+
+        </form>
+
+        <br>
+    </div>
+
+    <div class="beauty2" id="realbox">
+        <h1>OK Work 4 is here</h1>
+        <form action="https://example.com" method="post">
+            <label for="user">username : </label>
+            <input type="text" name="user" size="15" maxlength="10" id="inputbox1" placeholder="username (max : 10)" />
+            <br><br>
+
+            <label for="emailer">Email : </label>
+            <input type="email" name="emailer" size="15" maxlength="50" id="inputbox1" placeholder="Email NOW" />
+            <br><br>
+
+            <textarea name="comments" cols="20" rows="4" placeholder="Big text" class="notresize"></textarea>
+            <br><br>
+
+            <label for="password">
+                Password :
+            </label>
+
+            <input type="password" name="password" size="15" maxlength="8" id="inputbox1"
+                placeholder="password (max : 8)" />
+
+            <br><br>
+            <label for="neverGonna">Never gonna :
+            </label><br>
+            <input type="radio" name="neverGonna" value="giveYouUp" /><label for="neverGonna">Give you up</label>
+            <br><input type="radio" name="neverGonna" value="letYouDown" /><label for="neverGonna">Let you down</label>
+            <br><input type="radio" name="neverGonna" value="runAroundAndDesertYou" /><label for="neverGonna">Run around and desert you</label>
+            <br><br>
+            <label for="neverGonna2">Never gonna :
+            </label><br>
+            <input type="checkbox" name="neverGonna2" value="makeYouCry" /><label for="neverGonna2">Make you cry</label>
+            <br><input type="checkbox" name="neverGonna2" value="sayGoodbye" /><label for="neverGonna2">Say goodbye</label>
+            <br><input type="checkbox" name="neverGonna2" value="tellALieAndHurtYou" /><label for="neverGonna2">Tell a lies and hurt you</label>
+            <br><br>
+
+            <label for="compass">My compass</label>
+            <select name="compass">
+                <option value="plzsing">Choose NOW</option>
+                <option value="sea">WAS SWALLOWED BY THE SEA</option>
+                <option value="curiosity">IS CURIOSITY</option>
+            </select>
+            <br><br>
+
+            <label for="ifIcan">If I</label>
+            <select name="ifIcan" size="4" multiple="multiple">
+                <option value="point">am a set of point</option>
+                <option value="circle">am a circle</option>
+                <option value="sine">am a sine wave</option>
+                <option value="limit">approach infinity</option>
+            </select>
+            <br><br>
+
+            <input type="file" name="mp3" /><br><br>
+
+            <input type="submit" /><br><br>
+            <input type="reset" />
+
+        </form>
+
+        <br>
+    </div>
+
+    <button onclick="changebox()">EYYO CHANGE IT NOW</button><button onclick="changebox2()">Gimme back</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+        function changebox() {
+            document.getElementById('fakebox').style.zIndex='4';
+            document.getElementById('fakebox').style.opacity='0';
+            document.getElementById('fakebox').style.transform='translateX(-100%)';
+            document.getElementById('realbox').style.zIndex='3';
+            document.getElementById('realbox').style.opacity='1';
+            document.getElementById('realbox').style.transform='translateX(0)';
+
+            
+        }
+        function changebox2() {
+            
+            document.getElementById('fakebox').style.zIndex='3';
+            document.getElementById('fakebox').style.opacity='1';
+            document.getElementById('fakebox').style.transform='translateX(0)';
+            document.getElementById('realbox').style.zIndex='4';
+            document.getElementById('realbox').style.opacity='0';
+            document.getElementById('realbox').style.transform='translateX(-100%)';
+            
+        }
+    </script>
+
+</body>
+
+</html>
