@@ -130,6 +130,7 @@
         background-color: #eeff00;
         transition: transform 1s, opacity 0.75s;
         z-index: 99;
+        opacity: 0;
     }
     .logoimger{
         position: fixed;
@@ -184,6 +185,10 @@
         </span>
         Tuangwit Tuangsitthinan<br>
         <span style="font-size: 25px;">
+            Student ID
+        </span>
+        6540011055<br>
+        <span style="font-size: 25px;">
             Age
         </span>
         <a>  21 years old</a><br>
@@ -218,8 +223,9 @@
         
     </div>
 
-    <div class="midtitle" id="midTitle"><!-- Title at start -->
+    <div class="midtitle" id="midTitle" style="text-align: center;"><!-- Title at start -->
         <h1>Welcome to Tuangwit's website</h1>
+        Please wait while loading. . .<br>
     </div>
     
     <video id="realshit" autoplay loop><!-- Background Video -->
@@ -230,7 +236,7 @@
         <button onclick="changebgvid('video/background/Alice.mp4')">Alice</button><br>
         <button onclick="changebgvid('video/background/Koyuki_noint.mp4')">Koyuki</button><br>
         <button onclick="changebgvid('video/background/Reisa.mp4')">Reisa</button>
-        <br><ul><li><a href="../index.html">Home</a></li></ul>
+        
     </div>
 
 <!-- Not used>
@@ -317,6 +323,10 @@
     }
     //fading song 
     //Doesn't used anymore
+
+    window.onload = function() {
+        document.getElementById('midbut').style.opacity='1';
+    };
 
     function loadingfinisher(){
         document.querySelector('video').style.filter = 'blur(10px)';
