@@ -23,15 +23,12 @@
         right: 20px; 
         width: 50px;
         height: 50px;
-        
         transform: translateX(140%);
         opacity: 0;
         transition: transform 1s, opacity 1s;
         z-index:6;
         border: 4px solid #ccc; 
-        
         background-color: #ffffff;
-        
     }
     .navigtors {
         position: fixed;
@@ -54,7 +51,7 @@
         background-color: #f9f9f9; 
         z-index: 30; 
         transition: transform 1s, opacity 0.75s;
-        transform: translateX(0);transform: translateX(-120%);
+        transform: translateX(-120%);
         opacity: 0;
     }
     body{
@@ -90,54 +87,28 @@
         border: 2px solid #ccc; 
         padding: 5px; 
         background-color: #00ccff80;
+        transform: translateY(0);
         transition: transform 1s, opacity 0.75s;
         z-index: 99;
     }
-
     .midimg{
-        
+        position: fixed;
         width: 400px;
         height: 225px;
         overflow: hidden;
-        transform: translateY(-100%);
+        transform: translateY(250%);
         opacity: 0;
         transition: transform 1s, opacity 1s;
-        z-index:2;
+        z-index:14;
         border: 7px solid #ccc; 
-        
         background-color: #ffffff;
-        
     }
     .midimg img{
         position: absolute;
         width: 100%;
         height: 100%;
-        
-        
         transition: transform 1s, opacity 1s ease-in-out;
-        z-index:3;
-        
-    }
-    .hideitnow{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    .showmidimg{
-        transform: translateY(100%);
-        opacity: 255;
-    }
-
-    .slideinbox{
-        transform: translateX(0);
-        opacity: 255;
-    }
-    .slideinboxha{
-        transform: translateX(0);
-        opacity: 255;
-    }
-    .slideinleftbox{
-        transform: translateX(0);
-        opacity: 255;
+        z-index:15;
     }
     .midbutton{
         position: fixed;
@@ -147,17 +118,39 @@
         background-color: #eeff00;
         transition: transform 1s, opacity 0.75s;
         z-index: 99;
-        
     }
-    
+    .logoimger{
+        position: fixed;
+        overflow: hidden;
+        top: -250px ;
+        opacity: 0;
+        transition: top 1s, opacity 1s;
+        z-index:998;
+    }
+    .logoimger img{
+        overflow: hidden;
+        width: 750px;
+        opacity: 1;
+        transition: transform 1s, opacity 1s;
+        z-index:999;
+        background-color: #ffffff6c;
+        animation: coloring 5s infinite;
+        border-radius: 80px;
+    }
+    @keyframes coloring {
+      0% { background-color:rgba(255, 255, 255, 0.329);  }
+      50% { background-color: rgba(0, 204, 255, 0.356); }
+      100% { background-color: rgba(255, 255, 255, 0.329); }
+    }
     </style>
+    <!-- CSS Style! This is easy to learn anyway -->
 </head>
 <body>
-    <div id="fade-overlay"></div>
+    <div id="fade-overlay"></div> <!-- Simple calling -->
     
-
-    <div class="midimg" id="omgmid" >
-        
+    <div class="logoimger" id="logo"><img src="image/instance/random/blogo.png" alt="logoimg" id="logoimg" /></div> <!-- Logo here -->
+    
+    <div class="midimg" id="omgmid" onmouseover="logoer()" onmouseout="unlogoer()"><!-- Attacher -->
         <img src="image/instance/random/c.jpg" alt="image 1" id="image1"/>
         <img src="image/instance/random/d.png" alt="image 2" id="image2" style="opacity: 0;"/>
         <img src="image/instance/random/e.png" alt="image 3" id="image3" style="opacity: 0;"/>
@@ -168,12 +161,11 @@
         <img src="image/instance/random/u.png" alt="image 8" id="image8" style="opacity: 0;"/>
     </div>
 
-    <div class="midbutton" id="midbut">
+    <div class="midbutton" id="midbut"><!-- "Close" button -->
         <button onclick="loadingfinisher()">Close</button>
     </div>
 
-
-    <div class="textleft" id="textleft">
+    <div class="textleft" id="textleft"><!-- Text box on the left -->
         <h1>Profile</h1>
         <span style="font-size: 25px;">
             Name
@@ -203,53 +195,73 @@
         
     </div>
 
-    <div class="midtitle" id="midTitle">
+    <div class="midtitle" id="midTitle"><!-- Title at start -->
         <h1>Welcome to Tuangwit's website</h1>
     </div>
-    <video autoplay loop>
+    
+    <video autoplay loop><!-- Background Video -->
         <source src="video/background/Reisa.mp4">
     </video>
-    <div class="navigtors" id="navigtor">
+    
+    <div class="navigtors" id="navigtor"><!-- Background Changer & Navigator for going to home page -->
         <button onclick="changebgvid('video/background/Alice.mp4')">Alice</button><br>
         <button onclick="changebgvid('video/background/Koyuki_noint.mp4')">Koyuki</button><br>
         <button onclick="changebgvid('video/background/Reisa.mp4')">Reisa</button>
-        
         <br><ul><li><a href="../verymainpage.html">Home</a></li></ul>
-        </div>
-        <!--audio id="bgm" autoplay loop>
+    </div>
+
+<!-- Not used>
+<audio id="bgm" autoplay loop>
             <source src="music/mus_ruinspiano.ogg" >
         </audio -->
-<div class="content">
 
+<div class="content">
+<!-- Not really used here -->>
 </div>
-<!-- button onclick="togglebgm()">Mute</button>
+
+<!-- Not used>
+<button onclick="togglebgm()">Mute</button>
 <button onclick="changebgm()">Next song</button>
-<button onclick="loadingfinisher()">blur</button -->
+<button onclick="loadingfinisher()">blur</button >
+    <-->
 
     <div class="backerha" id="hahaha">
         <img src="image/instance/Untitled.png" style="width: 50;height: 50px;" onmouseover="unbruh()" onmouseout="bruh()">
         
     </div>
+
 <script>
 
     //var songlist = ["music/mus_ruinspiano.ogg", "music/mus_muscle.ogg", "music/mus_homereprise.ogg", "music/mus_grillby_02.ogg", "music/mus_brattycatty_shop.ogg"];
     //List song using arrey!
     function changebgvid(videoname){
-        
         document.getElementById('fade-overlay').style.opacity = '1';
         document.getElementById('fade-overlay').style.pointerEvents = 'fill';
-        setTimeout(function(){
-        document.querySelector('video').src = videoname;
-        document.querySelector('video').load();
-        document.querySelector('video').play();
-            },1050)
-            setTimeout(function(){
-                document.getElementById('fade-overlay').style.pointerEvents = 'none';
-                document.getElementById('fade-overlay').style.opacity = '0';
-            },1250)
+        document.getElementById('navigtor').style.opacity='0';
+        document.getElementById('navigtor').style.transform='translateX(120%)';
+        document.getElementById('textleft').style.opacity='0';
+        document.getElementById('textleft').style.transform='translateX(-120%)';
+        document.getElementById('omgmid').style.opacity='0';
+        document.getElementById('omgmid').style.transform='translateY(250%)';
 
-        
+        setTimeout(function(){
+            document.querySelector('video').src = videoname;
+            document.querySelector('video').load();
+            document.querySelector('video').play();
+        },1050)
+
+        setTimeout(function(){
+            document.getElementById('fade-overlay').style.pointerEvents = 'none';
+            document.getElementById('fade-overlay').style.opacity = '0';
+            document.getElementById('navigtor').style.opacity='1';
+            document.getElementById('navigtor').style.transform='translateX(0)';
+            document.getElementById('textleft').style.opacity='1';
+            document.getElementById('textleft').style.transform='translateX(0)';
+            document.getElementById('omgmid').style.opacity='1';
+            document.getElementById('omgmid').style.transform='translateY(140%)';
+        },1250)
     }
+
     /*function changebgm(){
         curindex = (curindex+1)%songlist.length;
         bgm.src = songlist[curindex];
@@ -280,43 +292,66 @@
         updateVol();
     }
     //fading song */
-    //Doesn't use anymore
-
-
+    //Doesn't used anymore
 
     function loadingfinisher(){
         document.querySelector('video').style.filter = 'blur(10px)';
         document.querySelector('video').play();
-        document.getElementById('midTitle').classList.add('hideitnow');
-        document.getElementById('midbut').classList.toggle('hideitnow');
-        document.getElementById('hahaha').classList.toggle('slideinbox');
-        document.getElementById('navigtor').classList.toggle('slideinboxha');
-        document.getElementById('textleft').classList.toggle('slideinleftbox');
-        document.getElementById('omgmid').classList.toggle('showmidimg');
+        
+        document.getElementById('midTitle').style.opacity='0';
+        document.getElementById('midTitle').style.transform='translateY(-100%)';
+        document.getElementById('midbut').style.opacity='0';
+        document.getElementById('midbut').style.transform='translateY(-100%)';
+        document.getElementById('hahaha').style.opacity='1';
+        document.getElementById('hahaha').style.transform='translateX(0)';
+        document.getElementById('navigtor').style.opacity='1';
+        document.getElementById('navigtor').style.transform='translateX(0)';
+        document.getElementById('textleft').style.opacity='1';
+        document.getElementById('textleft').style.transform='translateX(0)';
+        document.getElementById('textleft').style.opacity='1';
+        document.getElementById('textleft').style.transform='translateY(0)';
+        document.getElementById('omgmid').style.opacity='1';
+        document.getElementById('omgmid').style.transform='translateY(140%)';
         document.getElementById('fade-overlay').style.opacity = '0';
     }
-    //blur start animation
-    
-    const images = document.querySelectorAll('.midimg img');
+    //start animation
+
+const images = document.querySelectorAll('.midimg img');
 let imgindex = 0;
 function fadeimg(){
     images[imgindex].style.opacity = 0;
     imgindex=(imgindex+1)%images.length;
     images[imgindex].style.opacity = 1;
 }
-
-
 setInterval(fadeimg,3000);
-
-
+//Change Image
 
         function unbruh(){
             document.querySelector('video').style.filter = 'blur(0px)';
+            document.getElementById('navigtor').style.opacity='0';
+            document.getElementById('navigtor').style.transform='translateX(120%)';
+            document.getElementById('textleft').style.opacity='0';
+            document.getElementById('textleft').style.transform='translateX(-120%)';
+            document.getElementById('omgmid').style.opacity='0';
+            document.getElementById('omgmid').style.transform='translateY(250%)';
         }
         function bruh(){
             document.querySelector('video').style.filter = 'blur(10px)';
+            document.getElementById('navigtor').style.opacity='1';
+            document.getElementById('navigtor').style.transform='translateX(0)';
+            document.getElementById('textleft').style.opacity='1';
+            document.getElementById('textleft').style.transform='translateX(0)';
+            document.getElementById('omgmid').style.opacity='1';
+            document.getElementById('omgmid').style.transform='translateY(140%)';
         }
-    
+        function unlogoer(){
+            document.getElementById('logo').style.opacity = '0';
+            document.getElementById('logo').style.top = '-250px';
+        }
+        function logoer(){
+            document.getElementById('logo').style.top = '50px';
+            document.getElementById('logo').style.opacity = '1';
+        }
 </script>
 </body>
 </html>
