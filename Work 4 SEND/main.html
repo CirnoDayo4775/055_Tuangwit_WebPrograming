@@ -21,7 +21,7 @@
 
         .beauty {
             position: fixed;
-            top: 50px;
+            top: 40px;
             left: 20px;
             border: 2px solid #000000;
             padding: 5px;
@@ -33,7 +33,7 @@
         }
         .beauty2 {
             position: fixed;
-            top: 50px;
+            top: 40px;
             left: 20px;
             border: 2px solid #000000;
             padding: 5px;
@@ -59,7 +59,7 @@
     </div>
 
     <div class="beauty" id="fakebox">
-        <h1>OK Work 4 is here</h1>
+        <h2>Student registering</h2>
         <form action="https://example.com" method="post">
             <label for="name">Name : </label>
             <input type="text" name="name" size="15" maxlength="30" placeholder="" />
@@ -76,60 +76,44 @@
             <br><input type="radio" name="gender" value="f" /><label for="gender">Female</label>
             <br><br>
             <label for="entYear">Entrance Year : </label>
-            <input type="date" name="entYear" size="15" maxlength="10" placeholder="" />
+            <input type="number" name="entyear" min="2000" max="2100" step="1">
             <br><br>
             <label for="sername">Address : </label>
-            <textarea class="notresize" name="comments" cols="30" rows="6"></textarea>
+            <textarea class="notresize" name="comments" cols="30" rows="3"></textarea>
             <br><br>
             <label for="emailer">Email : </label>
-            <input type="email" name="emailer" size="15" maxlength="50" placeholder="Email NOW" />
-            <br><br>
-
-            <textarea name="comments" cols="20" rows="4" placeholder="Big text" class="notresize"></textarea>
+            <input type="email" name="emailer" size="15" maxlength="50" placeholder="" />
             <br><br>
             <label for="phone">Phone contact : </label>
             <input type="number" name="phone" size="15" maxlength="10" placeholder="" />
             <br><br>
 
-            <label for="password">
+            <label for="major">
                 Major :
             </label><br>
 
-            <input type="radio" name="gender" value="m" /><label for="gender">Male</label>
-            <br><input type="radio" name="gender" value="f" /><label for="gender">Female</label>
-
+            <input type="radio" name="major" value="it" /><label for="gender">IT</label>
+            <br><input type="radio" name="major" value="is" /><label for="gender">IS</label>
+<br><br>
+            <label for="job">Jobs : </label>
+            <input type="text" name="job" size="15" maxlength="90"  placeholder="" />
             <br><br>
-            <label for="neverGonna">Never gonna :
+            <label for="jobplace">Workplace's Address : </label>
+            <textarea class="notresize" name="jobplace" cols="30" rows="3"></textarea>
+            <br><br>
+
+            <label for="subjob">Specific Job :
             </label><br>
-            <input type="radio" name="neverGonna" value="giveYouUp" /><label for="neverGonna">Give you up</label>
-            <br><input type="radio" name="neverGonna" value="letYouDown" /><label for="neverGonna">Let you down</label>
-            <br><input type="radio" name="neverGonna" value="runAroundAndDesertYou" /><label for="neverGonna">Run around and desert you</label>
+            <input type="checkbox" name="subjob" value="WD" /><label for="subjob">Web Developer</label>
+            <br><input type="checkbox" name="subjob" value="SA" /><label for="subjob">System Analyser</label>
+            <br><input type="checkbox" name="subjob" value="GD" /><label for="subjob">Graphic Design</label>
+            <br><input type="checkbox" name="subjob" value="DM" /><label for="subjob">Digital Marketing</label>
             <br><br>
-            <label for="neverGonna2">Never gonna :
+
+            
+            <label for="images">Upload Image :
             </label><br>
-            <input type="checkbox" name="neverGonna2" value="makeYouCry" /><label for="neverGonna2">Make you cry</label>
-            <br><input type="checkbox" name="neverGonna2" value="sayGoodbye" /><label for="neverGonna2">Say goodbye</label>
-            <br><input type="checkbox" name="neverGonna2" value="tellALieAndHurtYou" /><label for="neverGonna2">Tell a lies and hurt you</label>
-            <br><br>
-
-            <label for="compass">My compass</label>
-            <select name="compass">
-                <option value="plzsing">Choose NOW</option>
-                <option value="sea">WAS SWALLOWED BY THE SEA</option>
-                <option value="curiosity">IS CURIOSITY</option>
-            </select>
-            <br><br>
-
-            <label for="ifIcan">If I</label>
-            <select name="ifIcan" size="4" multiple="multiple">
-                <option value="point">am a set of point</option>
-                <option value="circle">am a circle</option>
-                <option value="sine">am a sine wave</option>
-                <option value="limit">approach infinity</option>
-            </select>
-            <br><br>
-
-            <input type="file" name="mp3" /><br><br>
+            <input type="file" name="images" /><br><br>
 
             <input type="submit" /><br><br>
             <input type="reset" />
@@ -140,58 +124,61 @@
     </div>
 
     <div class="beauty2" id="realbox">
-        <h1>OK Work 4 is here</h1>
+        <h3>ลงทะเบียนศิษย์เก่า</h3>
         <form action="https://example.com" method="post">
-            <label for="user">username : </label>
-            <input type="text" name="user" size="15" maxlength="10" id="inputbox1" placeholder="username (max : 10)" />
+            <label for="name">ชื่อ : </label>
+            <input type="text" name="name" size="15" maxlength="30" placeholder="" />
             <br><br>
-
-            <label for="emailer">Email : </label>
-            <input type="email" name="emailer" size="15" maxlength="50" id="inputbox1" placeholder="Email NOW" />
+            <label for="sername">นามสกุล : </label>
+            <input type="text" name="sername" size="15" maxlength="30"  placeholder="" />
             <br><br>
-
-            <textarea name="comments" cols="20" rows="4" placeholder="Big text" class="notresize"></textarea>
+            <label for="stdID">รหัสนักศึกษา : </label>
+            <input type="number" name="stdID" size="15" maxlength="10" placeholder="" />
             <br><br>
-
-            <label for="password">
-                Password :
-            </label>
-
-            <input type="password" name="password" size="15" maxlength="8" id="inputbox1"
-                placeholder="password (max : 8)" />
-
-            <br><br>
-            <label for="neverGonna">Never gonna :
+            <label for="gender">เพศ :
             </label><br>
-            <input type="radio" name="neverGonna" value="giveYouUp" /><label for="neverGonna">Give you up</label>
-            <br><input type="radio" name="neverGonna" value="letYouDown" /><label for="neverGonna">Let you down</label>
-            <br><input type="radio" name="neverGonna" value="runAroundAndDesertYou" /><label for="neverGonna">Run around and desert you</label>
+            <input type="radio" name="gender" value="m" /><label for="gender">ชาย</label>
+            <br><input type="radio" name="gender" value="f" /><label for="gender">หญิง</label>
             <br><br>
-            <label for="neverGonna2">Never gonna :
+            <label for="entYear">ปีเข้าศึกษา : </label>
+            <input type="number" name="entyear" min="2550" max="2700" step="1">
+            <br><br>
+            <label for="sername">ที่อยู่ : </label>
+            <textarea class="notresize" name="comments" cols="30" rows="3"></textarea>
+            <br><br>
+            <label for="emailer">อีเมลล์ : </label>
+            <input type="email" name="emailer" size="15" maxlength="50" placeholder="" />
+            <br><br>
+            <label for="phone">เบอร์มือถือ : </label>
+            <input type="number" name="phone" size="15" maxlength="10" placeholder="" />
+            <br><br>
+
+            <label for="major">
+                สาขา :
             </label><br>
-            <input type="checkbox" name="neverGonna2" value="makeYouCry" /><label for="neverGonna2">Make you cry</label>
-            <br><input type="checkbox" name="neverGonna2" value="sayGoodbye" /><label for="neverGonna2">Say goodbye</label>
-            <br><input type="checkbox" name="neverGonna2" value="tellALieAndHurtYou" /><label for="neverGonna2">Tell a lies and hurt you</label>
+
+            <input type="radio" name="major" value="it" /><label for="gender">IT</label>
+            <br><input type="radio" name="major" value="is" /><label for="gender">IS</label>
+<br><br>
+            <label for="job">อาชีพ : </label>
+            <input type="text" name="job" size="15" maxlength="90"  placeholder="" />
+            <br><br>
+            <label for="jobplace">ที่อยู่ที่ทำงาน : </label>
+            <textarea class="notresize" name="jobplace" cols="30" rows="3"></textarea>
             <br><br>
 
-            <label for="compass">My compass</label>
-            <select name="compass">
-                <option value="plzsing">Choose NOW</option>
-                <option value="sea">WAS SWALLOWED BY THE SEA</option>
-                <option value="curiosity">IS CURIOSITY</option>
-            </select>
+            <label for="subjob">ประเภทงาน :
+            </label><br>
+            <input type="checkbox" name="subjob" value="WD" /><label for="subjob">Web Developer</label>
+            <br><input type="checkbox" name="subjob" value="SA" /><label for="subjob">System Analyser</label>
+            <br><input type="checkbox" name="subjob" value="GD" /><label for="subjob">Graphic Design</label>
+            <br><input type="checkbox" name="subjob" value="DM" /><label for="subjob">Digital Marketing</label>
             <br><br>
 
-            <label for="ifIcan">If I</label>
-            <select name="ifIcan" size="4" multiple="multiple">
-                <option value="point">am a set of point</option>
-                <option value="circle">am a circle</option>
-                <option value="sine">am a sine wave</option>
-                <option value="limit">approach infinity</option>
-            </select>
-            <br><br>
-
-            <input type="file" name="mp3" /><br><br>
+            
+            <label for="images">อัพโหลดรูปภาพ :
+            </label><br>
+            <input type="file" name="images" /><br><br>
 
             <input type="submit" /><br><br>
             <input type="reset" />
@@ -201,7 +188,7 @@
         <br>
     </div>
 
-    <button onclick="changebox()">EYYO CHANGE IT NOW</button><button onclick="changebox2()">Gimme back</button>
+    <button onclick="changebox()">ไทย</button>      <button onclick="changebox2()">English</button>
 
 
 
