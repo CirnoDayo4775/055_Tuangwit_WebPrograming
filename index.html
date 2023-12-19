@@ -112,7 +112,7 @@
     </div> <!-- Logo here -->
 
     <div class="midimg" id="omgmid" onmouseover="logoer()" onmouseout="unlogoer()"
-        style="position: fixed;left: 70px;bottom: 130px;width: 300px;height: 168.75px;overflow: hidden;transform: translateY(250%);opacity: 0;transition: transform 1s, opacity 1s;z-index: 14;border: 7px solid #ccc;background-color: #ffffff;">
+        style="position: fixed;left: 70px;bottom: 170px;width: 300px;height: 168.75px;overflow: hidden;transform: translateY(250%);opacity: 0;transition: transform 1s, opacity 1s;z-index: 14;border: 7px solid #ccc;background-color: #ffffff;">
         <!-- Attacher -->
         <img src="Work 3.5 Profile webpage/image/instance/random/c.jpg" alt="image 1" id="image1" draggable="false" />
         <img src="Work 3.5 Profile webpage/image/instance/random/d.png" alt="image 2" id="image2" style="opacity: 0;"
@@ -137,7 +137,7 @@
     </div>
 
     <div id="menuIcon"
-        style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 50px;z-index: 31;bottom: 80px;">
+        style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 70px;z-index: 31;bottom: 80px;">
         <table>
             <tr>
                 <td>
@@ -149,7 +149,7 @@
                         src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
                 </td>
                 <td>
-                    <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png"
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png" onmouseover="profON()" onmouseout="profOFF()"
                         width="100px"><br>Schedule
                 </td>
                 <td>
@@ -203,36 +203,63 @@
     </div>
 
     <div class="textleft" id="textleft"
-        style="position: fixed;top: 50px;left: 10px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateX(-120%);opacity: 0;">
+        style="text-align: center; position: fixed;top: 50px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateY(-130%);opacity: 1;">
         <!-- Text box on the left -->
         <h1>Profile</h1>
-        <span style="font-size: 25px;">
-            Name
-        </span>
-        Tuangwit Tuangsitthinan<br>
-        <span style="font-size: 25px;">
-            Student ID
-        </span>
-        6540011055<br>
-        <span style="font-size: 25px;">
-            Age
-        </span>
-        <a> 21 years old</a><br>
-        <span style="font-size: 25px;">
-            Major
-        </span>
-        Information Technology<br>
-        <span style="font-size: 25px;">
-            Birth date
-        </span>
-        25th October 2003<br>
-        <br><br>
+        <table border="3px" style="padding: 5px;">
+            <tr>
+                <td>
+                    <span style="font-size: 25px;">
+                        Name
+                    </span>
+                </td>
+                <td>
+                    <span style="font-size: 25px;">
+                        Student ID
+                    </span>
+                </td>
+                <td>
+                    <span style="font-size: 25px;">
+                        Age
+                    </span>
+                </td>
+                <td>
+                    <span style="font-size: 25px;">
+                        Birth date
+                    </span>
+                </td>
+                <td>
+                    <span style="font-size: 25px;">
+                        Major
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tuangwit Tuangsitthinan
+                </td>
+                <td>
+                    6540011055
+                </td>
+                <td>
+                    21 years old
+                </td>
+                <td>
+                    25th October 2003
+                </td>
+                <td>
+                    Information Technology
+                </td>
+
+        </table>
+        <br>
         <span style="font-size: 25px;">
             Note
-        </span><br><br>
-        Hi, and welcome to my website!<br>
-        My strongest language is C#<br>
-        This website is made with code from<br>stackoverflow that teach me some.<br>
+        </span><br>
+        Hi, and welcome to my website! My strongest language is C#<br>
+        This website is made with code from stackoverflow that teach me some.<br>
+        I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL, All Mobile Gacha game.
+        <br>Take a look at this page! I made a BIG ref of the game I loved most!
         <br><img src="Work 3.5 Profile webpage/image/instance/102_20231012150921.png" width="250px"
             draggable="false"><br>
         I don't have image of myself.
@@ -265,8 +292,8 @@
 
     <div class="navigtors" id="navigtor"><!-- Background Changer & Navigator for going to home page -->
         <h3>Character</h3>
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button> 
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button> 
+        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button>
+        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button>
         <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Reisa.mp4')">Reisa</button>
         <h3>volume</h3>
         <table>
@@ -275,7 +302,7 @@
                     <button onclick="changevolumebg(1)">100%</button>
                 </td>
                 <td>
-                    <button onclick="changevolumebg(0.8)">80%</button> 
+                    <button onclick="changevolumebg(0.8)">80%</button>
                 </td>
                 <td>
                     <button onclick="changevolumebg(0.6)">60%</button>
@@ -293,12 +320,12 @@
                 </td>
             </tr>
         </table>
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
 
     </div>
 
@@ -323,7 +350,7 @@
     <script>
         var currentvolume = 1;
 
-        function changevolumebg(targetvol){
+        function changevolumebg(targetvol) {
             currentvolume = targetvol;
             fadeVidVol(realshit, currentvolume, 200);
         }
@@ -334,8 +361,7 @@
             document.getElementById('fade-overlay').style.pointerEvents = 'fill';
             document.getElementById('navigtor').style.opacity = '0';
             document.getElementById('navigtor').style.transform = 'translateX(120%)';
-            document.getElementById('textleft').style.opacity = '0';
-            document.getElementById('textleft').style.transform = 'translateX(-120%)';
+            
             document.getElementById('omgmid').style.opacity = '0';
             document.getElementById('omgmid').style.transform = 'translateX(-130%)';
             document.getElementById('idcard').style.opacity = '0';
@@ -356,8 +382,7 @@
                 document.getElementById('fade-overlay').style.opacity = '0';
                 document.getElementById('navigtor').style.opacity = '1';
                 document.getElementById('navigtor').style.transform = 'translateX(0)';
-                document.getElementById('textleft').style.opacity = '1';
-                document.getElementById('textleft').style.transform = 'translateX(0)';
+                
                 document.getElementById('omgmid').style.opacity = '1';
                 document.getElementById('omgmid').style.transform = 'translateX(0)';
                 document.getElementById('idcard').style.opacity = '1';
@@ -392,7 +417,7 @@
         };
 
         function loadingfinisher() {
-            document.querySelector('video').style.filter = 'blur(10px)';
+            document.querySelector('video').style.filter = 'blur(0px)';
             document.querySelector('video').play();
 
             document.getElementById('midTitle').style.opacity = '0';
@@ -403,8 +428,7 @@
             document.getElementById('hahaha').style.transform = 'translateX(0)';
             document.getElementById('navigtor').style.opacity = '1';
             document.getElementById('navigtor').style.transform = 'translateX(0)';
-            document.getElementById('textleft').style.opacity = '1';
-            document.getElementById('textleft').style.transform = 'translateX(0)';
+            
             document.getElementById('textright').style.opacity = '1';
             document.getElementById('textright').style.transform = 'translateX(0)';
             document.getElementById('omgmid').style.opacity = '1';
@@ -427,8 +451,7 @@
             document.querySelector('video').style.filter = 'blur(0px)';
             document.getElementById('navigtor').style.opacity = '0';
             document.getElementById('navigtor').style.transform = 'translateX(120%)';
-            document.getElementById('textleft').style.opacity = '0';
-            document.getElementById('textleft').style.transform = 'translateX(-120%)';
+            
             document.getElementById('textright').style.opacity = '0';
             document.getElementById('textright').style.transform = 'translateX(120%)';
             document.getElementById('omgmid').style.opacity = '0';
@@ -441,11 +464,10 @@
             document.getElementById('menuTab').style.transform = 'translateY(160%)';
         }
         function bruh() {
-            document.querySelector('video').style.filter = 'blur(10px)';
+            document.querySelector('video').style.filter = 'blur(0px)';
             document.getElementById('navigtor').style.opacity = '1';
             document.getElementById('navigtor').style.transform = 'translateX(0)';
-            document.getElementById('textleft').style.opacity = '1';
-            document.getElementById('textleft').style.transform = 'translateX(0)';
+            
             document.getElementById('textright').style.opacity = '1';
             document.getElementById('textright').style.transform = 'translateX(0)';
             document.getElementById('omgmid').style.opacity = '1';
@@ -468,6 +490,20 @@
         function warp(destinationA) {
             window.location.href = destinationA;
         }
+
+        function profON() {
+            document.getElementById('textleft').style.opacity = '1';
+            document.querySelector('video').style.filter = 'blur(10px)';
+            document.getElementById('textleft').style.transform = 'translateY(0)';
+        }
+
+        function profOFF() {
+            document.getElementById('textleft').style.opacity = '0';
+            document.getElementById('textleft').style.transform = 'translateY(-130%)';
+            document.querySelector('video').style.filter = 'blur(0px)';
+        }
+
+        
     </script>
 </body>
 
