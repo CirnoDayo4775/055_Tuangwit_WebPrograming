@@ -134,6 +134,7 @@
         style="transition: transform 1s, opacity 1s; border: 100px solid #ffffff; position: fixed; background-color: #ffffff; height: 50px; z-index: 30; bottom: -150px; border-radius: 30px;">
         zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
     </div>
+
     <div id="menuIcon"
         style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 50px;z-index: 31;bottom: 80px;">
         <table>
@@ -193,6 +194,7 @@
             </tr>
         </table>
     </div>
+
     <div class="midbutton" id="midbut"
         style="position: fixed;transform: translateY(220%);border: 2px solid #ccc;padding: 5px;background-color: #eeff00;transition: transform 1s, opacity 0.75s;z-index: 99;opacity: 0;">
         <!-- "Close" button -->
@@ -237,7 +239,7 @@
     </div>
 
     <div class="textright" id="textright"
-        style="position: fixed;top: 200px;right: 10px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateX(120%);opacity: 0;">
+        style="position: fixed;top: 270px;right: 20px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateX(120%);opacity: 0;">
         <!-- Text box on the right -->
         <h1>Navigator</h1>
         <button onclick="warp('Work 1 (food things)/index.html')">Work 1</button><br><br>
@@ -261,9 +263,41 @@
     </video>
 
     <div class="navigtors" id="navigtor"><!-- Background Changer & Navigator for going to home page -->
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button><br>
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button><br>
+        <h3>Character</h3>
+        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button> 
+        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button> 
         <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Reisa.mp4')">Reisa</button>
+        <h3>volume</h3>
+        <table>
+            <tr>
+                <td>
+                    <button onclick="changevolumebg(1)">100%</button>
+                </td>
+                <td>
+                    <button onclick="changevolumebg(0.8)">80%</button> 
+                </td>
+                <td>
+                    <button onclick="changevolumebg(0.6)">60%</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="changevolumebg(0.4)">40%</button>
+                </td>
+                <td>
+                    <button onclick="changevolumebg(0.2)">20%</button>
+                </td>
+                <td>
+                    <button onclick="changevolumebg(0)">0%</button>
+                </td>
+            </tr>
+        </table>
+        
+        
+        
+        
+        
+        
 
     </div>
 
@@ -286,6 +320,12 @@
     </div>
 
     <script>
+        var currentvolume = 1;
+
+        function changevolumebg(targetvol){
+            currentvolume = targetvol;
+            fadeVidVol(realshit, currentvolume, 200);
+        }
 
         //var songlist = ["music/mus_ruinspiano.ogg", "music/mus_muscle.ogg", "music/mus_homereprise.ogg", "music/mus_grillby_02.ogg", "music/mus_brattycatty_shop.ogg"];    //List song using arrey!
         function changebgvid(videoname) {
@@ -302,7 +342,7 @@
             document.getElementById('menuIcon').style.opacity = '0';
             document.getElementById('menuTab').style.opacity = '0';
             document.getElementById('menuIcon').style.transform = 'translateY(160%)';
-            document.getElementById('menuTab').style.transform = 'translateY(160%)'; fadeVidVol(realshit, 0, 500);
+            document.getElementById('menuTab').style.transform = 'translateY(160%)'; fadeVidVol(realshit, currentvolume, 500);
 
             setTimeout(function () {
                 document.querySelector('video').src = videoname;
@@ -324,25 +364,19 @@
                 document.getElementById('menuIcon').style.opacity = '1';
                 document.getElementById('menuTab').style.opacity = '1';
                 document.getElementById('menuIcon').style.transform = 'translateY(0)';
-                document.getElementById('menuTab').style.transform = 'translateY(0)'; fadeVidVol(realshit, 1, 500);
+                document.getElementById('menuTab').style.transform = 'translateY(0)'; fadeVidVol(realshit, currentvolume, 500);
             }, 1250)
         }
 
         /*function changebgm(){
             curindex = (curindex+1)%songlist.length;        bgm.src = songlist[curindex];        bgm.load();        bgm.play();}*/
-
-        //change bgm
-        function toggleVidbgm() {
-            if (realshit.volume === 0) {
-                fadeVidVol(realshit, 1, 200);
-            } else { fadeVidVol(realshit, 0, 200); }
-        }
         //mute
         function fadeVidVol(ele, tarVol, duration) {
-            var startTime = new Date().getTime(); function updateVol() {
+            var startTime = new Date().getTime();
+            function updateVol() {
                 var currentTime = new Date().getTime(); var elap = currentTime - startTime; var progress = elap / duration;
 
-                if (progress < 1) {
+                if (progress < tarVol) {
                     ele.volume = ele.volume + (tarVol - ele.volume) * progress; requestAnimationFrame(updateVol);
                 } else { ele.volume = tarVol; }
             }
