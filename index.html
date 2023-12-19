@@ -1,184 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
     <style>
-    #fade-overlay{
-        position: fixed;
-        top:0;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-        background-color: black;
-        opacity: 1;
-        z-index: 50;
-        transition: opacity 1s ease-in-out;
-        pointer-events:none;
-    }
-    .backerha{
-        position: fixed;
-        bottom: 50px;
-        right: 20px; 
-        width: 50px;
-        height: 50px;
-        transform: translateX(140%);
-        opacity: 0;
-        transition: transform 1s, opacity 1s;
-        z-index:6;
-        border: 4px solid #ccc; 
-        background-color: #ffffff;
-    }
-    .navigtors {
-        position: fixed;
-        top: 50px;
-        right: 20px; 
-        border: 2px solid #ccc; 
-        padding: 5px; 
-        background-color: #f9f9f9; 
-        z-index: 30; 
-        transition: transform 1s, opacity 0.75s;
-        transform: translateX(120%);
-        opacity: 0;
-    }
-    .textleft {
-        position: fixed;
-        top: 50px;
-        left: 10px; 
-        border: 2px solid #ccc; 
-        padding: 5px; 
-        background-color: #f9f9f9; 
-        z-index: 30; 
-        transition: transform 1s, opacity 0.75s;
-        transform: translateX(-120%);
-        opacity: 0;
-    }
-    .textright {
-        position: fixed;
-        top: 200px;
-        right: 10px; 
-        border: 2px solid #ccc; 
-        padding: 5px; 
-        background-color: #f9f9f9; 
-        z-index: 30; 
-        transition: transform 1s, opacity 0.75s;
-        transform: translateX(120%);
-        opacity: 0;
-    }
-    body{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin:0;
-        height: 100vh;
-        padding:0;
-        overflow: hidden;
-    }
-    video {
-        object-fit:cover;
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top:0;
-        left:0;
-        z-index: -1;
-        filter: blur(0px);
-        transition: filter 0.5s ease;
-    }
-    .content{
-        color:white;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-    }
-    .midtitle{
-        position: fixed;
-        border: 2px solid #ccc; 
-        padding: 5px; 
-        background-color: #00ccff80;
-        transform: translateY(0);
-        transition: transform 1s, opacity 0.75s;
-        z-index: 99;
-    }
-    .midimg{
-        position: fixed;
-        width: 400px;
-        height: 225px;
-        overflow: hidden;
-        transform: translateY(250%);
-        opacity: 0;
-        transition: transform 1s, opacity 1s;
-        z-index:14;
-        border: 7px solid #ccc; 
-        background-color: #ffffff;
-    }
-    .midimg img{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transition: transform 1s, opacity 1s ease-in-out;
-        z-index:15;
-    }
-    .midbutton{
-        position: fixed;
-        transform: translateY(220%);
-        border: 2px solid #ccc; 
-        padding: 5px; 
-        background-color: #eeff00;
-        transition: transform 1s, opacity 0.75s;
-        z-index: 99;
-        opacity: 0;
-    }
-    .logoimger{
-        position: fixed;
-        overflow: hidden;
-        top: -250px ;
-        opacity: 0;
-        transition: top 1s, opacity 1s;
-        z-index:998;
-    }
-    .logoimger img{
-        overflow: hidden;
-        width: 750px;
-        opacity: 1;
-        transition: transform 1s, opacity 1s;
-        z-index:999;
-        background-color: #ffffff6c;
-        animation: coloring 5s infinite;
-        border-radius: 80px;
-    }
-    @keyframes coloring {
-      0% { background-color:rgba(255, 255, 255, 0.329);  }
-      50% { background-color: rgba(0, 204, 255, 0.356); }
-      100% { background-color: rgba(255, 255, 255, 0.329); }
-    }
+        .navigtors {
+            position: fixed;
+            top: 50px;
+            right: 20px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(120%);
+            opacity: 0;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'printable4U'
+        }
+
+        video {
+            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: blur(0px);
+            transition: filter 0.5s ease;
+        }
+
+        .midimg img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: transform 1s, opacity 1s ease-in-out;
+            z-index: 15;
+        }
+
+        .logoimger img {
+            overflow: hidden;
+            width: 750px;
+            opacity: 1;
+            transition: transform 1s, opacity 1s;
+            z-index: 999;
+            background-color: #ffffff6c;
+            animation: coloring 5s infinite;
+            border-radius: 80px;
+        }
+
+        @keyframes coloring {
+            0% {
+                background-color: rgba(255, 255, 255, 0.329);
+            }
+
+            50% {
+                background-color: rgba(0, 204, 255, 0.356);
+            }
+
+            100% {
+                background-color: rgba(255, 255, 255, 0.329);
+            }
+        }
     </style>
+
     <!-- CSS Style! This is easy to learn anyway -->
 </head>
+
 <body>
-    <div id="fade-overlay"></div> <!-- Simple calling -->
-    
-    <div class="logoimger" id="logo"><img src="Work 3.5 Profile webpage/image/instance/random/blogo.png" alt="logoimg" id="logoimg" draggable="false"/></div> <!-- Logo here -->
-    
-    <div class="midimg" id="omgmid" onmouseover="logoer()" onmouseout="unlogoer()"><!-- Attacher -->
-        <img src="Work 3.5 Profile webpage/image/instance/random/c.jpg" alt="image 1" id="image1" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/d.png" alt="image 2" id="image2" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/e.png" alt="image 3" id="image3" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/g.png" alt="image 4" id="image4" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/h.png" alt="image 5" id="image5" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/k.png" alt="image 6" id="image6" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/s.png" alt="image 7" id="image7" style="opacity: 0;" draggable="false"/>
-        <img src="Work 3.5 Profile webpage/image/instance/random/u.png" alt="image 8" id="image8" style="opacity: 0;" draggable="false"/>
+    <div id="fade-overlay"
+        style="position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;background-color: black;opacity: 1;z-index: 50;transition: opacity 1s ease-in-out;pointer-events: none;">
+    </div> <!-- Simple calling -->
+
+    <div id="idcard"
+        style="position: fixed;top: 15px;left: 15px;z-index: 31;width: 300px;height: 0px;border-radius: 6px;transition: transform 1s, opacity 1s;
+   
+    border-bottom: 50px solid rgb(25, 54, 84);border-left: 0px solid  rgb(115, 248, 44);border-right: 50px solid  rgba(248, 51, 44, 0);">
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(255, 255, 255); font-size: 20px; margin-left: 70px; margin-top: 5px;">Tuangwit
+            Tuangsitthinan</a>
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(255, 255, 255); font-size: 25px; margin-left: 70px; margin-top: 10px;">______________________</a>
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(1, 225, 255); font-size: 25px; margin-left: 70px; margin-top: 10px;">______</a>
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(1, 225, 255); font-size: 16px; margin-left: 70px; margin-top: 33px;">61
+            / 365</a>
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(255, 255, 255); font-size: 40px; margin-left: 20px; margin-top: 10px;">20</a>
+        <a
+            style=" position: fixed; font-style: italic; color: rgb(247, 255, 1); font-size:20px; margin-left: 31px; margin-top: 1px;">LV.</a>
     </div>
 
-    <div class="midbutton" id="midbut"><!-- "Close" button -->
+    <div class="logoimger" id="logo"
+        style="position: fixed;overflow: hidden;top: -250px;opacity: 0;transition: top 1s, opacity 1s;z-index: 998;">
+        <img src="Work 3.5 Profile webpage/image/instance/random/blogo.png" alt="logoimg" id="logoimg"
+            draggable="false" />
+    </div> <!-- Logo here -->
+
+    <div class="midimg" id="omgmid" onmouseover="logoer()" onmouseout="unlogoer()"
+        style="position: fixed;left: 70px;bottom: 130px;width: 300px;height: 168.75px;overflow: hidden;transform: translateY(250%);opacity: 0;transition: transform 1s, opacity 1s;z-index: 14;border: 7px solid #ccc;background-color: #ffffff;">
+        <!-- Attacher -->
+        <img src="Work 3.5 Profile webpage/image/instance/random/c.jpg" alt="image 1" id="image1" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/d.png" alt="image 2" id="image2" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/e.png" alt="image 3" id="image3" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/g.png" alt="image 4" id="image4" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/h.png" alt="image 5" id="image5" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/k.png" alt="image 6" id="image6" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/s.png" alt="image 7" id="image7" style="opacity: 0;"
+            draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/u.png" alt="image 8" id="image8" style="opacity: 0;"
+            draggable="false" />
+    </div>
+
+    <div id="menuTab"
+        style="transition: transform 1s, opacity 1s; border: 100px solid #ffffff; position: fixed; background-color: #ffffff; height: 50px; z-index: 30; bottom: -150px; border-radius: 30px;">
+        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+    </div>
+    <div id="menuIcon"
+        style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 50px;z-index: 31;bottom: 80px;">
+        <table>
+            <tr>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png"
+                        width="100px"><br>Cafe
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png"
+                        width="100px"><br>Schedule
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png"
+                        width="100px"><br>Student
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/3/3e/MP_Circle.png"
+                        width="100px"><br>Club
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/3/3c/MP_Crafting.png"
+                        width="100px"><br>Crafting
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/3/35/MP_Shop.png"
+                        width="100px"><br>Shop
+                </td>
+                <td>
+                    <img style="opacity: 0;"
+                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                </td>
+                <td>
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/6/6d/MP_Gacha.png"
+                        width="100px"><br>Recruit
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="midbutton" id="midbut"
+        style="position: fixed;transform: translateY(220%);border: 2px solid #ccc;padding: 5px;background-color: #eeff00;transition: transform 1s, opacity 0.75s;z-index: 99;opacity: 0;">
+        <!-- "Close" button -->
         <button onclick="loadingfinisher()">Close</button>
     </div>
 
-    <div class="textleft" id="textleft"><!-- Text box on the left -->
+    <div class="textleft" id="textleft"
+        style="position: fixed;top: 50px;left: 10px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateX(-120%);opacity: 0;">
+        <!-- Text box on the left -->
         <h1>Profile</h1>
         <span style="font-size: 25px;">
             Name
@@ -191,7 +214,7 @@
         <span style="font-size: 25px;">
             Age
         </span>
-        <a>  21 years old</a><br>
+        <a> 21 years old</a><br>
         <span style="font-size: 25px;">
             Major
         </span>
@@ -207,199 +230,217 @@
         Hi, and welcome to my website!<br>
         My strongest language is C#<br>
         This website is made with code from<br>stackoverflow that teach me some.<br>
-        <br><img src="Work 3.5 Profile webpage/image/instance/102_20231012150921.png" width="250px" draggable="false"><br>
+        <br><img src="Work 3.5 Profile webpage/image/instance/102_20231012150921.png" width="250px"
+            draggable="false"><br>
         I don't have image of myself.
-        
+
     </div>
 
-    <div class="textright" id="textright"><!-- Text box on the right -->
+    <div class="textright" id="textright"
+        style="position: fixed;top: 200px;right: 10px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateX(120%);opacity: 0;">
+        <!-- Text box on the right -->
         <h1>Navigator</h1>
-        <button onclick="warp('Work 1 food things/index.html')">Work 1</button><br><br>
+        <button onclick="warp('Work 1 (food things)/index.html')">Work 1</button><br><br>
         <button onclick="warp('Work 2/index.html')">Work 2</button><br><br>
         <button onclick="warp('Work 3/index.html')">Work 3</button><br><br>
         <button onclick="warp('Work 3.5 Profile webpage/startup.html')">Work 3.5<br>index page Beta</button><br><br>
         <button onclick="warp('Work 4/main.html')">Work 4</button><br><br>
         <button onclick="warp('Work 4 SEND/main.html')">Work 4 (ส่งงาน)</button><br><br>
-        
+
     </div>
 
-    <div class="midtitle" id="midTitle" style="text-align: center;"><!-- Title at start -->
+    <div class="midtitle" id="midTitle"
+        style="text-align: center;position: fixed;        border: 2px solid #ccc;        padding: 5px;        background-color: #00ccff80;        transform: translateY(0);        transition: transform 1s, opacity 0.75s;        z-index: 99;">
+        <!-- Title at start -->
         <h1>Welcome to Tuangwit's website</h1>
         Please wait while loading. . .<br>
     </div>
-    
+
     <video id="realshit" autoplay loop><!-- Background Video -->
         <source src="Work 3.5 Profile webpage/video/background/Reisa.mp4">
     </video>
-    
+
     <div class="navigtors" id="navigtor"><!-- Background Changer & Navigator for going to home page -->
         <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button><br>
         <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button><br>
         <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Reisa.mp4')">Reisa</button>
-        
+
     </div>
 
-<!-- Not used>
+    <!-- Not used>
 <audio id="bgm" autoplay loop>
             <source src="Work 3.5 Profile webpage/music/mus_ruinspiano.ogg" >
         </audio -->
 
-<div class="content">
-<!-- Not really used here -->
-</div>
-
-<!-- Not used>
+    <!-- Not used>
 <button onclick="togglebgm()">Mute</button>
 <button onclick="changebgm()">Next song</button>
 <button onclick="loadingfinisher()">blur</button >
     <-->
 
-    <div class="backerha" id="hahaha">
-        <img src="Work 3.5 Profile webpage/image/instance/Untitled.png" style="width: 50;height: 50px;" onmouseover="unbruh()" onmouseout="bruh()" draggable="false">
-        
+    <div class="backerha" id="hahaha"
+        style="position: fixed;bottom: 50px;right: 20px;width: 50px;height: 50px;transform: translateX(140%);opacity: 0;transition: transform 1s, opacity 1s;z-index: 6;border: 4px solid #ccc;background-color: #ffffff;">
+        <img src="Work 3.5 Profile webpage/image/instance/Untitled.png" style="width: 50;height: 50px;"
+            onmouseover="unbruh()" onmouseout="bruh()" draggable="false">
+
     </div>
 
-<script>
+    <script>
 
-    //var songlist = ["music/mus_ruinspiano.ogg", "music/mus_muscle.ogg", "music/mus_homereprise.ogg", "music/mus_grillby_02.ogg", "music/mus_brattycatty_shop.ogg"];
-    //List song using arrey!
-    function changebgvid(videoname){
-        document.getElementById('fade-overlay').style.opacity = '1';
-        document.getElementById('fade-overlay').style.pointerEvents = 'fill';
-        document.getElementById('navigtor').style.opacity='0';
-        document.getElementById('navigtor').style.transform='translateX(120%)';
-        document.getElementById('textleft').style.opacity='0';
-        document.getElementById('textleft').style.transform='translateX(-120%)';
-        document.getElementById('omgmid').style.opacity='0';
-        document.getElementById('omgmid').style.transform='translateY(250%)';
-        fadeVidVol(realshit, 0, 500);
+        //var songlist = ["music/mus_ruinspiano.ogg", "music/mus_muscle.ogg", "music/mus_homereprise.ogg", "music/mus_grillby_02.ogg", "music/mus_brattycatty_shop.ogg"];    //List song using arrey!
+        function changebgvid(videoname) {
+            document.getElementById('fade-overlay').style.opacity = '1';
+            document.getElementById('fade-overlay').style.pointerEvents = 'fill';
+            document.getElementById('navigtor').style.opacity = '0';
+            document.getElementById('navigtor').style.transform = 'translateX(120%)';
+            document.getElementById('textleft').style.opacity = '0';
+            document.getElementById('textleft').style.transform = 'translateX(-120%)';
+            document.getElementById('omgmid').style.opacity = '0';
+            document.getElementById('omgmid').style.transform = 'translateX(-130%)';
+            document.getElementById('idcard').style.opacity = '0';
+            document.getElementById('idcard').style.transform = 'translateY(-120%)';
+            document.getElementById('menuIcon').style.opacity = '0';
+            document.getElementById('menuTab').style.opacity = '0';
+            document.getElementById('menuIcon').style.transform = 'translateY(160%)';
+            document.getElementById('menuTab').style.transform = 'translateY(160%)'; fadeVidVol(realshit, 0, 500);
 
-        setTimeout(function(){
-            document.querySelector('video').src = videoname;
-            document.querySelector('video').load();
-            document.querySelector('video').play();
-        },1050)
+            setTimeout(function () {
+                document.querySelector('video').src = videoname;
+                document.querySelector('video').load();
+                document.querySelector('video').play();
+            }, 1050)
 
-        setTimeout(function(){
-            document.getElementById('fade-overlay').style.pointerEvents = 'none';
-            document.getElementById('fade-overlay').style.opacity = '0';
-            document.getElementById('navigtor').style.opacity='1';
-            document.getElementById('navigtor').style.transform='translateX(0)';
-            document.getElementById('textleft').style.opacity='1';
-            document.getElementById('textleft').style.transform='translateX(0)';
-            document.getElementById('omgmid').style.opacity='1';
-            document.getElementById('omgmid').style.transform='translateY(140%)';
-            fadeVidVol(realshit, 1, 500);
-        },1250)
-    }
-
-    /*function changebgm(){
-        curindex = (curindex+1)%songlist.length;
-        bgm.src = songlist[curindex];
-        bgm.load();
-        bgm.play();
-    }*/
-
-    //change bgm
-    function toggleVidbgm(){
-        if(realshit.volume===0){
-            fadeVidVol(realshit, 1, 200);
-        }else{fadeVidVol(realshit, 0, 200);}
-    }
-    //mute
-    function fadeVidVol(ele, tarVol, duration){
-        var startTime = new Date().getTime();
-        function updateVol(){
-            var currentTime = new Date().getTime();
-            var elap = currentTime - startTime;
-            var progress = elap / duration;
-
-            if(progress<1){
-                ele.volume = ele.volume + (tarVol - ele.volume) * progress;
-                requestAnimationFrame(updateVol);
-            }else{ele.volume=tarVol;}
+            setTimeout(function () {
+                document.getElementById('fade-overlay').style.pointerEvents = 'none';
+                document.getElementById('fade-overlay').style.opacity = '0';
+                document.getElementById('navigtor').style.opacity = '1';
+                document.getElementById('navigtor').style.transform = 'translateX(0)';
+                document.getElementById('textleft').style.opacity = '1';
+                document.getElementById('textleft').style.transform = 'translateX(0)';
+                document.getElementById('omgmid').style.opacity = '1';
+                document.getElementById('omgmid').style.transform = 'translateX(0)';
+                document.getElementById('idcard').style.opacity = '1';
+                document.getElementById('idcard').style.transform = 'translateY(0)';
+                document.getElementById('menuIcon').style.opacity = '1';
+                document.getElementById('menuTab').style.opacity = '1';
+                document.getElementById('menuIcon').style.transform = 'translateY(0)';
+                document.getElementById('menuTab').style.transform = 'translateY(0)'; fadeVidVol(realshit, 1, 500);
+            }, 1250)
         }
-        updateVol();
-    }
-    //fading song 
-    //Doesn't used anymore
 
-    window.onload = function() {
-        document.getElementById('midbut').style.opacity='1';
-    };
+        /*function changebgm(){
+            curindex = (curindex+1)%songlist.length;        bgm.src = songlist[curindex];        bgm.load();        bgm.play();}*/
 
-    function loadingfinisher(){
-        document.querySelector('video').style.filter = 'blur(10px)';
-        document.querySelector('video').play();
-        
-        document.getElementById('midTitle').style.opacity='0';
-        document.getElementById('midTitle').style.transform='translateY(-100%)';
-        document.getElementById('midbut').style.opacity='0';
-        document.getElementById('midbut').style.transform='translateY(-100%)';
-        document.getElementById('hahaha').style.opacity='1';
-        document.getElementById('hahaha').style.transform='translateX(0)';
-        document.getElementById('navigtor').style.opacity='1';
-        document.getElementById('navigtor').style.transform='translateX(0)';
-        document.getElementById('textleft').style.opacity='1';
-        document.getElementById('textleft').style.transform='translateX(0)';
-        document.getElementById('textright').style.opacity='1';
-        document.getElementById('textright').style.transform='translateX(0)';
-        document.getElementById('omgmid').style.opacity='1';
-        document.getElementById('omgmid').style.transform='translateY(140%)';
-        document.getElementById('fade-overlay').style.opacity = '0';
-    }
-    //start animation
-
-const images = document.querySelectorAll('.midimg img');
-let imgindex = 0;
-function fadeimg(){
-    images[imgindex].style.opacity = 0;
-    imgindex=(imgindex+1)%images.length;
-    images[imgindex].style.opacity = 1;
-}
-setInterval(fadeimg,3000);
-//Change Image
-
-        function unbruh(){
-            document.querySelector('video').style.filter = 'blur(0px)';
-            document.getElementById('navigtor').style.opacity='0';
-            document.getElementById('navigtor').style.transform='translateX(120%)';
-            document.getElementById('textleft').style.opacity='0';
-            document.getElementById('textleft').style.transform='translateX(-120%)';
-            document.getElementById('textright').style.opacity='0';
-            document.getElementById('textright').style.transform='translateX(120%)';
-            document.getElementById('omgmid').style.opacity='0';
-            document.getElementById('omgmid').style.transform='translateY(250%)';
+        //change bgm
+        function toggleVidbgm() {
+            if (realshit.volume === 0) {
+                fadeVidVol(realshit, 1, 200);
+            } else { fadeVidVol(realshit, 0, 200); }
         }
-        function bruh(){
+        //mute
+        function fadeVidVol(ele, tarVol, duration) {
+            var startTime = new Date().getTime(); function updateVol() {
+                var currentTime = new Date().getTime(); var elap = currentTime - startTime; var progress = elap / duration;
+
+                if (progress < 1) {
+                    ele.volume = ele.volume + (tarVol - ele.volume) * progress; requestAnimationFrame(updateVol);
+                } else { ele.volume = tarVol; }
+            }
+            updateVol();
+        }
+        //fading song 
+        //Doesn't used anymore
+
+        window.onload = function () {
+
+            document.getElementById('midbut').style.opacity = '1'; loadingfinisher()
+        };
+
+        function loadingfinisher() {
             document.querySelector('video').style.filter = 'blur(10px)';
-            document.getElementById('navigtor').style.opacity='1';
-            document.getElementById('navigtor').style.transform='translateX(0)';
-            document.getElementById('textleft').style.opacity='1';
-            document.getElementById('textleft').style.transform='translateX(0)';
-            document.getElementById('textright').style.opacity='1';
-            document.getElementById('textright').style.transform='translateX(0)';
-            document.getElementById('omgmid').style.opacity='1';
-            document.getElementById('omgmid').style.transform='translateY(140%)';
+            document.querySelector('video').play();
+
+            document.getElementById('midTitle').style.opacity = '0';
+            document.getElementById('midTitle').style.transform = 'translateY(-100%)';
+            document.getElementById('midbut').style.opacity = '0';
+            document.getElementById('midbut').style.transform = 'translateY(-100%)';
+            document.getElementById('hahaha').style.opacity = '1';
+            document.getElementById('hahaha').style.transform = 'translateX(0)';
+            document.getElementById('navigtor').style.opacity = '1';
+            document.getElementById('navigtor').style.transform = 'translateX(0)';
+            document.getElementById('textleft').style.opacity = '1';
+            document.getElementById('textleft').style.transform = 'translateX(0)';
+            document.getElementById('textright').style.opacity = '1';
+            document.getElementById('textright').style.transform = 'translateX(0)';
+            document.getElementById('omgmid').style.opacity = '1';
+            document.getElementById('omgmid').style.transform = 'translateX(0)';
+            document.getElementById('fade-overlay').style.opacity = '0';
+            document.getElementById('menuIcon').style.opacity = '1';
+            document.getElementById('menuTab').style.opacity = '1';
+            document.getElementById('menuIcon').style.transform = 'translateY(0)';
+            document.getElementById('menuTab').style.transform = 'translateY(0)';
+
         }
-        function unlogoer(){
+        //start animation
+
+        const images = document.querySelectorAll('.midimg img'); let imgindex = 0; function fadeimg() {
+            images[imgindex].style.opacity = 0; imgindex = (imgindex + 1) % images.length; images[imgindex].style.opacity = 1;
+        }
+        setInterval(fadeimg, 3000);    //Change Image
+
+        function unbruh() {
+            document.querySelector('video').style.filter = 'blur(0px)';
+            document.getElementById('navigtor').style.opacity = '0';
+            document.getElementById('navigtor').style.transform = 'translateX(120%)';
+            document.getElementById('textleft').style.opacity = '0';
+            document.getElementById('textleft').style.transform = 'translateX(-120%)';
+            document.getElementById('textright').style.opacity = '0';
+            document.getElementById('textright').style.transform = 'translateX(120%)';
+            document.getElementById('omgmid').style.opacity = '0';
+            document.getElementById('omgmid').style.transform = 'translateX(-130%)';
+            document.getElementById('idcard').style.opacity = '0';
+            document.getElementById('idcard').style.transform = 'translateY(-120%)';
+            document.getElementById('menuIcon').style.opacity = '0';
+            document.getElementById('menuTab').style.opacity = '0';
+            document.getElementById('menuIcon').style.transform = 'translateY(160%)';
+            document.getElementById('menuTab').style.transform = 'translateY(160%)';
+        }
+        function bruh() {
+            document.querySelector('video').style.filter = 'blur(10px)';
+            document.getElementById('navigtor').style.opacity = '1';
+            document.getElementById('navigtor').style.transform = 'translateX(0)';
+            document.getElementById('textleft').style.opacity = '1';
+            document.getElementById('textleft').style.transform = 'translateX(0)';
+            document.getElementById('textright').style.opacity = '1';
+            document.getElementById('textright').style.transform = 'translateX(0)';
+            document.getElementById('omgmid').style.opacity = '1';
+            document.getElementById('omgmid').style.transform = 'translateX(0)';
+            document.getElementById('idcard').style.opacity = '1';
+            document.getElementById('idcard').style.transform = 'translateY(0)';
+            document.getElementById('menuIcon').style.opacity = '1';
+            document.getElementById('menuTab').style.opacity = '1';
+            document.getElementById('menuIcon').style.transform = 'translateY(0)';
+            document.getElementById('menuTab').style.transform = 'translateY(0)';
+        }
+        function unlogoer() {
             document.getElementById('logo').style.opacity = '0';
             document.getElementById('logo').style.top = '-250px';
         }
-        function logoer(){
+        function logoer() {
             document.getElementById('logo').style.top = '50px';
             document.getElementById('logo').style.opacity = '1';
         }
         function warp(destinationA) {
-      window.location.href = destinationA;
-    }
-</script>
+            window.location.href = destinationA;
+        }
+    </script>
 </body>
+
 </html>
 
 
 
-
+<!-- OLD VERSION OF INDEX -->
 <!--DOCTYPE html>
 <html lang="en">
 <head>
