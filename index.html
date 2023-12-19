@@ -375,7 +375,8 @@
             document.getElementById('menuIcon').style.opacity = '0';
             document.getElementById('menuTab').style.opacity = '0';
             document.getElementById('menuIcon').style.transform = 'translateY(160%)';
-            document.getElementById('menuTab').style.transform = 'translateY(160%)'; fadeVidVol(realshit, currentvolume, 500);
+            document.getElementById('menuTab').style.transform = 'translateY(160%)';
+            fadeVidVol(realshit, currentvolume, 500);
 
             setTimeout(function () {
                 document.querySelector('video').src = videoname;
@@ -388,8 +389,8 @@
                 document.getElementById('fade-overlay').style.opacity = '0';
                 document.getElementById('navigtor').style.opacity = '1';
                 document.getElementById('navigtor').style.transform = 'translateX(0)';
-                document.getElementById('navigtor').style.opacity = '1';
-                document.getElementById('navigtor').style.transform = 'translateX(0)';
+                document.getElementById('righttext').style.opacity = '1';
+                document.getElementById('righttext').style.transform = 'translateX(0)';
                 document.getElementById('omgmid').style.opacity = '1';
                 document.getElementById('omgmid').style.transform = 'translateX(0)';
                 document.getElementById('idcard').style.opacity = '1';
@@ -405,7 +406,7 @@
             curindex = (curindex+1)%bglist.length;
             changebgvid(bglist[curindex]);
         }
-        //mute
+
         function fadeVidVol(ele, tarVol, duration) {
             var startTime = new Date().getTime();
             function updateVol() {
@@ -418,11 +419,10 @@
             updateVol();
         }
         //fading song 
-        //Doesn't used anymore
 
         window.onload = function () {
 
-            document.getElementById('midbut').style.opacity = '1'; loadingfinisher()
+            document.getElementById('midbut').style.opacity = '1';
         };
 
         function loadingfinisher() {
