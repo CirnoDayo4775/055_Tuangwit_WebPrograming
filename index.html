@@ -105,7 +105,7 @@
             style=" position: fixed; font-style: italic; color: rgb(247, 255, 1); font-size:20px; margin-left: 31px; margin-top: 1px;">LV.</a>
     </div>
 
-    <div  id="logo"
+    <div id="logo"
         style="position: fixed;overflow: hidden;top: -250px;opacity: 0;transition: top 1s, opacity 1s;z-index: 998;">
         <img src="Work 3.5 Profile webpage/image/instance/random/blogo.png" alt="logoimg" id="logoimg"
             draggable="false" />
@@ -141,24 +141,24 @@
         <table>
             <tr>
                 <td>
-                    <img src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" onclick="changebgm()"
-                        width="100px"><br>Cafe
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png"
+                        onclick="changebgm()" width="100px"><br>Cafe
                 </td>
                 <td>
                     <img style="opacity: 0;"
                         src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
                 </td>
                 <td>
-                    <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png" onmouseover="schON()" onmouseout="schOFF()"
-                        width="100px"><br>Schedule
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png"
+                        onmouseover="schON()" onmouseout="schOFF()" width="100px"><br>Schedule
                 </td>
                 <td>
                     <img style="opacity: 0;"
                         src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
                 </td>
                 <td>
-                    <img src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png" onmouseover="profON()" onmouseout="profOFF()"
-                        width="100px"><br>Student
+                    <img src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png"
+                        onmouseover="profON()" onmouseout="profOFF()" width="100px"><br>Student
                 </td>
                 <td>
                     <img style="opacity: 0;"
@@ -196,7 +196,7 @@
         </table>
     </div>
 
-    <div  id="midbut"
+    <div id="midbut"
         style="position: fixed;transform: translateY(220%);border: 2px solid #ccc;padding: 5px;background-color: #eeff00;transition: transform 1s, opacity 0.75s;z-index: 99;opacity: 0;">
         <!-- "Close" button -->
         <button onclick="loadingfinisher()">Close</button>
@@ -268,7 +268,7 @@
 
     <div id="scheduletable"
         style="text-align: center; position: fixed;top: 50px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateY(-130%);opacity: 0;">
-    <img src="img asset/ClassSchedule_6540011055_2_2566.jpg" alt="" width="1050px">
+        <img src="img asset/ClassSchedule_6540011055_2_2566.jpg" alt="" width="1050px">
     </div>
 
     <div id="textright"
@@ -284,7 +284,7 @@
 
     </div>
 
-    <div  id="midTitle"
+    <div id="midTitle"
         style="text-align: center;position: fixed;        border: 2px solid #ccc;        padding: 5px;        background-color: #00ccff80;        transform: translateY(0);        transition: transform 1s, opacity 0.75s;        z-index: 99;">
         <!-- Title at start -->
         <h1>Welcome to Tuangwit's website</h1>
@@ -345,7 +345,7 @@
 <button onclick="loadingfinisher()">blur</button >
     <-->
 
-    <div  id="hahaha"
+    <div id="hahaha"
         style="position: fixed;bottom: 50px;right: 20px;width: 50px;height: 50px;transform: translateX(140%);opacity: 0;transition: transform 1s, opacity 1s;z-index: 6;border: 4px solid #ccc;background-color: #ffffff;">
         <img src="Work 3.5 Profile webpage/image/instance/Untitled.png" style="width: 50;height: 50px;"
             onmouseover="unbruh()" onmouseout="bruh()" draggable="false">
@@ -389,8 +389,8 @@
                 document.getElementById('fade-overlay').style.opacity = '0';
                 document.getElementById('navigtor').style.opacity = '1';
                 document.getElementById('navigtor').style.transform = 'translateX(0)';
-                document.getElementById('righttext').style.opacity = '1';
-                document.getElementById('righttext').style.transform = 'translateX(0)';
+                document.getElementById('textright').style.opacity = '1';
+                document.getElementById('textright').style.transform = 'translateX(0)';
                 document.getElementById('omgmid').style.opacity = '1';
                 document.getElementById('omgmid').style.transform = 'translateX(0)';
                 document.getElementById('idcard').style.opacity = '1';
@@ -398,12 +398,13 @@
                 document.getElementById('menuIcon').style.opacity = '1';
                 document.getElementById('menuTab').style.opacity = '1';
                 document.getElementById('menuIcon').style.transform = 'translateY(0)';
-                document.getElementById('menuTab').style.transform = 'translateY(0)'; fadeVidVol(realshit, currentvolume, 500);
+                document.getElementById('menuTab').style.transform = 'translateY(0)';
+                fadeVidVol(realshit, currentvolume, 500);
             }, 1250)
         }
         var curindex = 1;
-        function changebgm(){
-            curindex = (curindex+1)%bglist.length;
+        function changebgm() {
+            curindex = (curindex + 1) % bglist.length;
             changebgvid(bglist[curindex]);
         }
 
@@ -437,7 +438,7 @@
             document.getElementById('hahaha').style.transform = 'translateX(0)';
             document.getElementById('navigtor').style.opacity = '1';
             document.getElementById('navigtor').style.transform = 'translateX(0)';
-            
+
             document.getElementById('textright').style.opacity = '1';
             document.getElementById('textright').style.transform = 'translateX(0)';
             document.getElementById('omgmid').style.opacity = '1';
@@ -460,7 +461,7 @@
             document.querySelector('video').style.filter = 'blur(0px)';
             document.getElementById('navigtor').style.opacity = '0';
             document.getElementById('navigtor').style.transform = 'translateX(120%)';
-            
+
             document.getElementById('textright').style.opacity = '0';
             document.getElementById('textright').style.transform = 'translateX(120%)';
             document.getElementById('omgmid').style.opacity = '0';
@@ -476,7 +477,7 @@
             document.querySelector('video').style.filter = 'blur(0px)';
             document.getElementById('navigtor').style.opacity = '1';
             document.getElementById('navigtor').style.transform = 'translateX(0)';
-            
+
             document.getElementById('textright').style.opacity = '1';
             document.getElementById('textright').style.transform = 'translateX(0)';
             document.getElementById('omgmid').style.opacity = '1';
@@ -524,7 +525,7 @@
             document.querySelector('video').style.filter = 'blur(0px)';
         }
 
-        
+
     </script>
 </body>
 
