@@ -62,6 +62,10 @@
             border-radius: 80px;
         }
 
+        td img {
+            width: 50%;
+        }
+
         @keyframes coloring {
             0% {
                 background-color: rgba(255, 255, 255, 0.329);
@@ -132,65 +136,46 @@
     </div>
 
     <div id="menuTab"
-        style="transition: transform 1s, opacity 1s; border: 100px solid #ffffff; position: fixed; background-color: #ffffff; height: 50px; z-index: 30; bottom: -150px; border-radius: 30px;">
-        zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+        style="transition: transform 1s, opacity 1s; ; position: fixed; background-color: #ffffff; height: 14%; width: 70%; z-index: 30; bottom: -4%; border-radius: 10px;">
+        
     </div>
 
     <div id="menuIcon"
-        style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 70px;z-index: 31;bottom: 80px;">
+        style="transition: transform 1s, opacity 1s; text-align: center;font-size: 40px;position: fixed;height: 7%;width: 70%;z-index: 31;bottom: 7%; font-size: 2vw;">
         <table>
             <tr>
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png"
-                        onclick="changebgm()" width="100px"><br>Cafe
+                        onclick="changebgm()"><br>Cafe
                 </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
-                </td>
+                
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png"
-                        onmouseover="schON()" onmouseout="schOFF()" width="100px"><br>Schedule
+                        onmouseover="schON()" onmouseout="schOFF()"><br>Schedule
                 </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
-                </td>
+                
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png"
-                        onmouseover="profON()" onmouseout="profOFF()" width="100px"><br>Student
-                </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
+                        onmouseover="profON()" onmouseout="profOFF()"><br>Student
                 </td>
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/3/3e/MP_Circle.png"
-                        width="100px"><br>Club
+                       ><br>Club
                 </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
-                </td>
+                
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/3/3c/MP_Crafting.png"
-                        width="100px"><br>Crafting
+                       ><br>Crafting
                 </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
-                </td>
+                
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/3/35/MP_Shop.png"
-                        width="100px"><br>Shop
+                       ><br>Shop
                 </td>
-                <td>
-                    <img style="opacity: 0;"
-                        src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" width="100px">
-                </td>
+                
                 <td>
                     <img src="https://static.wikia.nocookie.net/blue-archive/images/6/6d/MP_Gacha.png"
-                        width="100px"><br>Recruit
+                       ><br>Recruit
                 </td>
             </tr>
         </table>
@@ -267,8 +252,8 @@
     </div>
 
     <div id="scheduletable"
-        style="text-align: center; position: fixed;top: 50px;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateY(-130%);opacity: 0;">
-        <img src="img asset/ClassSchedule_6540011055_2_2566.jpg" alt="" width="1050px">
+        style="text-align: center; position: fixed;border: 2px solid #ccc;padding: 5px;background-color: #f9f9f9;z-index: 30;transition: transform 1s, opacity 0.75s;transform: translateY(-130%);opacity: 0; width: 70%;">
+        <img src="img asset/ClassSchedule_6540011055_2_2566.jpg" alt="" width="80%">
     </div>
 
     <div id="textright"
@@ -422,8 +407,9 @@
         //fading song 
 
         window.onload = function () {
-
             document.getElementById('midbut').style.opacity = '1';
+            
+            loadingfinisher();
         };
 
         function loadingfinisher() {
