@@ -1,4 +1,3 @@
-loadContent("ZIndexFile/htmlfile/idcard.html", "idcard");
 var currentvolume = 1;
 function changevolumebg(targetvol) {
   currentvolume = targetvol;
