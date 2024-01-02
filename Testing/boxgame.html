@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        #randomNumberDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        #clickCount {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #resetButton {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Random Table</title>
+</head>
+<body>
+
+<script>
+    // Function to shuffle an array
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    // Function to reset the table and generate a new random number
+    function resetTable() {
+        // Generate a new random order for numbers 1 to 100
+        shuffleArray(numbers);
+
+        // Generate a new random number from 1 to 100
+        randomNumber = Math.floor(Math.random() * 100) + 1;
+
+        // Reset cell styles, content, and enable click events
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < 10; j++) {
+                const cell = document.getElementById(`cell_${i}_${j}`);
+                cell.style.backgroundColor = '';
+                cell.innerHTML = '';
+                cell.onclick = () => cellClick(i, j);
+            }
+        }
+
+        // Update the displayed random number
+        randomNumberDisplay.textContent = `ตัวเลขของคุณในครั้งนี้ : ${randomNumber}`;
+
+        // Reset click count
+        clickCount = 0;
+        clickCountDisplay.textContent = `จำนวนครั้งที่กดไปแล้ว: ${clickCount} / 50`;
+    }
+
+    // Generate a random order for numbers 1 to 100
+    let numbers = Array.from({ length: 100 }, (_, i) => i + 1);
+    shuffleArray(numbers);
+
+    // Generate a random number from 1 to 100
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+
+    // Variable to track the click count
+    let clickCount = 0;
+    let winCount = 0;
+    let loseCount = 0;
+
+    // Function to handle cell click
+    function cellClick(row, col) {
+        clickCount++;
+
+        const cellValue = numbers[row * 5 + col];
+        const cell = document.getElementById(`cell_${row}_${col}`);
+
+        if (cellValue === randomNumber) {
+            
+            cell.style.backgroundColor = 'green';
+
+            if(clickCount<51){
+            winCount++;
+            }
+
+            if(clickCount>51){
+            loseCount++;
+            }
+            
+        }
+
+        cell.innerHTML = cellValue;
+
+        // Disable click event for the clicked cell
+        cell.onclick = null;
+
+        // Update the click count display
+        clickCountDisplay.textContent = `จำนวนครั้งที่กดไปแล้ว: ${clickCount} / 50`;
+        numberofwin.textContent = `จำนวนครั้งที่หาเลขสำเร็จ ${winCount}`;
+        numberoflose.textContent = `จำนวนครั้งที่หาเลขล้มเหลว : ${loseCount}`;
+    }
+
+    // Create the table
+    const table = document.createElement('table');
+    for (let i = 0; i < 10; i++) {
+        const row = table.insertRow(i);
+        for (let j = 0; j < 10; j++) {
+            const cell = row.insertCell(j);
+            cell.id = `cell_${i}_${j}`;
+            cell.onclick = () => cellClick(i, j);
+        }
+    }
+
+    // Append the table to the body
+    document.body.appendChild(table);
+
+    // Display the randomly generated number
+    const randomNumberDisplay = document.createElement('div');
+    randomNumberDisplay.id = 'randomNumberDisplay';
+    randomNumberDisplay.textContent = `ตัวเลขของคุณในครั้งนี้ : ${randomNumber}`;
+    document.body.appendChild(randomNumberDisplay);
+
+    // Display the click count
+    const clickCountDisplay = document.createElement('div');
+    clickCountDisplay.id = 'clickCount';
+    clickCountDisplay.textContent = `จำนวนครั้งที่กดไปแล้ว : ${clickCount} / 50`;
+    document.body.appendChild(clickCountDisplay);
+
+    // Display the click count
+    const numberofwin = document.createElement('div');
+    numberofwin.id = 'clicker';
+    numberofwin.textContent = `จำนวนครั้งที่หาเลขสำเร็จ : ${winCount}`;
+    document.body.appendChild(numberofwin);
+
+    const numberoflose = document.createElement('div');
+    numberoflose.id = 'clicklose';
+    numberoflose.textContent = `จำนวนครั้งที่หาเลขล้มเหลว : ${loseCount}`;
+    document.body.appendChild(numberoflose);
+
+    // Add a reset button
+    const resetButton = document.createElement('button');
+    resetButton.id = 'resetButton';
+    resetButton.textContent = 'Reset Table';
+    resetButton.onclick = resetTable;
+    document.body.appendChild(resetButton);
+</script>
+
+</body>
+</html>

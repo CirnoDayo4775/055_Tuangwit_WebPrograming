@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random 1s and 0s Array</title>
+</head>
+
+<body>
+
+  <h2>Bunkshot Roulette</h2>
+
+  <p>
+    Version 1 : Game has been created. (3/1 00:20)
+    <br><li>Has 1 type of item "Spyglass" which can bullet in chamber.</li>
+  </p>
+
+  <button onclick="test()">Test Bullet Generator</button><br><br>
+
+  <button onclick="itemgiving()">Test item giving</button><br><br>
+
+  <button onclick="startgame()">Start the game</button><br><br>
+
+  <table border="3px" style="text-align: center;">
+    <tr>
+      <td id="player1name" colspan="4"><input type="text" style="text-align: center;" value="Player 1"></td>
+      <td id="player2name" colspan="4"><input type="text" style="text-align: center;" value="Player 2"></td>
+    </tr>
+    <tr>
+      <td id="player1life1"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player1life2"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player1life3"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player1life4"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player2life1"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player2life2"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player2life3"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+      <td id="player2life4"><img src="https://static.wikia.nocookie.net/blue-archive/images/6/67/MP_Bond.png" alt=""
+          width="30px"></td>
+    </tr>
+    <tr>
+      <td id="player1shot" colspan="2"><button onclick="shotgunshot(1,1)">Self</button></td>
+      <td id="player1shot" colspan="2"><button onclick="shotgunshot(1,3)">Other</button></td>
+      <td id="player2shot" colspan="2"><button onclick="shotgunshot(3,3)">Self</button></td>
+      <td id="player2shot" colspan="2"><button onclick="shotgunshot(3,1)">Other</button></td>
+    </tr>
+    <tr>
+      <td id="player1shot" colspan="4">ITEM</td>
+      <td id="player1shot" colspan="4">ITEM</td>
+    </tr>
+    <tr>
+      <td id="player1item1" style="width: 10%;"><button id="player1item1b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player1item2" style="width: 10%;"><button id="player1item2b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player1item3" style="width: 10%;"><button id="player1item3b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player1item4" style="width: 10%;"><button id="player1item4b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player2item1" style="width: 10%;"><button id="player2item1b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player2item2" style="width: 10%;"><button id="player2item2b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player2item3" style="width: 10%;"><button id="player2item3b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+      <td id="player2item4" style="width: 10%;"><button id="player2item4b" style="width: 100%;"
+          onclick=null>[Empty]</button></td>
+    </tr>
+  </table>
+
+  <p id="result"></p>
+
+  <p id="shotout"></p>
+
+  <p id="currentbulletmsg"></p>
+
+
+  <audio id="click" style="display: none;">
+    <source src="mp3effect/Gun Click - Sound Effects - Sound FX.mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="shooot" style="display: none;">
+    <source src="mp3effect/x2mate.com - Doom Shotgun Sound Effect (128 kbps).mp3" type="audio/mp3">
+  </audio>
+
+  <audio id="heaal" style="display: none;">
+    <source src="mp3effect/x2mate.com - Minecraft Drinking Sound Effect (HD) (128 kbps).mp3" type="audio/mp3">
+  </audio>
+
+
+  <script>
+    totalbullet = Math.floor(Math.random() * (6)) + 3;
+    countZeros = 0;
+    countOnes = 0;
+    randomArray = Array.from({ length: totalbullet }, () => Math.round(Math.random()));
+    player1lifeA = 4;
+    player2lifeA = 4;
+    currentbullet = 0;
+    resultElement = document.getElementById('result');
+    shotgundamage = 1;
+    let previousButtonClickHandler;
+
+    b1 = 0;
+    b2 = 0;
+    b3 = 0;
+    b4 = 0;
+    b5 = 0;
+    b6 = 0;
+    b7 = 0;
+    b8 = 0;
+
+    window.onload = function () {
+      startgame();
+    }
+
+    function startgame() {
+      generateArray();
+      showsetofbulletplay(totalbullet, randomArray, countOnes, countZeros);
+    }
+
+    function test() {
+      generateArray();
+      showsetofbullet(totalbullet, randomArray, countOnes, countZeros);
+    }
+
+    function generateArray() {
+      currentbullet = 0;
+      itemgiving();
+      for (let check = 5; check > 4; check++) {
+
+        totalbullet = Math.floor(Math.random() * (6)) + 3;
+
+        // Generate the array with random 1s and 0s
+        randomArray = Array.from({ length: totalbullet }, () => Math.round(Math.random()));
+
+        // Count the number of 1s and 0s
+        countOnes = randomArray.filter(value => value === 1).length;
+        countZeros = randomArray.length - countOnes;
+        if (countOnes <= countZeros && countOnes != 0) {
+          check = 0;
+        }
+      }
+    }
+
+    function showsetofbullet(totalbullet, randomArray, countOnes, countZeros) {
+      resultElement.textContent = `ในรังเพลิงนี้มีกระสุน ${totalbullet} ลูก [${randomArray.join(', ')}]\nกระสุนจริง ${countOnes} ลูก\rกระสุนด้าน ${countZeros} ลูก`;
+    }
+
+    function showsetofbulletplay(totalbullet, randomArray, countOnes, countZeros) {
+      resultElement.textContent = `ในรังเพลิงนี้มีกระสุน ${totalbullet} ลูก\nกระสุนจริง ${countOnes} ลูก\rกระสุนด้าน ${countZeros} ลูก`;
+    }
+
+    function shotgunshot(shooter, target) {
+      currentbullet++;
+
+      for (let count = 1; count <= shotgundamage; count++) {
+
+        if (randomArray[currentbullet-1] == 1) {
+          document.getElementById("shooot").play();
+          lifeupdate(target, -1);
+        } else {
+          document.getElementById("click").play();
+        }
+        if (currentbullet == randomArray.length) {
+          startgame();
+        }
+      }
+      
+      shotgundamage = 1;
+
+
+      if(player1lifeA==0){
+        document.getElementById('shotout').textContent = 'ผู้เล่น 2 ชนะ';
+      }if(player2lifeA==0){
+        document.getElementById('shotout').textContent = 'ผู้เล่น 1 ชนะ';
+      }
+
+    }
+
+
+    function lifeupdate(targetshot, lifechage) { //1=plus -1=down
+      if (lifechage == -1) {
+        if (targetshot == 1) {
+
+          if (player1lifeA == 4) {
+            document.getElementById('player1life4').style.opacity = 0.2;
+          }
+
+          if (player1lifeA == 3) {
+            document.getElementById('player1life3').style.opacity = 0.2;
+          }
+
+          if (player1lifeA == 2) {
+            document.getElementById('player1life2').style.opacity = 0.2;
+          }
+
+          if (player1lifeA == 1) {
+            document.getElementById('player1life1').style.opacity = 0.2;
+          }
+
+          player1lifeA = player1lifeA + lifechage;
+        }
+
+        if (targetshot == 3) {
+
+          if (player2lifeA == 4) {
+            document.getElementById('player2life4').style.opacity = 0.2;
+          }
+
+          if (player2lifeA == 3) {
+            document.getElementById('player2life3').style.opacity = 0.2;
+          }
+
+          if (player2lifeA == 2) {
+            document.getElementById('player2life2').style.opacity = 0.2;
+          }
+
+          if (player2lifeA == 1) {
+            document.getElementById('player2life1').style.opacity = 0.2;
+          }
+
+          player2lifeA = player2lifeA + lifechage;
+        }
+      }
+
+      if (lifechage == 1) {
+        if (targetshot == 1 && player1lifeA < 4) {
+          player1lifeA = player1lifeA + lifechage;
+          if (player1lifeA == 4) {
+            document.getElementById('player1life4').style.opacity = 1;
+          }
+
+          if (player1lifeA == 3) {
+            document.getElementById('player1life3').style.opacity = 1;
+          }
+
+          if (player1lifeA == 2) {
+            document.getElementById('player1life2').style.opacity = 1;
+          }
+
+          if (player1lifeA == 1) {
+            document.getElementById('player1life1').style.opacity = 1;
+          }
+        }
+
+        if (targetshot == 2 && player2lifeA < 4) {
+          player2lifeA = player2lifeA + lifechage;
+          if (player2lifeA == 4) {
+            document.getElementById('player2life4').style.opacity = 1;
+          }
+
+          if (player2lifeA == 3) {
+            document.getElementById('player2life3').style.opacity = 1;
+          }
+
+          if (player2lifeA == 2) {
+            document.getElementById('player2life2').style.opacity = 1;
+          }
+
+          if (player2lifeA == 1) {
+            document.getElementById('player2life1').style.opacity = 1;
+          }
+        }
+      }
+    }
+
+    /*function mcltHeal(targetheal, buttonclick) {
+      lifeupdate(targetheal, 1);
+      document.getElementById("heaal").play();
+    }
+
+    function doubledamage() {
+      shotgundamage = 2;
+    }
+*/
+
+    function buttonfunction(whoclick, buttonclick, functionitis) {//functionitis | 1 = heal | 2 = Saw | 3 = Glasses
+
+      if (functionitis == 1) {
+       // mcltHeal(whoclick, 1);
+      }
+
+      if (functionitis == 2) {
+        //doubledamage();
+      }
+
+      if (functionitis == 3) {
+        spycheck();
+      }
+
+      if (buttonclick == 1) {
+        document.getElementById('player1item1b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player1item1b').innerText = "[Empty]";
+        b1 = 0;
+      }
+
+      if (buttonclick == 2) {
+        document.getElementById('player1item2b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player1item2b').innerText = "[Empty]";
+        b2 = 0;
+      }
+
+      if (buttonclick == 3) {
+        document.getElementById('player1item3b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player1item3b').innerText = "[Empty]";
+        b3 = 0;
+      }
+
+      if (buttonclick == 4) {
+        document.getElementById('player1item4b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player1item4b').innerText = "[Empty]";
+        b4 = 0;
+      }
+
+      if (buttonclick == 5) {
+        document.getElementById('player2item1b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player2item1b').innerText = "[Empty]";
+        b5 = 0;
+      }
+
+      if (buttonclick == 6) {
+        document.getElementById('player2item2b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player2item2b').innerText = "[Empty]";
+        b6 = 0;
+      }
+
+      if (buttonclick == 7) {
+        document.getElementById('player2item3b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player2item3b').innerText = "[Empty]";
+        b7 = 0;
+      }
+
+      if (buttonclick == 8) {
+        document.getElementById('player2item4b').removeEventListener('click', previousButtonClickHandler);
+        document.getElementById('player2item4b').innerText = "[Empty]";
+        b8 = 0;
+      }
+    }
+
+    function emptyfunc(){
+      return;
+    }
+
+    function itemgiving() {
+      itemtype = 3;//Math.floor(Math.random() * (3)) + 1;
+      stay = 0;
+      if (stay == 0 && b1 == 0) {
+        document.getElementById('player1item1b').addEventListener('click', () => buttonfunction(1, 1, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player1item1b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player1item1b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player1item1b').innerText = "[Spyglass]";
+        }
+        b1 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b2 == 0) {
+        document.getElementById('player1item2b').addEventListener('click', () => buttonfunction(1, 2, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player1item2b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player1item2b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player1item2b').innerText = "[Spyglass]";
+        }
+        b2 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b3 == 0) {
+        document.getElementById('player1item3b').addEventListener('click', () => buttonfunction(1, 3, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player1item3b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player1item3b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player1item3b').innerText = "[Spyglass]";
+        }
+        b3 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b4 == 0) {
+        document.getElementById('player1item4b').addEventListener('click', () => buttonfunction(1, 4, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player1item4b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player1item4b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player1item4b').innerText = "[Spyglass]";
+        }
+        b4 = 1;
+        stay = 1;
+      }
+
+      itemtype = 3;//Math.floor(Math.random() * (3)) + 1;
+      stay = 0;
+
+      if (stay == 0 && b5 == 0) {
+        document.getElementById('player2item1b').addEventListener('click', () => buttonfunction(2, 5, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player2item1b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player2item1b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player2item1b').innerText = "[Spyglass]";
+        }
+        b5 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b6 == 0) {
+        document.getElementById('player2item2b').addEventListener('click', () => buttonfunction(2, 6, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player2item2b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player2item2b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player2item2b').innerText = "[Spyglass]";
+        }
+        b6 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b7 == 0) {
+        document.getElementById('player2item3b').addEventListener('click', () => buttonfunction(2, 7, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player2item3b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player2item3b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player2item3b').innerText = "[Spyglass]";
+        }
+        b7 = 1;
+        stay = 1;
+      }
+
+      if (stay == 0 && b8 == 0) {
+        document.getElementById('player2item4b').addEventListener('click', () => buttonfunction(2, 8, itemtype)); stay = 1;
+        if (itemtype == 1) {
+          document.getElementById('player2item4b').innerText = "[Milk]";
+        }
+        if (itemtype == 2) {
+          document.getElementById('player2item4b').innerText = "[Saw]";
+        }
+        if (itemtype == 3) {
+          document.getElementById('player2item4b').innerText = "[Spyglass]";
+        }
+        b8 = 1;
+        stay = 1;
+      }
+    }
+
+    function spycheck(){
+      document.getElementById('currentbulletmsg').textContent = 'กระสุนถัดไปคือกระสุนด้าน';
+      if(randomArray[currentbullet]==1){
+        document.getElementById('currentbulletmsg').textContent = 'กระสุนถัดไปคือกระสุนจริง';
+      }
+      
+    }
+
+  </script>
+
+</body>
+
+</html>
