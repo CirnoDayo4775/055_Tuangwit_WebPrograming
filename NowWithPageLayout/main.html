@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+@font-face {
+            font-family: 'printable4uregular';
+            src: url('../font/PrintAble4URegularver100.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'printable4uregular'
+        }
+
+    .navigtors {
+            position: fixed;
+            top: 15vh;
+            right: 20px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .test, .test2{
+            width: 20vw;
+            border: 3px solid black;
+            margin: 2px;
+            padding: 3px;   
+        }
+
+        .test{
+            position: relative;
+        }
+        .test2{
+            position: relative; 
+            top:10vh;
+            left:5vw;  
+        }
+        .test3{
+            position: absolute;
+            right:0px;
+            top: 0px;
+            width: 3vw;
+            border: 3px solid black;
+            background-color: rgba(255, 255, 0, 0.46);   
+        }
+
+        .columnA,.columnB,.columnC,.columnD,.columnE,.columnF{
+width: 20vw;
+border: 3px solid rgb(218, 11, 255);
+padding: 2vw;
+margin: 30px;
+        }
+
+.columnA{
+    background-color: rgba(0, 255, 255, 0.362);
+    animation: coloring3 0.7s infinite;
+    float: left;
+}
+.columnB{
+    background-color: rgba(68, 255, 0, 0.362);
+    animation: coloring2 0.3s infinite;
+    float: left;
+}
+.columnC{
+    background-color: rgba(255, 98, 0, 0.362);
+    animation: coloring 0.1s infinite;
+    float: left;
+}
+
+
+.columnD{
+    background-color: rgba(0, 255, 255, 0.362);
+    animation: coloring3 0.7s infinite;
+    float: left;
+    clear: left;
+}
+.columnE{
+    background-color: rgba(68, 255, 0, 0.362);
+    animation: coloring2 0.3s infinite;
+    float: left;
+}
+.columnF{
+    background-color: rgba(255, 98, 0, 0.362);
+    animation: coloring 0.1s infinite;
+    float: left;
+}
+
+.clearing{
+    clear: both;
+}
+
+@keyframes coloring {
+    0% {
+        background-color: rgba(255, 0, 0, 0.329);
+    }
+
+    50% {
+        background-color: rgba(105, 222, 252, 0.329);
+    }
+
+    100% {
+        background-color: rgba(255, 0, 0, 0.329);
+    }
+}
+@keyframes coloring2 {
+    0% {
+        background-color: rgba(0, 255, 30, 0.329);
+    }
+
+    50% {
+        background-color: rgba(105, 222, 252, 0.329);
+    }
+
+    100% {
+        background-color: rgba(0, 255, 30, 0.329);
+    }
+}
+@keyframes coloring3 {
+    0% {
+        background-color: rgba(183, 255, 0, 0.329);
+    }
+
+    50% {
+        background-color: rgba(105, 222, 252, 0.329);
+    }
+
+    100% {
+        background-color: rgba(183, 255, 0, 0.329);
+    }
+}
+
+</style>
+<body>
+
+<div class="columnA">
+    <h1>Number 1</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+<div class="columnB">
+    <h1>Number 2</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt eveniet omnis vel sapiente aut voluptatum reiciendis reprehenderit laboriosam fugit, porro quia inventore dignissimos distinctio animi culpa assumenda a architecto ullam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem sit accusamus quo corporis minus totam. Dolor, aliquid, deleniti enim soluta est maiores fugit, eaque debitis molestias perspiciatis quod veniam beatae!
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+<div class="columnC">
+    <h1>Number 3</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+
+<div class="columnD">
+    <h1>Number 4</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+<div class="columnE">
+    <h1>Number 5</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+<div class="columnF">
+    <h1>Number 6</h1>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, iusto explicabo? Neque officia aut error est, architecto fugiat quisquam placeat fuga mollitia voluptatem tempora labore tenetur quibusdam dolorem, sequi corrupti.
+</div>
+<div class="clearing"></div>
+
+
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque illum consequuntur pariatur voluptatem, veniam natus atque magni expedita excepturi totam quidem, laboriosam commodi aliquam, quam molestiae accusantium obcaecati magnam aut.</p>
+
+
+    <!--div>
+        <div class="test">
+            <h3>Title 1</h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam odit pariatur tempora, officia repellendus sed autem obcaecati recusandae laudantium? Aliquam earum fugit illo esse mollitia modi tempore dolor nesciunt molestiae?
+            <div class="test3">
+                More
+            </div>
+            
+        </div>
+        <div class="test2">
+            <h3>Title 2</h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam odit pariatur tempora, officia repellendus sed autem obcaecati recusandae laudantium? Aliquam earum fugit illo esse mollitia modi tempore dolor nesciunt molestiae?
+        </div>
+    </div-->
+    <div class="navigtors" id="navigtor"><!-- Navigator for going to home page -->
+        <button onclick="warp('../index.html')">
+            Home
+        </button>
+    </div>
+
+    
+    <script>
+        function warp(destinationA) {
+  window.location.href = destinationA;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link rel="stylesheet" href="../ZIndexFile/stylesheet.css"-->
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'printable4uregular';
+            src: url('../font/PrintAble4URegularver100.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            height: 100vh;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'printable4uregular'
+        }
+
+        button {
+            font-family: 'printable4uregular';
+            z-index: 20;
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .navigtors {
+            position: fixed;
+            top: 15vh;
+            right: 20px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            background-color: #f9f9f9;
+            z-index: 30;
+            transition: transform 1s, opacity 0.75s;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .tabBUTTON {
+            background-color: rgb(205, 205, 205);
+            width: 8%;
+            height: 8vh;
+            position: fixed;
+            top: 1vh;
+            z-index: 0;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        .tabBUTTON button {
+            position: absolute;
+            left: 35%;
+            top: 35%;
+        }
+
+        span {
+            background-color: green;
+        }
+
+        .menu>li {
+            display: inline;
+            margin: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .menu {
+            border-top: 2px solid #000000;
+            border-bottom: 2px solid #000000;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        #example img {
+
+            width: 450px;
+            height: 300px;
+            margin: 3px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div
+        style="background-color: rgb(0, 0, 0); width: 100%; height: 10vh;position: fixed;top: 0px; z-index: -1; left: 0px;">
+        <!-- HERE WILL BE THE BUTTON PART-->
+
+        <div class="tabBUTTON" style="left: 1%;">
+            <!-- BUTTON-->
+            <button onclick="warp('../index.html')">
+                Home
+            </button>
+        </div>
+
+
+        <div class="tabBUTTON" style="left: 11%;">
+            <!-- BUTTON-->
+        </div>
+
+        <div class="tabBUTTON" style="left: 21%;">
+            <!-- BUTTON-->
+        </div>
+
+        <div class="tabBUTTON" style="left: 31%;">
+            <!-- BUTTON-->
+        </div>
+
+        <div class="tabBUTTON" style="left: 41%;">
+            <!-- BUTTON-->
+        </div>
+
+
+    </div>
+
+    <!--div id="allcontent"
+        style="background-color: #a1a1a1; width: 100%; height: 100vh;position: fixed;top: 10vh;z-index: -1; left: 0px;">
+        <ALL CONTENT WILL BE HERE>
+        <p style="background-color: aliceblue;">
+            Lorem ipsum, dolor sit amet <span>consectetur adipisicing elit. Porro fuga cupiditate tempore tenetur ad at
+                eius magni enim, impedit cum quisquam culpa ratione animi laborum,</span> dolorem sequi, illo beatae ab?
+        </p>
+
+        <div
+            style="width: 300px; padding: 5px; background-color: rgb(255, 108, 108); border: 2px solid #000; margin: 0px 0px 0px 15px; border-radius: 10px;">
+            asdasd
+        </div>
+        <br>
+        <div
+            style="width: 300px; padding: 5px; background-color: rgb(72, 255, 81); border: 2px solid #0008ff; margin: 0px 0px 0px 15px; border-radius: 10px;">
+            asdasd
+        </div>
+
+        <li>ok</li>
+        <li>ok</li>
+        <li>ok</li>
+
+    </div -->
+
+    <div style="background-color: #a1a1a1; width: 100%; height: 100vh; position: fixed; top: 10%;">
+
+
+        <div id="example"
+            style="background-color: #d3d3d3; width: 80%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; display: flex; flex-direction: column; align-items: center; border: #000000 solid 5px; padding-bottom: 30px;">
+
+            <h1 style="align-self: center;">YES PLEASE</h1>
+            <h3>Here's a bunch of random images</h3>
+            <div class='menu' style="list-style-type: none;">
+                <li>Here's a thing</li>
+                <li>I don't know</li>
+                <li>What to do</li>
+                <li>So. . .</li>
+                <li>Yeah. . .</li>
+            </div>
+            <div style="display: flex;">
+                <img src="img/Silence.jpg">
+                <img src="img/wtf.jpg">
+                <img src="img/Smug.jpg">
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="navigtors" id="navigtor"><!-- Navigator for going to home page -->
+        <button onclick="warp('../index.html')">
+            Home
+        </button>
+    </div>
+
+</body>
+
+<script>
+    function warp(destinationA) {
+        window.location.href = destinationA;
+    }
+</script>
+
+</html>

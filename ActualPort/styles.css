@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'printable4uregular';
+    src: url('../font/PrintAble4URegularver100.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'printable4uregular';
+}
+
+button {
+    font-family: 'printable4uregular';
+    z-index: 20;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.navigtors {
+    position: fixed;
+    top: 15vh;
+    right: 20px;
+    border: 2px solid #ccc;
+    padding: 5px;
+    background-color: #f9f9f9;
+    z-index: 30;
+    transition: transform 1s, opacity 0.75s;
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.tabBUTTON {
+    background-color: rgb(205, 205, 205);
+    width: 8%;
+    height: 8vh;
+    position: fixed;
+    top: 1vh;
+    z-index: 0;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.tabBUTTON button {
+    position: absolute;
+    left: 35%;
+    top: 35%;
+}
+
+span {
+    background-color: green;
+}
+
+.menu>li {
+    display: inline;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.menu {
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#example img {
+    width: 450px;
+    height: 300px;
+    margin: 3px;
+    margin-top: 40px;
+}
