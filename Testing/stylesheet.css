@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'printable4uregular';
+    src: url('../font/PrintAble4URegularver100.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  body {
+    position: fixed;
+    padding-left: 0px;
+    margin-left: 0px;
+    height: 100vh;
+    width: 100vw;
+    
+    overflow: hidden;
+    font-family: 'printable4uregular';
+    background-color: rgb(187, 187, 187);
+  }
+
+  .mainscreen{
+    padding: 0.5%;
+  }
+
+  .backgrounder{
+    z-index: -2;
+  }
+  #table1{
+    border: 2px solid black;
+    
+  }
+  #table1 div div{
+    border: 2px solid black;
+    margin: 3px;
+  }
+
