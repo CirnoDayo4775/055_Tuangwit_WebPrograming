@@ -34,3 +34,33 @@
     margin: 3px;
   }
 
+  .navbar-brand{
+    color: rgb(98, 237, 255);
+    font-style: italic;
+  }
+
+  #test{
+    border-radius: 10px;
+  }
+
+  #delmargin{
+    margin:0px;
+    padding: 0px;
+  }
+
+  .bg-body-tertiary{
+    background-color:cornsilk!important;
+  }
+
+  #boxilator{
+    background-color: rgb(240, 248, 255)!important;
+    padding: 20px;
+    /*border: 3px solid black;
+    border-radius: 10px;*/
+  }
+
+  #boxilator #block{
+    margin: 10px!important;
+    border: 2px solid black;
+    border-radius: 30px;
+  }
