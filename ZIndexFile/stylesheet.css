@@ -11,7 +11,7 @@
 }
 
 body {
-    display: flex;
+    display: fixed;
     align-items: center;
     justify-content: center;
     
@@ -39,8 +39,10 @@ body {
 video {
     object-fit: cover;
 
-    height: 100vh;
-    width: 100vw;
+    position: fixed!important;
+    width: 100vw!important;
+    height: 100vh!important;
+    top: 0!important;
     z-index: -1;
     filter: blur(0px);
     transition: filter 0.5s ease;
@@ -50,7 +52,7 @@ video {
 }
 
 #omgmid img {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     transition: transform 1s, opacity 1s ease-in-out;
@@ -116,6 +118,7 @@ td img {
     position: fixed;
     overflow: hidden;
     top: -250px;
+    left: 30vw;
     opacity: 0;
     transition: top 1s, opacity 1s;
     z-index: 998;
@@ -126,9 +129,10 @@ td img {
 }
 
 #fade-overlay {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
+    position: fixed!important;
+    width: 100vw!important;
+    height: 100vh!important;
+    top: 0!important;
     background-color: black;
     opacity: 1;
     z-index: 50;
@@ -151,6 +155,8 @@ td img {
 #scheduletable {
     text-align: center;
     position: fixed;
+    top: 15%;
+    right: 15%;
     border: 2px solid #ccc;
     padding: 5px;
     background-color: #f9f9f9;
@@ -197,8 +203,12 @@ td img {
 
 #midTitle {
     text-align: center;
+    justify-content: center;
     position: fixed;
     border: 2px solid #ccc;
+    left: 30vw;
+    width: 40vw;
+    top: 40vh;
     padding: 5px;
     background-color: #00ccff80;
     transform: translateY(0);
@@ -209,7 +219,8 @@ td img {
 #textleft {
     text-align: center;
     position: fixed;
-    top: 50px;
+    top: 15%;
+    right: 35%;
     border: 2px solid #ccc;
     padding: 5px;
     background-color: #f9f9f9;
@@ -238,6 +249,8 @@ td img {
     position: fixed;
     transform: translateY(220%);
     border: 2px solid #ccc;
+    left: 48vw;
+    top: 40vh;
     padding: 5px;
     background-color: #eeff00;
     transition: transform 1s, opacity 0.75s;
@@ -256,6 +269,11 @@ td img {
     #omgmid {
         width: 15vw;
         height: 17vh;
+        
+    }
+
+    .navigtors{
+        opacity: 1;
     }
 }
 
@@ -272,6 +290,10 @@ td img {
     #omgmid {
         width: 15vh!important;
         height: 17vw!important;
+    }
+
+    .navigtors{
+        opacity: 0;
     }
 }
 

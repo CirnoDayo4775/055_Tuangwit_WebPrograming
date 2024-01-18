@@ -75,7 +75,7 @@ function fadeVidVol(ele, tarVol, duration) {
 
 window.onload = function () {
   document.getElementById("midbut").style.opacity = "1";
-  loadingfinisher();
+  //loadingfinisher();
 };
 
 function loadingfinisher() {
