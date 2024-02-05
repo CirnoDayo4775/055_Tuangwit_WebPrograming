@@ -426,12 +426,12 @@ td img {
     }
 
     #omgmid {
-        width: 26vh !important;
+        width: 26vw !important;
         height: 18vw !important;
     }
 
     .navigtors {
-        right: -13%;
+        right: -75%;
         top: 10%;
     }
 
@@ -442,7 +442,7 @@ td img {
     }
 
     #menuTab {
-        height: 14%;
+        height: 16%;
         width: 70%;
         z-index: 30;
         bottom: -4%;
@@ -472,11 +472,11 @@ td img {
         left: 7%;
         bottom: 17%;
         width: 15%;
-        height: 17%;
+        height: 18%;
     }
 
     #hahaha {
-        right: -10%;
+        right: -70%;
     }
 
     #hahaha img {
@@ -485,9 +485,9 @@ td img {
     }
 
     #midTitle {
-        left: 45vw;
-        width: 40vw;
-        top: 30vh;
+        left: 25vh;
+        width: 40vh;
+        top: 20vw;
     }
 
     #textleft {
@@ -497,17 +497,17 @@ td img {
 
     #textright {
         bottom: 2%;
-        right: -30%;
+        right: -95%;
         width: 15%;
     }
 
     #midbut {
-        left: 60vw;
-        top: 40vh;
+        left: 40vh;
+        top: 40vw;
     }
 
     .navigtors {
-        opacity: 0;
+        /*top: -3000vw;*/
     }
 }
 
