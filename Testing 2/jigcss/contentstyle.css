@@ -1,0 +1,9 @@
+.bignewhead {
+    font-size: calc(1.525rem + 3.3vw);
+}
+
+@media (min-width: 768px) {
+.bignewhead {
+  font-size: 2rem;
+}
+}

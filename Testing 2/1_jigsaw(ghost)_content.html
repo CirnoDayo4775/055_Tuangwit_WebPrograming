@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CNN</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="jigcss/contentstyle.css">
+  <link rel="stylesheet" href="jigcss/Mheader.css">
+  <link rel="stylesheet" href="jigcss/Sheader.css">
+
+
+
+  <!-- ปรับหัวข้อให้ใหญ่เมื่อจอเล็ก -->
+
+  <style>
+    .buttonlogin {
+      color: aliceblue;
+      border: 1px solid;
+    }
+
+    .bi-search {
+      color: aliceblue;
+    }
+
+    .bi-list {
+
+      color: aliceblue;
+    }
+
+    .head1 {
+      display: flex;
+      justify-content: center;
+      justify-items: center;
+    }
+
+    .titletext1 {
+      color: red;
+      padding-left: 10px;
+    }
+
+    .text2 {
+      border-right: 1px solid lightgrey;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .text1-2 {
+      border-right: 1px solid lightgrey;
+      padding-right: 10px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      #tabbar {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (max-width: 1200px) {
+      #tabbar {
+        white-space: nowrap;
+        justify-content: start;
+      }
+    }
+
+    .bignewhead {
+      font-size: calc(1.525rem + 3.3vw);
+      /* ขนาดเริ่มต้น */
+    }
+
+    @media (min-width: 768px) {
+
+      /* 768 = md */
+      .bignewhead {
+        font-size: 2rem;
+        /* 2rem เปลี่ยนขนาดได้ตามใจชอบเลย */
+      }
+    }
+  </style>
+  <!-- ปรับหัวข้อให้ใหญ่เมื่อจอเล็ก -->
+</head>
+
+<body>
+
+  <!-- พวกแถบบน หรือหัวข้อ ไว้ตรงนี้ -->
+
+
+  <div class="container-fluid head1 me-auto ms-auto mt-3 overflow-x-visible" id="tabbar">
+    <div class="col-">
+      <samp class="titletext1">
+        COVID-19:</samp>
+      <samp class="text1-2">
+        <a href="#COVID">
+          Vaccination tracker</a>
+      </samp>
+    </div>
+    <div class="col-">
+      <samp class="titletext1">
+        TRENDING:</samp>
+      <samp class="text2">
+        <a href="#Most">
+          Most luxurious airport</a>
+      </samp>
+    </div>
+    <div class="col-">
+      <samp class="text2">
+        <a href="#Mysterious">
+          Mysterious Chinese app</a>
+      </samp class="text2">
+      <samp class="text2">
+        <a href="#Gerd">
+          Gerd Müller</a>
+      </samp>
+      <samp class="text2">
+        <a href="#Melania">
+          Melania Trump's White House Rose Garden</a>
+      </samp>
+    </div>
+  </div>
+
+
+
+  <!-- เนื้อหาอยู่นี่ --> <!-- text-center ให้เนื้อหาอยู่ตรงกลาง -->
+  <div class="container-fluid text-center" id="content">
+    <div class="row main">
+
+      <div class="col-12 col-xl mainNews">
+        <h1 class="bignewhead">
+          Mar-a-Lago -- and its owner -- have long caused concerns for US
+          intelligence
+        </h1>
+
+        <img src="https://cdn.cnn.com/cnnnext/dam/assets/220810211745-mar-a-lago-vpx-exlarge-169.jpeg"
+          class="img-thumbnail" alt="..." />
+        <h3>
+          From revealing an airstrike over 'beautiful' cake to cellphone
+          photos of the 'nuclear football,' Trump's Florida home has caused
+          headaches for US security
+        </h3>
+
+        <ul class="detail">
+          <ol class="">Afghan defense minister curses fleeing President</ol>
+          <ol class="">
+            US completes evacuation of embassy as flag comes down
+          </ol>
+          <ol class="">
+            <span class="">Full story:</span> Taliban forces enter
+            capital of Kabul
+          </ol>
+          <ol class="">
+            Biden officials admit miscalculation as Afghan government falls
+          </ol>
+          <ol class="">
+            <i class="bi bi-play-circle" style="font-size: 1.2rem; color: red"></i>
+            Was it a mistake for the U.S. to leave Afghanistan?
+          </ol>
+          <ol class="">
+            Interpreter: 'If the Taliban find me, they will kill me and my
+            family'
+          </ol>
+          <ol class="">
+            <i class="bi bi-play-circle" style="font-size: 1.2rem; color: red"></i>
+            CNN reporter enters former US base captured by the Taliban
+          </ol>
+        </ul>
+
+      </div>
+
+      <div class="col-12 col-md-6 col-xl-4 main"> <!-- col-12 col-md-6 col-xl-4 -->
+        <div class="row">
+          <div class="col news">
+            <img
+              src="https://cdn.cnn.com/cnnnext/dam/assets/220815143927-screengrab-india-pakistan-flag-ceremony-exlarge-169.jpeg"
+              class="img-thumbnail" alt="" />
+            <h3>
+              Coronavirus has created the perfect conditions for a full-scale war
+              on truth
+            </h3>
+            <ul class="">
+              <ol class="">US health care system 'breaking,' expert says</ol>
+            </ul>
+            <img
+              src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F220813082410-09-europe-drought-rivers.jpg"
+              class="img-thumbnail" alt="..." />
+            <h3>
+              The militant fighters are assuming control of the Afghan capital and
+              have seized the presidential palace
+            </h3>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-xl-4 news">
+        <img
+          src="https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1100,c_fill,g_auto,h_619,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F220812174743-08-europe-drought-rivers.jpg"
+          class="img-thumbnail" alt="..." />
+        <h3>Millions globally flock to mysterious Chinese app</h3>
+        <ul class="">
+          <ol class="">
+            At least 20 people killed after fuel tank explodes in Lebanon
+          </ol>
+          <ol class="">
+            BBC Russia correspondent calls her imminent expulsion 'shocking'
+          </ol>
+          <ol class="">
+            At least four people presumed dead after mudslides hit Japan
+          </ol>
+          <ol class="">
+            <span class="">Analysis:</span> Taliban forces enter
+            capital of Kabul
+          </ol>
+          <ol class="">
+            Biden officials admit miscalculation as Afghan government falls
+          </ol>
+
+          <ol class="">
+            Interpreter: 'If the Taliban find me, they will kill me and my
+            family'
+          </ol>
+          <ol class="">
+            <i class="bi bi-play-circle" style="font-size: 1.2rem; color: red"></i>
+            CNN reporter enters former US base captured by the Taliban
+          </ol>
+        </ul>
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+  <!-- เนื้อหาอยู่นี่ -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
