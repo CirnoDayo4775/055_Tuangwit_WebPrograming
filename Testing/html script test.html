@@ -37,13 +37,172 @@
   </head>
 
   <body>
+    
     <div class="container-fluid">
-
-      
-      quaso
-    
-    
+      <h1><a href="../HTML WARP STATION.html">Warp station</a></h1>
+      <h1>Fahrenheit to Celcius & Celcius to Fahrenheit</h1>
+      <button type="button" class="btn btn-secondary" onclick="frh2cc()">
+        120 Fahrenheit to Celcius
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="cc2frh()">
+        30 Celcius to Fahrenheit
+      </button>
+      <!--input type="number" class="form-control" id="exampleInputPassword1"-->
+      <div>Translated to</div>
+      <div id="lolcollector">.</div>
+      <br /><br />
+      <h1>Hour(s) to Second(s)</h1>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(1)">
+        1 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(2)">
+        2 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(3)">
+        3 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(4)">
+        4 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(5)">
+        5 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(6)">
+        6 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(7)">
+        7 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(8)">
+        8 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(9)">
+        9 Hour
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="hr2sec(10)">
+        10 Hour
+      </button>
+      <div id="lolcollector2">.</div>
+      <br /><br />
+      <h1>Second(s) to Hour(s) Minute(s) and Second(s)</h1>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(22400)">
+        22400 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(1235)">
+        1235 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(9214)">
+        9214 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(3600)">
+        3600 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(3720)">
+        3720 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(1521)">
+        1521 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(234)">
+        234 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(360)">
+        360 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(12)">
+        12 Seconds
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="sec2hr(99)">
+        99 Seconds
+      </button>
+      <div id="lolcollector3">.</div>
+      <br /><br />
+      <h1>Odd or Even?</h1>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(1)">
+        1
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(2)">
+        2
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(3)">
+        3
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(4)">
+        4
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(5)">
+        5
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(6)">
+        6
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(7)">
+        7
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(8)">
+        8
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(9)">
+        9
+      </button>
+      <button type="button" class="btn btn-secondary" onclick="oddOReven(10)">
+        10
+      </button>
+      <div id="lolcollector4">.</div>
     </div>
+    <br /><br />
+    <script>
+      //(ccA*9/5)+32=frhA | (frhA-32)*5/9
+
+      var ccA = 30;
+      var frhA = 120;
+      function cc2frh() {
+        document.getElementById("lolcollector").textContent =
+          (ccA * 9) / 5 + 32 + " Degree Fahrenheit";
+      }
+
+      function frh2cc() {
+        document.getElementById("lolcollector").textContent =
+          ((frhA - 32) * 5) / 9 + " Degree Celcius";
+      }
+
+      function hr2sec(hrA) {
+        document.getElementById("lolcollector2").textContent =
+          hrA * 3600 + " Seconds";
+      }
+
+      function sec2hr(sec) {
+        var hrleft = 0;
+        var minleft = 0;
+        var secleft = sec;
+
+        hrleft = Math.floor(secleft / 3600);
+        secleft = secleft - hrleft * 3600;
+        minleft = Math.floor(secleft / 60);
+        secleft = secleft - minleft * 60;
+
+        var finaltext = "";
+        if (hrleft > 0) {
+          finaltext = finaltext + hrleft + " Hour(s)";
+        }
+        if (minleft > 0) {
+          finaltext = finaltext + minleft + " Minute(s)";
+        }
+        if (secleft > 0) {
+          finaltext = finaltext + secleft + " Second(s)";
+        }
+
+        document.getElementById("lolcollector3").textContent = finaltext;
+      }
+
+      function oddOReven(number) {
+        if (Math.floor(number/2)*2==number) {
+          document.getElementById("lolcollector4").textContent = number + " is an Even number";
+        }else{
+          document.getElementById("lolcollector4").textContent = number + " is an Odd number";
+        }
+      }
+    </script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
