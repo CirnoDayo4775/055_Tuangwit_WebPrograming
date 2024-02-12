@@ -50,35 +50,50 @@
       <h1 id="uwu">OK BOOMER</h1>
       <br /><br /><br />
 
-
-
       <h2 id="Pleasehelp">.</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-12">
+            <img src="../ActualPort/img/wtf.jpg" style="width: 100%" alt="" />
+          </div>
+          <div class="col-sm-6 col-12">
+            <form action="">
+              <h1 id="testtexter">Login</h1>
+              <label for="Test">Username</label><br />
+              <input
+                class="form-control"
+                id="username"
+                type="text"
+                placeholder="Min. 8 characters long"
+              />
+              <p id="usernameinvalidMessage" style="color: red; opacity: 0">
+                Your Username is invalid
+              </p>
 
-      <form action="">
-        <h1 id="testtexter">Test</h1>
-        <label for="Test">Username</label><br />
-        <input
-          id="username"
-          type="text"
-          placeholder="Min. 8 characters long"
-        /><br />
-        <p id="usernameinvalidMessage" style="color: red; opacity: 0">
-          Your Username is invalid
-        </p>
+              <label for="Test">Password</label><br />
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                placeholder="Password"
+                onabort=""
+              />
+              <p id="passwordinvalidMessage" style="color: red; opacity: 0">
+                Your password is too short
+              </p>
+            </form>
 
-        <label for="Test">Password</label><br />
-        <input
-          id="password"
-          type="password"
-          placeholder="Password"
-          onabort=""
-        /><br />
-        <p id="passwordinvalidMessage" style="color: red; opacity: 0">Your password is too short</p>
-      </form>
-
-      <input type="submit" disabled id="submiter">
-
-
+            <input
+              type="submit"
+              class="btn btn-primary mb-3"
+              disabled
+              id="submiter"
+            /><label for="Test" id="notcorrect" style="color: red; opacity: 0"
+              >Your Username or Password is incorrect.</label
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -104,13 +119,24 @@
         usernamepasschecker();
       });
 
-
-      function usernamepasschecker(){
-        if(document.getElementById("password").value == '6540011055A'&&document.getElementById("username").value == 'Tuangwit'){
+      function usernamepasschecker() {
+        if (
+          document.getElementById("password").value == "6540011055A" &&
+          document.getElementById("username").value == "Tuangwit"
+        ) {
           document.getElementById("submiter").disabled = false;
-        }else{
-        document.getElementById("submiter").disabled = true;
-      }
+          document.getElementById("notcorrect").style.opacity = 0;
+        } else {
+          document.getElementById("submiter").disabled = true;
+          if (
+            document.getElementById("password").value != "" &&
+            document.getElementById("username").value != "" &&
+            document.getElementById("username").value.length > 7 &&
+            document.getElementById("password").value.length > 7
+          ) {
+            document.getElementById("notcorrect").style.opacity = 1;
+          }
+        }
       }
 
       var amountClicked = 0;
@@ -162,7 +188,9 @@
           h1Text.innerHTML = "See you later, NERD";
         }
         if (amountClicked == 14) {
-          h1Text.innerHTML = " ";
+          h1Text.innerHTML = ".";
+          h1Text.style.opacity = 0;
+          clicker.style.opacity = 0;
         }
 
         amountClicked++;
