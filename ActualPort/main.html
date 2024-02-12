@@ -1,194 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--link rel="stylesheet" href="../ZIndexFile/stylesheet.css"-->
-    <title>Document</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tuangwit</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
     <style>
-        @font-face {
-            font-family: 'printable4uregular';
-            src: url('../font/PrintAble4URegularver100.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
+      @font-face {
+        font-family: "printable4uregular";
+        src: url("../font/PrintAble4URegularver100.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+      /* Tuangwit template */
+      body {
+        position: fixed;
 
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            height: 100vh;
-            padding: 0;
-            overflow: hidden;
-            font-family: 'printable4uregular'
-        }
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+        margin-left: 0px;
+        height: 100vh;
+        width: 100vw;
 
-        button {
-            font-family: 'printable4uregular';
-            z-index: 20;
+        overflow-x: hidden;
+        font-family: "printable4uregular";
+        background-color: rgb(219, 219, 219);
+      }
 
-        }
+      .container-fluid {
+        margin: 0px;
+        padding: 0px;
+      }
 
-        h1 {
-            font-size: 40px;
-        }
+      .outliner {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding-left: 1%;
+        padding-right: 1%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+      }
 
-        .navigtors {
-            position: fixed;
-            top: 15vh;
-            right: 20px;
-            border: 2px solid #ccc;
-            padding: 5px;
-            background-color: #f9f9f9;
-            z-index: 30;
-            transition: transform 1s, opacity 0.75s;
-            transform: translateX(0);
-            opacity: 1;
-        }
+      .innerside {
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        padding-top: 5%;
+      }
 
-        .tabBUTTON {
-            background-color: rgb(205, 205, 205);
-            width: 8%;
-            height: 8vh;
-            position: fixed;
-            top: 1vh;
-            z-index: 0;
-            border-radius: 10px;
-            pointer-events: none;
-        }
+      .darkenhold:hover {
+        background-color: gray;
+      }
+      .darkenhold {
+        background-color: rgb(194, 194, 194);
+        transition: background-color 0.25s, transform 0.5s;
+        transform: translateY(50%);
+      }
 
-        .tabBUTTON button {
-            position: absolute;
-            left: 35%;
-            top: 35%;
-        }
+      .containholderA,
+      .containholderB,
+      .containholderC {
+        background-color: rgb(194, 194, 194);
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
 
-        span {
-            background-color: green;
-        }
-
-        .menu>li {
-            display: inline;
-            margin: 10px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-        }
-
-        .menu {
-            border-top: 2px solid #000000;
-            border-bottom: 2px solid #000000;
-            padding-top: 15px;
-            padding-bottom: 15px;
-        }
-
-        #example img {
-
-            width: 450px;
-            height: 300px;
-            margin: 3px;
-            margin-top: 40px;
-        }
+      /* Custom CSS */
     </style>
-</head>
+  </head>
 
-<body>
-
-    <div
-        style="background-color: rgb(0, 0, 0); width: 100%; height: 10vh;position: fixed;top: 0px; z-index: -1; left: 0px;">
-        <!-- HERE WILL BE THE BUTTON PART-->
-
-        <div class="tabBUTTON" style="left: 1%;">
-            <!-- BUTTON-->
-            <button onclick="warp('../index.html')">
-                Home
-            </button>
-        </div>
-
-
-        <div class="tabBUTTON" style="left: 11%;">
-            <!-- BUTTON-->
-        </div>
-
-        <div class="tabBUTTON" style="left: 21%;">
-            <!-- BUTTON-->
-        </div>
-
-        <div class="tabBUTTON" style="left: 31%;">
-            <!-- BUTTON-->
-        </div>
-
-        <div class="tabBUTTON" style="left: 41%;">
-            <!-- BUTTON-->
-        </div>
-
-
-    </div>
-
-    <!--div id="allcontent"
-        style="background-color: #a1a1a1; width: 100%; height: 100vh;position: fixed;top: 10vh;z-index: -1; left: 0px;">
-        <ALL CONTENT WILL BE HERE>
-        <p style="background-color: aliceblue;">
-            Lorem ipsum, dolor sit amet <span>consectetur adipisicing elit. Porro fuga cupiditate tempore tenetur ad at
-                eius magni enim, impedit cum quisquam culpa ratione animi laborum,</span> dolorem sequi, illo beatae ab?
-        </p>
-
+  <body>
+    <div class="container-fluid outliner">
+      <div class="container-fluid innerside text-center">
         <div
-            style="width: 300px; padding: 5px; background-color: rgb(255, 108, 108); border: 2px solid #000; margin: 0px 0px 0px 15px; border-radius: 10px;">
-            asdasd
-        </div>
-        <br>
-        <div
-            style="width: 300px; padding: 5px; background-color: rgb(72, 255, 81); border: 2px solid #0008ff; margin: 0px 0px 0px 15px; border-radius: 10px;">
-            asdasd
-        </div>
-
-        <li>ok</li>
-        <li>ok</li>
-        <li>ok</li>
-
-    </div -->
-
-    <div style="background-color: #a1a1a1; width: 100%; height: 100vh; position: fixed; top: 10%;">
-
-
-        <div id="example"
-            style="background-color: #d3d3d3; width: 80%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1; display: flex; flex-direction: column; align-items: center; border: #000000 solid 5px; padding-bottom: 30px;">
-
-            <h1 style="align-self: center;">YES PLEASE</h1>
-            <h3>Here's a bunch of random images</h3>
-            <div class='menu' style="list-style-type: none;">
-                <li>Here's a thing</li>
-                <li>I don't know</li>
-                <li>What to do</li>
-                <li>So. . .</li>
-                <li>Yeah. . .</li>
+          class="navi container"
+          style=" padding: 0px"
+        >
+          <div class="row">
+            <div class="col darkenhold" id="buta" onclick="aclicked()">
+              <label for="">Profile</label>
             </div>
-            <div style="display: flex;">
-                <img src="img/Silence.jpg">
-                <img src="img/wtf.jpg">
-                <img src="img/Smug.jpg">
+            <div class="col darkenhold" id="butb" onclick="bclicked()">
+              <label for="">Contact</label>
             </div>
+            <div class="col darkenhold" id="butc" onclick="cclicked()">
+              <label for="">Work collection</label>
+            </div>
+            <div class="col darkenhold" id="butc" onclick="warp('../index.html')">
+                <label for="">Home Page</label>
+              </div>
+          </div>
 
+          <div
+            class="containholder container"
+            style=" padding: 0px;background-color: rgb(194, 194, 194);"
+          >
+            <br />
+            <br />
+            <div
+              class="containholderA container"
+              id="containholderA"
+              style="position: fixed; opacity: 0;"
+            >
+              <h1>Tuangwit Tuangsitthinan</h1>
+              <h2>ตวงวิทย์ ตวงสิทธินันท์</h2>
 
+              <img
+                src="../thumbnail/soon.png"
+                class="img-thumbnail"
+                style="width: 30%"
+              />
+              <p>
+                Hi, and welcome to my website! My strongest language is C#<br />
+                This website is made with code from stackoverflow that teach me
+                some.<br />
+                I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL, All
+                Mobile Gacha game.
+              </p>
+            </div>
+            <div
+              class="containholderB container"
+              id="containholderB"
+              style="position: fixed;opacity: 0;"
+            >
+              <div class="row">
+                <div class="col darkenhold" id="linka" onclick="warp('https://discord.com/app')">
+                  <label for="">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-discord"
+                      viewBox="0 0 16 16">
+                      <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/></svg>cirnodayo4775
+                    </label>
+                
+                    </div>
+                <div class="col darkenhold" id="linkb" onclick="warp('https://www.youtube.com/channel/UCXtR8xy4RUDk27QrjqkYQbA')">
+                  <label for=""
+                    ><svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-youtube"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                      /></svg>Teamlol Studio</label>
+                </div>
+                <div class="col darkenhold" id="linkc" onclick="warp()">
+                  <label for="">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-facebook"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                      /></svg >Cirno Tuangsitthinan</label>
+                </div>
+              </div>
+            </div>
+            <div
+              class="containholderC container"
+              id="containholderC"
+              style="position: fixed;opacity: 0;"
+            >
+              adkkkkkkkkkk
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
-
-
-    <div class="navigtors" id="navigtor"><!-- Navigator for going to home page -->
-        <button onclick="warp('../index.html')">
-            Home
-        </button>
-    </div>
-
-</body>
-
-<script>
-    function warp(destinationA) {
-        window.location.href = destinationA;
-    }
-</script>
-
+    <script>
+      function aclicked() {
+        document.getElementById("buta").style.transform = "translateY(0%)";
+        document.getElementById("butb").style.transform = "translateY(50%)";
+        document.getElementById("butc").style.transform = "translateY(50%)";
+        document.getElementById("containholderA").style.opacity = 1;
+        document.getElementById("containholderB").style.opacity = 0;
+        document.getElementById("containholderC").style.opacity = 0;
+      }
+      function bclicked() {
+        document.getElementById("buta").style.transform = "translateY(50%)";
+        document.getElementById("butb").style.transform = "translateY(0%)";
+        document.getElementById("butc").style.transform = "translateY(50%)";
+        document.getElementById("containholderA").style.opacity = 0;
+        document.getElementById("containholderB").style.opacity = 1;
+        document.getElementById("containholderC").style.opacity = 0;
+      }
+      function cclicked() {
+        document.getElementById("buta").style.transform = "translateY(50%)";
+        document.getElementById("butb").style.transform = "translateY(50%)";
+        document.getElementById("butc").style.transform = "translateY(0%)";
+        document.getElementById("containholderA").style.opacity = 0;
+        document.getElementById("containholderB").style.opacity = 0;
+        document.getElementById("containholderC").style.opacity = 1;
+      }
+      function warp(destinationA) {
+  window.location.href = destinationA;
+}
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
