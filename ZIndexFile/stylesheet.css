@@ -509,6 +509,14 @@ td img {
     .navigtors {
         /*top: -3000vw;*/
     }
+
+    #hiddenonsmol,.hiddenonsmol,#scheduletable,#logoimg,#navigtor{
+        display: none;
+    }
+
+    .disableonsmol{
+        opacity: 0.2;
+    }
 }
 
 .container-fluid {

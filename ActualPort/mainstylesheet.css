@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "printable4uregular";
+    src: url("../font/PrintAble4URegularver100.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* Tuangwit template */
+  body {
+    position: fixed;
+
+    justify-content: center;
+    align-items: center;
+    padding-left: 0px;
+    margin-left: 0px;
+    height: 100vh;
+    width: 100vw;
+
+    overflow-x: hidden;
+    font-family: "printable4uregular";
+    background-color: rgb(219, 219, 219);
+  }
+
+  .container-fluid {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .outliner {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .innerside {
+    border: 2px solid black;
+    width: 100%;
+    height: 100%;
+    padding-top: 5%;
+  }
+
+  .darkenhold:hover {
+    background-color: gray;
+  }
+  .darkenhold {
+    background-color: rgb(194, 194, 194);
+    transition: background-color 0.25s, transform 0.5s;
+    transform: translateY(50%);
+    border: 1px solid black;
+  }
+
+  .containholderA,
+  .containholderB,
+  .containholderC,
+  .containholderD {
+    background-color: rgb(194, 194, 194);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
