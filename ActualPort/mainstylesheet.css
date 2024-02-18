@@ -52,11 +52,42 @@
     border: 1px solid black;
   }
 
+  .darkenhold2:hover {
+    background-color: rgb(41, 74, 165);
+  }
+  .darkenhold2 {
+    background-color: rgb(49, 210, 250);
+    transition: background-color 0.25s, transform 0.5s;
+    transform: translateY(50%);
+    border: 1px solid black;
+  }
+
+  .darkenhold3:hover {
+    background-color: gray;
+  }
+  .darkenhold3 {
+    background-color: rgb(226, 226, 226);
+    transition: background-color 0.25s, transform 0.5s;
+    transform: translateX(0%);
+    border: 1px solid black;
+    margin-top: 4px;
+  }
+
   .containholderA,
   .containholderB,
   .containholderC,
   .containholderD {
     background-color: rgb(194, 194, 194);
     opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .workholderA,
+  .workholderB,
+  .workholderC,
+  .workholderD {
+    background-color: rgb(255, 0, 0);
+    opacity: 0;
+
     transition: opacity 0.25s;
   }
