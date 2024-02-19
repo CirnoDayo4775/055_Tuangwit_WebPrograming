@@ -1,3 +1,14 @@
+var midder = document.getElementById("omgmid").style;
+var fadeovl = document.getElementById("fade-overlay");
+var navvar = document.getElementById("navigtor").style;
+var txtrg = document.getElementById("textright").style;
+var idc = document.getElementById("idcard").style;
+var iconmn = document.getElementById("menuIcon").style;
+var barmn = document.getElementById("menuTab").style;
+
+
+
+
 var currentvolume = 1;
 function changevolumebg(targetvol) {
   currentvolume = targetvol;
@@ -9,20 +20,20 @@ var bglist = [
   "Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4",
 ]; //List song using arrey!
 function changebgvid(videoname) {
-  document.getElementById("fade-overlay").style.opacity = "1";
-  document.getElementById("fade-overlay").style.pointerEvents = "fill";
-  document.getElementById("navigtor").style.opacity = "0";
-  document.getElementById("navigtor").style.transform = "translateX(120%)";
-  document.getElementById("textright").style.opacity = "0";
-  document.getElementById("textright").style.transform = "translateX(120%)";
-  document.getElementById("omgmid").style.opacity = "0";
-  document.getElementById("omgmid").style.transform = "translateX(-130%)";
-  document.getElementById("idcard").style.opacity = "0";
-  document.getElementById("idcard").style.transform = "translateY(-120%)";
-  document.getElementById("menuIcon").style.opacity = "0";
-  document.getElementById("menuTab").style.opacity = "0";
-  document.getElementById("menuIcon").style.transform = "translateY(160%)";
-  document.getElementById("menuTab").style.transform = "translateY(160%)";
+  fadeovl.style.opacity = "1";
+  fadeovl.style.pointerEvents = "fill";
+  navvar.opacity = "0";
+  navvar.transform = "translateX(120%)";
+  txtrg.opacity = "0";
+  txtrg.transform = "translateX(120%)";
+  midder.opacity = "0";
+  midder.transform = "translateX(-130%)";
+  idc.opacity = "0";
+  idc.transform = "translateY(-120%)";
+  iconmn.opacity = "0";
+  iconmn.opacity = "0";
+  iconmn.transform = "translateY(160%)";
+  iconmn.transform = "translateY(160%)";
   fadeVidVol(realshit, currentvolume, 500);
 
   setTimeout(function () {
@@ -32,20 +43,20 @@ function changebgvid(videoname) {
   }, 1050);
 
   setTimeout(function () {
-    document.getElementById("fade-overlay").style.pointerEvents = "none";
-    document.getElementById("fade-overlay").style.opacity = "0";
-    document.getElementById("navigtor").style.opacity = "1";
-    document.getElementById("navigtor").style.transform = "translateX(0)";
-    document.getElementById("textright").style.opacity = "1";
-    document.getElementById("textright").style.transform = "translateX(0)";
-    document.getElementById("omgmid").style.opacity = "1";
-    document.getElementById("omgmid").style.transform = "translateX(0)";
-    document.getElementById("idcard").style.opacity = "1";
-    document.getElementById("idcard").style.transform = "translateY(0)";
-    document.getElementById("menuIcon").style.opacity = "1";
-    document.getElementById("menuTab").style.opacity = "1";
-    document.getElementById("menuIcon").style.transform = "translateY(0)";
-    document.getElementById("menuTab").style.transform = "translateY(0)";
+    fadeovl.style.pointerEvents = "none";
+    fadeovl.style.opacity = "0";
+    navvar.opacity = "1";
+    navvar.transform = "translateX(0)";
+    txtrg.opacity = "1";
+    txtrg.transform = "translateX(0)";
+    midder.opacity = "1";
+    midder.transform = "translateX(0)";
+    idc.opacity = "1";
+    idc.transform = "translateY(0)";
+    iconmn.opacity = "1";
+    iconmn.opacity = "1";
+    iconmn.transform = "translateY(0)";
+    iconmn.transform = "translateY(0)";
     fadeVidVol(realshit, currentvolume, 500);
   }, 1250);
 }
@@ -88,18 +99,18 @@ function loadingfinisher() {
   document.getElementById("midbut").style.transform = "translateY(-100%)";
   document.getElementById("hahaha").style.opacity = "1";
   document.getElementById("hahaha").style.transform = "translateX(0)";
-  document.getElementById("navigtor").style.opacity = "1";
-  document.getElementById("navigtor").style.transform = "translateX(0)";
+  navvar.opacity = "1";
+  navvar.transform = "translateX(0)";
 
-  document.getElementById("textright").style.opacity = "1";
-  document.getElementById("textright").style.transform = "translateX(0)";
-  document.getElementById("omgmid").style.opacity = "1";
-  document.getElementById("omgmid").style.transform = "translateX(0)";
-  document.getElementById("fade-overlay").style.opacity = "0";
-  document.getElementById("menuIcon").style.opacity = "1";
-  document.getElementById("menuTab").style.opacity = "1";
-  document.getElementById("menuIcon").style.transform = "translateY(0)";
-  document.getElementById("menuTab").style.transform = "translateY(0)";
+  txtrg.opacity = "1";
+  txtrg.transform = "translateX(0)";
+  midder.opacity = "1";
+  midder.transform = "translateX(0)";
+  fadeovl.style.opacity = "0";
+  iconmn.opacity = "1";
+  iconmn.opacity = "1";
+  iconmn.transform = "translateY(0)";
+  iconmn.transform = "translateY(0)";
 }
 //start animation
 
@@ -114,35 +125,35 @@ setInterval(fadeimg, 3000); //Change Image
 
 function unbruh() {
   document.querySelector("video").style.filter = "blur(0px)";
-  document.getElementById("navigtor").style.opacity = "0";
-  document.getElementById("navigtor").style.transform = "translateX(120%)";
+  navvar.opacity = "0";
+  navvar.transform = "translateX(120%)";
 
-  document.getElementById("textright").style.opacity = "0";
-  document.getElementById("textright").style.transform = "translateX(120%)";
-  document.getElementById("omgmid").style.opacity = "0";
-  document.getElementById("omgmid").style.transform = "translateX(-130%)";
-  document.getElementById("idcard").style.opacity = "0";
-  document.getElementById("idcard").style.transform = "translateY(-120%)";
-  document.getElementById("menuIcon").style.opacity = "0";
-  document.getElementById("menuTab").style.opacity = "0";
-  document.getElementById("menuIcon").style.transform = "translateY(160%)";
-  document.getElementById("menuTab").style.transform = "translateY(160%)";
+  txtrg.opacity = "0";
+  txtrg.transform = "translateX(120%)";
+  midder.opacity = "0";
+  midder.transform = "translateX(-130%)";
+  idc.opacity = "0";
+  idc.transform = "translateY(-120%)";
+  iconmn.opacity = "0";
+  iconmn.opacity = "0";
+  iconmn.transform = "translateY(160%)";
+  iconmn.transform = "translateY(160%)";
 }
 function bruh() {
   document.querySelector("video").style.filter = "blur(0px)";
-  document.getElementById("navigtor").style.opacity = "1";
-  document.getElementById("navigtor").style.transform = "translateX(0)";
+  navvar.opacity = "1";
+  navvar.transform = "translateX(0)";
 
-  document.getElementById("textright").style.opacity = "1";
-  document.getElementById("textright").style.transform = "translateX(0)";
-  document.getElementById("omgmid").style.opacity = "1";
-  document.getElementById("omgmid").style.transform = "translateX(0)";
-  document.getElementById("idcard").style.opacity = "1";
-  document.getElementById("idcard").style.transform = "translateY(0)";
-  document.getElementById("menuIcon").style.opacity = "1";
-  document.getElementById("menuTab").style.opacity = "1";
-  document.getElementById("menuIcon").style.transform = "translateY(0)";
-  document.getElementById("menuTab").style.transform = "translateY(0)";
+  txtrg.opacity = "1";
+  txtrg.transform = "translateX(0)";
+  midder.opacity = "1";
+  midder.transform = "translateX(0)";
+  idc.opacity = "1";
+  idc.transform = "translateY(0)";
+  iconmn.opacity = "1";
+  iconmn.opacity = "1";
+  iconmn.transform = "translateY(0)";
+  iconmn.transform = "translateY(0)";
 }
 function unlogoer() {
   document.getElementById("logo").style.opacity = "0";

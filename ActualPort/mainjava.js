@@ -173,9 +173,18 @@ function workcclick() {
 function workdclick() {
   weveryoneoff();
   document.getElementById("workd").style.transform = "translateX(30%)";
-  document.getElementById("workheader").innerText = "Work 4 (WIP)";
-  document.getElementById("workdetail1").innerText = "WIP";
-  document.getElementById("workdetail2").innerText = "WIP";
+  document.getElementById("workheader").innerText = "Minimized Port";
+  document.getElementById("workdetail1").innerText = "Portfolio made with the concept of 'Less Deco, More functional'. All button here is functional and interactable.";
+  document.getElementById("workdetail2").innerText = "You can try mess up with the pages here. It's has been checked and QC-ed with my discord friend! 95% input error preventing. Still... Unable to prevent spamming tho.";
+  document.getElementById("workimage").src = "img/MinimizedPort.png";
+}
+
+function workeclick() {
+  weveryoneoff();
+  document.getElementById("worke").style.transform = "translateX(30%)";
+  document.getElementById("workheader").innerText = "WIP";
+  document.getElementById("workdetail1").innerText = "";
+  document.getElementById("workdetail2").innerText = "";
   document.getElementById("workimage").src = "img/wtf.jpg";
 }
 
@@ -184,8 +193,8 @@ function weveryoneoff() {
   document.getElementById("workb").style.transform = "translateX(0%)";
   document.getElementById("workc").style.transform = "translateX(0%)";
   document.getElementById("workd").style.transform = "translateX(0%)";
+  document.getElementById("worke").style.transform = "translateX(0%)";
 }
-
 
 function showimg(){
   document.getElementById("popupimage").style.opacity = 1;
