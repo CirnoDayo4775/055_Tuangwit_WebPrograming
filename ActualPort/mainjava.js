@@ -15,6 +15,15 @@ function cclicked() {
   document.getElementById("butc").style.transform = "translateY(0%)";
   document.getElementById("containholderC").style.opacity = 1;
   document.getElementById("containholderC").style.zIndex = 3;
+
+  weveryoneoff();
+
+  document.getElementById("workheader").innerText = "Welcome to my Gallery";
+  document.getElementById("workdetail1").innerText =
+    "Here's work's gallery! you can see my notable work here!";
+  document.getElementById("workdetail2").innerText =
+    "Please select your work you want to see by using button on the left.";
+  document.getElementById("workimage").src = "../thumbnail/soon.png";
 }
 function dclicked() {
   everyoneoff();
@@ -135,30 +144,31 @@ window.onload = function () {
   aclicked();
 };
 
-
 function workaclick() {
   weveryoneoff();
   document.getElementById("worka").style.transform = "translateX(30%)";
   document.getElementById("workheader").innerText = "Bunkshot Roulette";
-  document.getElementById("workdetail1").innerText = "A re-made on HTML from the famous game, Bulkshot Roulette.\nFull mechanic of randomizing and remembering.";
-  document.getElementById("workdetail2").innerText = "If you wander how can I play? You can see it on the Warp Station on the DeathRulette one";
+  document.getElementById("workdetail1").innerText =
+    "A re-made on HTML from the famous game, Bulkshot Roulette.\nFull mechanic of randomizing and remembering.";
+  document.getElementById("workdetail2").innerText =
+    "If you wander how can I play? You can see it on the Warp Station on the DeathRulette one!";
   document.getElementById("workimage").src = "img/work1.png";
 }
 function workbclick() {
   weveryoneoff();
   document.getElementById("workb").style.transform = "translateX(30%)";
-  document.getElementById("workheader").innerText = "Work 2 (WIP)";
-  document.getElementById("workdetail1").innerText = "WIP";
-  document.getElementById("workdetail2").innerText = "WIP";
-  document.getElementById("workimage").src = "img/wtf.jpg";
+  document.getElementById("workheader").innerText = "Deal or No Deal";
+  document.getElementById("workdetail1").innerText = "A game based on game shows name 'Deal or No Deal' which let you choose 1 box. \nThen Pick a box by box. There's will be deal of money for you to stop choosing. If you choose to pick up box to last one. You get money on your box.";
+  document.getElementById("workdetail2").innerText = "Try out the game play in Warp Station on the DoND one!";
+  document.getElementById("workimage").src = "img/dond.png";
 }
 function workcclick() {
   weveryoneoff();
   document.getElementById("workc").style.transform = "translateX(30%)";
-  document.getElementById("workheader").innerText = "Work 3 (WIP)";
-  document.getElementById("workdetail1").innerText = "WIP";
-  document.getElementById("workdetail2").innerText = "WIP";
-  document.getElementById("workimage").src = "img/wtf.jpg";
+  document.getElementById("workheader").innerText = "Full scale index";
+  document.getElementById("workdetail1").innerText = "This is the full scale animation index. I tried to replicated the Blue Archive game's home screen with HTML. All of this iss made on HTML, css, and javascript. Used Bootsrap for mobile support.";
+  document.getElementById("workdetail2").innerText = "If you want to see it in full scale, please click Home Page button on the top left.";
+  document.getElementById("workimage").src = "img/inde.png";
 }
 function workdclick() {
   weveryoneoff();
@@ -169,10 +179,24 @@ function workdclick() {
   document.getElementById("workimage").src = "img/wtf.jpg";
 }
 
-
 function weveryoneoff() {
   document.getElementById("worka").style.transform = "translateX(0%)";
   document.getElementById("workb").style.transform = "translateX(0%)";
   document.getElementById("workc").style.transform = "translateX(0%)";
   document.getElementById("workd").style.transform = "translateX(0%)";
+}
+
+
+function showimg(){
+  document.getElementById("popupimage").style.opacity = 1;
+  document.getElementById("popupimage").style.zIndex = 5;
+  document.getElementById("popupimgimg").src = document.getElementById("workimage").src;
+}
+
+function hideimg(){
+  document.getElementById("popupimage").style.opacity = 0;
+
+  setTimeout(function () {
+    document.getElementById("popupimage").style.zIndex = -3;
+  }, 750);
 }

@@ -15,6 +15,18 @@
 
   <body>
     <div class="container-fluid outliner">
+
+      <div id="popupimage" class="container-fluid text-center ms-0" style="background-color: rgba(0, 0, 0, 0.699); z-index: -3; opacity: 0; position: fixed; transition: transform 1s, opacity 0.75s;">
+        <img
+        src="../thumbnail/soon.png"
+        class="img-thumbnail"
+        id="popupimgimg"
+        onclick="hideimg()"
+        style="width: 90%;"
+      />
+      </div>
+      
+
       <div class="container-fluid innerside text-center">
         <div class="navi container" style="padding: 0px">
           <div class="row">
@@ -66,24 +78,28 @@
               id="containholderA"
               style="position: fixed; opacity: 0"
             >
-              <h1>Tuangwit Tuangsitthinan</h1>
-              <h2>ตวงวิทย์ ตวงสิทธินันท์</h2>
+              <label for=""
+                ><h1>Tuangwit Tuangsitthinan</h1>
+                <h2>ตวงวิทย์ ตวงสิทธินันท์</h2></label
+              >
+
               <div class="row">
                 <div class="col-12 col-sm-6">
                   <img src="../thumbnail/soon.png" class="img-thumbnail" />
                 </div>
                 <div class="col-12 col-sm-6">
-                  <p>
-                    Hi, and welcome to my website! My strongest language is
-                    C#<br />
-                    This website is made with code from stackoverflow that teach
-                    me some.<br />
-                    I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL, All
-                    Mobile Gacha game. <br />I don't have much image of myself,
-                    so I will use this to make up instead.<br />Also, I'm a
-                    freelance artist. Who take commission for drawing<br />And I
-                    also does some modding of some games.<br />
-                  </p>
+                  <label for=""
+                    ><p>
+                      Hi, and welcome to my website! My strongest language is
+                      C#<br />
+                      This website is made with code from stackoverflow that
+                      teach me some.<br />
+                      I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL,
+                      All Mobile Gacha game. <br />I don't have much image of
+                      myself, so I will use this to make up instead.<br />Also,
+                      I'm a freelance artist. Who take commission for drawing<br />And
+                      I also does some modding of some games.<br /></p
+                  ></label>
                 </div>
               </div>
             </div>
@@ -160,28 +176,28 @@
               style="position: fixed; opacity: 0"
             >
               <div class="row container">
-                <div class="col-4 col-md-2 container">
+                <div class="col-4 col-md-3 container">
                   <div class="row container">
                     <div
                       class="col-12 darkenhold3"
                       id="worka"
                       onclick="workaclick()"
                     >
-                      <label for="">Work 1</label>
+                      <label for="">Bunkshot Roulette</label>
                     </div>
                     <div
                       class="col-12 darkenhold3"
                       id="workb"
                       onclick="workbclick()"
                     >
-                      <label for="">Work 2</label>
+                      <label for="">Deal or No Deal</label>
                     </div>
                     <div
                       class="col-12 darkenhold3"
                       id="workc"
                       onclick="workcclick()"
                     >
-                      <label for="">Work 3</label>
+                      <label for="">Full scale index</label>
                     </div>
                     <div
                       class="col-12 darkenhold3"
@@ -204,6 +220,7 @@
                       class="img-thumbnail"
                       id="workimage"
                       style="width: 40%"
+                      onclick="showimg()"
                     />
                     <p id="workdetail2" class="text-start">
                       Please select your work you want to see by using button on
