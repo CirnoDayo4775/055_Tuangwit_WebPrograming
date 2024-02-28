@@ -1,0 +1,9 @@
+.darkenhold:hover {
+    background-color: gray;
+  }
+  .darkenhold {
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.25s, transform 0.5s;
+    /*border: 1px solid black;*/
+    
+  }
