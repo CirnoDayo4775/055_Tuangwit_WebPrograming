@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <style>
+    body {
+      overflow: hidden;
+    }
+
+    .scrollable-content {
+      /* Example class for a scrollable content area */
+      height: 80vh; /* Example height */
+      overflow-y: auto; /* Enables vertical scrolling */
+      /* You can also use 'overflow: scroll;' if you always want the scrollbar visible */
+    }
+  </style>
+  <body>
+    <nav class="bg-gray-800 sticky top-0 z-50" id="">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between">
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <div class="flex flex-shrink-0 items-center">
+              <img
+                class="h-8 w-auto"
+                src="../../img asset/blue archive/MP_Cafe.webp"
+                alt="CirnoDayo4775"
+              />
+            </div>
+          </div>
+
+          <div
+            class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center"
+          >
+            <div class="hidden sm:ml-6 sm:block">
+              <div class="flex space-x-4 justify-between">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <div>
+                  <a
+                    href="#"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Product</a
+                  >
+                  <a
+                    href="#"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Order</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                    aria-current="page"
+                    >Home</a
+                  >
+                </div>
+                <div>
+                  <a
+                    href="#"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >About</a
+                  >
+                  <a
+                    href="#"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                    >Feedback</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"
+          >
+            <button
+              type="button"
+              class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+            >
+              <span class="absolute -inset-1.5"></span>
+              <span class="sr-only">View notifications</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a
+            href="#"
+            class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+            aria-current="page"
+            >Dashboard</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Team</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Projects</a
+          >
+          <a
+            href="#"
+            class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+            >Calendar</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <div class="scrollable-content p-3">
+      <div class="grid grid-cols-12 gap-4 border border-black border-2 p-3 m-2">
+        <div class="col-span-5 p-3">
+          <h1 class="text-4xl text-center mb-5">HEADER FROM THE HEAD</h1>
+          <p>
+            To know and manipulate all the secrets of the world; that is the
+            privilege of the Head, the Eye, and the Claws. It is their honor and
+            absolute power. No one dares to stand against them. As long as they
+            exist, the tale of the Nest will never reach its close.
+          </p>
+          <p>
+            The identity of the Head is completely unknown, as they are very
+            reclusive. Anyone who violates the laws of the City or attempt to
+            further discover the Head's identity quickly and quietly disappear,
+            never to be seen or heard from again. They handle managing and
+            granting patents for Workshop technologies. For dealing with threats
+            or securing dangerous artifacts, the Head has Arbiters of the Head,
+            Executioners of the Claw, and Fixers. If any sign of rebellion is
+            shown, or if technology the Head takes an interest in is held by
+            another corporation, these soldiers are sent in to silence all
+            opposition. Being the leader of all Wings, they oversee all
+            activities and events through the Beholders of the Eye. Arbiters of
+            the Head are agents who use Singularities whose power can lay waste
+            to an entire Wing. Despite their sheer authority, the Head does not
+            intervene out of very specific situations. Planned rebellions such
+            as those from The Reverberation Ensemble, out of control street
+            gangs and rampaging monsters (or the occasional insane Fixer going
+            on a rampage such as Roland) are mostly ignored. On the other hand,
+            failing to pay taxes in time, manufacturing weapons with illegal
+            attributes or trespassing various city-wide Taboos (most notably one
+            that banned sentient A.I.) will result in absolute death or the
+            dissolving of a Wing, usually by a Claw agent deployed from C Corp.
+            Furthermore, they are also in-charge of incidents that can
+            realistically harm them if ignored; according to an official
+            interview, had an incident where all of the Abnormalities are
+            released off from Lobotomy Corporation, the Head will easily take
+            care of it. However, if it only damages a part of the City (such as
+            the events in Angela's bad ending where her actions only affect the
+            southern part of the City), that incident is mostly brushed off.
+          </p>
+        </div>
+        <div class="col-span-7">
+          <img
+            src="https://i.redd.it/agents-operating-under-the-head-from-project-moon-v0-doy93bg9hvzc1.png?width=2048&format=png&auto=webp&s=8b2bbd3c22db3b9b5a0d25a67733c9e573b0aaaf"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-12 gap-4 border border-black border-2 p-3 m-2">
+        <div class="col-span-4 p-3">
+          <div
+            class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex justify-center">
+              <a href="#">
+                <img
+                  class="rounded-t-lg"
+                  src="https://i.ytimg.com/vi/1Jrzl2GC_XE/hqdefault.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  The Queen of Hatred has returned!
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Who will take the job for today? I wonder...
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Conduct Attachment work
+                <svg
+                  class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-span-4 p-3">
+          <div
+            class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex justify-center">
+              <a href="#">
+                <img
+                  class="rounded-t-lg"
+                  src="https://i.redd.it/007ue1t40xxb1.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Local HamHamPangPang guy appeared in Outskirt!
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                I have nothing but my sorrow and I want nothing more. It has
+                been, it still is, faithful to me.
+                <br />
+                Why should I begrudge it, since during the hours when my soul
+                crushed the depths of my heart, it was seated there beside me?
+                <br />
+                O sorrow, I have ended, you see, by respecting you, because I am
+                certain you will never leave me.
+                <br />
+                Ah! I realize it: your beauty lies in the force of your being.
+                You are like those who never left the sad fireside corner of my
+                poor black heart.
+                <br />
+                O my sorrow, you are better than a well-beloved: because I know
+                that on the day of my final agony, you will be there, lying in
+                my sheets, O sorrow, so that you might once again attempt to
+                enter my heart.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Keter Realization
+                <svg
+                  class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-span-4 p-3">
+          <div
+            class="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
+            <div class="flex justify-center">
+              <a href="#">
+                <img
+                  class="rounded-t-lg"
+                  src="https://i.ytimg.com/vi/U_MHiOfcHJk/maxresdefault.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+            <div class="p-5">
+              <a href="#">
+                <h5
+                  class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                  Mister Sir Squirrel has died from ligma
+                </h5>
+              </a>
+              <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Who is Mister Sir Squirrel? <br />
+                ligmaballz *Vineboom*
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Commit Prigitia
+                <svg
+                  class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 14 10"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M1 5h12m0 0L9 1m4 4L9 9"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-white shadow dark:bg-gray-900">
+      /* Footer */
+      <div class="w-full max-w-screen-xl mx-auto pb-3">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="../../img asset/blue archive/MP_Cafe.webp"
+              class="h-8"
+              alt="Flowbite Logo"
+            />
+            <span
+              class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >CirnoDayo</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+          >
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span
+          class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >2024
+          <a
+            href="https://cirnodayo4775.github.io/055_Tuangwit_WebPrograming/"
+            class="hover:underline"
+            >Tuangwit Tuangsitthinan</a
+          >'s Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script>
+      document.body.style.overflow = "hidden"; // Hide scroll bar on body
+
+      // To allow scrolling on a specific element (e.g., with class 'scrollable-content'):
+      var scrollableContent = document.querySelector(".scrollable-content");
+      scrollableContent.style.overflowY = "auto"; // or 'scroll' if you always want the scrollbar visible
+    </script>
+  </body>
+</html>

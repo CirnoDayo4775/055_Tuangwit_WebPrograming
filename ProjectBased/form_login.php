@@ -31,6 +31,21 @@
     <title>Submitting a form through GET and POST method</title>
   </head>
   <body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
     <h1 class="topic">Login Form</h1>
     <div class="loginFrame">
     

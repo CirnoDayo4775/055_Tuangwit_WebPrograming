@@ -31,8 +31,8 @@ function changebgvid(videoname) {
   idc.opacity = "0";
   idc.transform = "translateY(-120%)";
   iconmn.opacity = "0";
-  iconmn.opacity = "0";
-  iconmn.transform = "translateY(160%)";
+  barmn.opacity = "0";
+  barmn.transform = "translateY(160%)";
   iconmn.transform = "translateY(160%)";
   fadeVidVol(realshit, currentvolume, 500);
 
@@ -54,8 +54,8 @@ function changebgvid(videoname) {
     idc.opacity = "1";
     idc.transform = "translateY(0)";
     iconmn.opacity = "1";
-    iconmn.opacity = "1";
-    iconmn.transform = "translateY(0)";
+    barmn.opacity = "1";
+    barmn.transform = "translateY(0)";
     iconmn.transform = "translateY(0)";
     fadeVidVol(realshit, currentvolume, 500);
   }, 1250);
@@ -108,8 +108,8 @@ function loadingfinisher() {
   midder.transform = "translateX(0)";
   fadeovl.style.opacity = "0";
   iconmn.opacity = "1";
-  iconmn.opacity = "1";
-  iconmn.transform = "translateY(0)";
+  barmn.opacity = "1";
+  barmn.transform = "translateY(0)";
   iconmn.transform = "translateY(0)";
 }
 //start animation
@@ -135,8 +135,8 @@ function unbruh() {
   idc.opacity = "0";
   idc.transform = "translateY(-120%)";
   iconmn.opacity = "0";
-  iconmn.opacity = "0";
-  iconmn.transform = "translateY(160%)";
+  barmn.opacity = "0";
+  barmn.transform = "translateY(160%)";
   iconmn.transform = "translateY(160%)";
 }
 function bruh() {
@@ -151,8 +151,8 @@ function bruh() {
   idc.opacity = "1";
   idc.transform = "translateY(0)";
   iconmn.opacity = "1";
-  iconmn.opacity = "1";
-  iconmn.transform = "translateY(0)";
+  barmn.opacity = "1";
+  barmn.transform = "translateY(0)";
   iconmn.transform = "translateY(0)";
 }
 function unlogoer() {
