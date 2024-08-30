@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="uwu"></p>
+
+    <div style="height: 50vh; padding: 5%">
+      <div style="display: flex; justify-content: space-between; width: 100%">
+        <div style="flex: 0 0 auto">
+          <div>
+            <img
+              src="./Rosilia/ClothCustom/Default.png"
+              alt=""
+              style="transform: scaleX(-1)"
+            />
+            <br />
+            <p id="yourHP">HP : 20 / 20</p>
+          </div>
+        </div>
+        <div style="flex: 1; text-align: center">
+          <button>Commence</button>
+        </div>
+        <div style="flex: 0 0 auto">
+          <img
+            src="./Elglador/ClothCustom/Default.png"
+            alt=""
+            style="transform: scaleX(1)"
+          />
+          <br />
+          <p id="enemyHP">HP : 20 / 20</p>
+        </div>
+      </div>
+    </div>
+    <div style="border: 10px solid black"></div>
+    <div style="padding: 10px">
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 22vh;
+        "
+      >
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill1"
+        >
+          <div
+            id="skill1"
+            onclick="useSkill(1)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Solid Strike</h2>
+            <p>
+              Type : Rock <br />
+              Damage : 3
+              <br /><br />
+              Effect : Upon using skill, your next Buff/Debuff will be negate.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill2"
+        >
+          <div
+            id="skill2"
+            onclick="useSkill(2)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Rear Guardian</h2>
+            <p>
+              Type : Paper <br />
+              Damage : 2
+              <br /><br />
+              Effect : This turn take 3 less damage. If completely took no
+              damage by attack, deal damage back.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill3"
+        >
+          <div
+            id="skill3"
+            onclick="useSkill(3)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Cutting String</h2>
+            <p>
+              Type : Scissor <br />
+              Damage : 7
+              <br /><br />
+              Effect : User take damage equal to enemy's HP after attack.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill4"
+        >
+          <div
+            id="skill4"
+            onclick="useSkill(4)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Perfect Guard</h2>
+            <p>
+              Type : Buff <br />
+
+              <br /><br />
+              Effect : If taking damage, recover exact HP this turn. Else, this
+              skill will be no longer usable.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill5"
+        >
+          <div
+            id="skill5"
+            onclick="useSkill(5)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Clear Mind</h2>
+            <p>
+              Type : Buff <br />
+
+              <br /><br />
+              Effect : Next turn, you will see the exact what enemy's move is.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill6"
+        >
+          <div
+            id="skill6"
+            onclick="useSkill(6)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Recovery</h2>
+            <p>
+              Type : Heal <br />
+              Amount : 4
+              <br /><br />
+              Effect : 3 times use per match
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill7"
+        >
+          <div
+            id="skill7"
+            onclick="useSkill(7)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Solid Strike</h2>
+            <p>
+              Type : Rock <br />
+              Damage : 3
+              <br /><br />
+              Effect : Upon using skill, your next Buff/Debuff will be negate.
+            </p>
+          </div>
+        </div>
+        <div
+          style="
+            border: 3px solid black;
+            width: 10%;
+            height: 100%;
+            padding: 5px;
+          "
+          id="Cskill8"
+        >
+          <div
+            id="skill8"
+            onclick="useSkill(8)"
+            style="flex: 1; text-align: center"
+          >
+            <h2>Solid Strike</h2>
+            <p>
+              Type : Rock <br />
+              Damage : 3
+              <br /><br />
+              Effect : Upon using skill, your next Buff/Debuff will be negate.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        cardlimit = 2;
+        skillC1 = 0;
+        skillC2 = 0;
+        skillC3 = 0;
+        skillC4 = 0;
+        skillC5 = 0;
+        skillC6 = 0;
+        skillC7 = 0;
+        skillC8 = 0;
+        skillI1 = 0;
+        skillI2 = 0;
+        skillI3 = 0;
+        skillI4 = 0;
+        skillI5 = 0;
+        skillI6 = 0;
+        skillI7 = 0;
+        skillI8 = 0;
+        skillSet = 0;
+        yourHP = 20;
+        yourMHP = 20;
+        enemyHP = 20;
+        enemyMHP = 20;
+        enemySkill = 0;
+        yourSkillType = 0;
+
+        document.getElementById("yourHP").textContent =
+          "HP : " + yourHP + " / " + yourMHP;
+        document.getElementById("enemyHP").textContent =
+          "HP : " + enemyHP + " / " + enemyMHP;
+
+        //
+        tetttt = Math.random();
+        console.log(tetttt);
+        console.log(Math.floor(tetttt * 10));
+        console.log(Math.floor(tetttt * (4 - 1 + 1) + 1));
+      };
+
+      function UwUFUFU() {
+        document.getElementById("1").textContent = "Sawaddee";
+      }
+
+      function turnlimit() {}
+
+      let checkcommand = {
+        ChskillI1: function () {
+          if (skillI1 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill1").style.backgroundColor = "lime";
+              skillI1 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill1").style.backgroundColor = "white";
+            skillI1 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI2: function () {
+          if (skillI2 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill2").style.backgroundColor = "lime";
+              skillI2 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill2").style.backgroundColor = "white";
+            skillI2 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI3: function () {
+          if (skillI3 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill3").style.backgroundColor = "lime";
+              skillI3 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill3").style.backgroundColor = "white";
+            skillI3 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI4: function () {
+          if (skillI4 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill4").style.backgroundColor = "lime";
+              skillI4 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill4").style.backgroundColor = "white";
+            skillI4 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI5: function () {
+          if (skillI5 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill5").style.backgroundColor = "lime";
+              skillI5 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill5").style.backgroundColor = "white";
+            skillI5 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI6: function () {
+          if (skillI6 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill6").style.backgroundColor = "lime";
+              skillI6 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill6").style.backgroundColor = "white";
+            skillI6 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI7: function () {
+          if (skillI7 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill7").style.backgroundColor = "lime";
+              skillI7 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill7").style.backgroundColor = "white";
+            skillI7 = 0;
+            skillSet = 0;
+          }
+        },
+        ChskillI8: function () {
+          if (skillI8 == 0) {
+            if (skillSet == 0) {
+              document.getElementById("Cskill8").style.backgroundColor = "lime";
+              skillI8 = 1;
+              skillSet = 1;
+            }
+          } else {
+            document.getElementById("Cskill8").style.backgroundColor = "white";
+            skillI8 = 0;
+            skillSet = 0;
+          }
+        },
+      };
+      function useSkill(skillUsed) {
+        let skillusing = "ChskillI" + skillUsed;
+
+        if (checkcommand[skillusing]) {
+          checkcommand[skillusing]();
+        } else {
+          console.log("Error occured on skill: " + skillusing);
+        }
+      }
+
+      function enemySet() {
+        rannum1_3 = 1;
+        while ((rannum1_3 = 1)) {
+          rannum1_3 = Math.floor(Math.random() * 3);
+        }
+        eneset = rannum1_3 * 3 + 1;
+        if ((eneset = 1)) {
+          enemySkill = 1;
+        }
+        if ((eneset = 2)) {
+          enemySkill = 2;
+        }
+        if ((eneset = 3)) {
+          enemySkill = 3;
+        }
+      }
+
+      function startCombat(){
+        if(skillSet = 1){
+          
+        }
+      }
+    </script>
+  </body>
+</html>

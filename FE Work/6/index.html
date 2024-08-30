@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #hint{
+position: fixed;
+top : 0;
+left : 0;
+width: 100vw;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.459);
+z-index: -30;
+transition: opacity 1s ;
+opacity: 0;
+
+        }
+        #hint div{
+            background-color: white;
+            margin: 5%;
+            height: 80%;
+            border: 3px black solid;
+            padding: 10px;
+            transform: translateY(-150%);
+            transition: transform 1s;
+        }
+    </style>
+</head>
+<body>
+    <div style="z-index: 10;">
+            <h1 id="title">High? Or low?</h1>
+    <button id="start" onclick="startover()">Start Over</button>
+    <h2 id ="number">number</h2>
+    <button id="high" onclick="ans(1)" disabled>High?</button>
+    <button id="low" onclick="ans(2)" disabled>Low?</button>
+    <p id="score">Score : 0</p>
+    <p id="gameover" style="opacity: 0;">game over</p>
+    <img src="" alt="" id="lol" style="width: 200px;">
+    <button onclick="tut()">Tutorial</button>
+    </div>
+
+
+    <div id="hint" onclick="untut()">
+        <div id="tutbox">
+            <h1>Just guess if the next number is higher or lower than last number.</h1>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var a = 0;
+        var b = 0;
+        var score = 0;
+        function startover(){
+            score = 0;
+            document.getElementById('start').disabled = true;
+            document.getElementById('high').disabled = false;
+            document.getElementById('low').disabled = false;
+            var rannum1_10 = 1;
+        while (rannum1_10 == 1) {
+          rannum1_10 = Math.floor(Math.random() * 10);
+        }
+        a = rannum1_10;
+document.getElementById('number').textContent = "start = "+a;
+document.getElementById('gameover').style.opacity = 0;
+        
+        }
+
+        function ans(ans){
+            var rannum1_10 = 1;
+        while (rannum1_10 == 1) {
+          rannum1_10 = Math.floor(Math.random() * 10);
+        }
+        b = rannum1_10;
+            if(ans==1){
+                if(a<=b){
+                    score++;
+                    document.getElementById('number').textContent = document.getElementById('number').textContent + " <= " + b;
+                    a = b;
+                    document.getElementById('score').textContent = "Score : "+score;
+                }
+                else{
+                    document.getElementById('number').textContent = document.getElementById('number').textContent + " >= " + b;
+                    document.getElementById('gameover').style.opacity = 1;
+                    document.getElementById('high').disabled = true;
+                    document.getElementById('low').disabled = true;
+                    document.getElementById('start').disabled = false;
+                }
+            }
+
+            if(ans==2){
+                if(a>=b){
+                    score++;
+                    document.getElementById('number').textContent = document.getElementById('number').textContent + " >= " + b;
+                    a = b;
+                    document.getElementById('score').textContent = "Score : "+score;
+                }
+                else{
+                    document.getElementById('number').textContent = document.getElementById('number').textContent + " <= " + b;
+                    document.getElementById('gameover').style.opacity = 1;
+                    document.getElementById('high').disabled = true;
+                    document.getElementById('low').disabled = true;
+                    document.getElementById('start').disabled = false;
+                }
+            }
+            if(b==9){
+                document.getElementById('lol').src = "./asso/9.png";
+            }else{
+            document.getElementById('lol').src = "./asso/"+b+".webp";}
+        }
+
+            function tut(){
+                document.getElementById('hint').style.opacity = '1';
+                document.getElementById('hint').style.zIndex = '100';
+                document.getElementById('tutbox').style.transform = 'translateY(0%)'
+            }
+            function untut(){
+                document.getElementById('hint').style.opacity = '0';
+                document.getElementById('hint').style.zIndex = '-100';
+                document.getElementById('tutbox').style.transform = 'translateY(-150%)'
+            }
+    </script>
+</body>
+</html>

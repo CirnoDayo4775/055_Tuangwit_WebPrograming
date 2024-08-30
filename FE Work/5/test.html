@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+        .card {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .card:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        .card:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        .status, .result {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .health {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .hp-bar {
+            width: 200px;
+            height: 20px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .hp-bar-fill {
+            height: 100%;
+            background-color: #4CAF50;
+            transition: width 0.3s ease-in-out;
+        }
+        .imgChar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="imgChar">
+            <img id="playerImg" src="./Rosilia/ClothCustom/Default.png" style="transform:scaleX(-1); width: 50%;" alt="Player">
+            <img id="botImg" src="./Elglador/ClothCustom/Default.png" style="width: 50%;" alt="Bot">
+        </div>
+        <div class="health">
+            <div>
+                Player HP: <span id="playerHP">100</span>
+                <div class="hp-bar">
+                    <div id="playerHPBar" class="hp-bar-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+            <div>
+                Bot HP: <span id="botHP">100</span>
+                <div class="hp-bar">
+                    <div id="botHPBar" class="hp-bar-fill" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <button class="card" id="rock">Rock</button>
+            <button class="card" id="paper">Paper</button>
+            <button class="card" id="scissors">Scissors</button>
+        </div>
+        <div class="status" id="status"></div>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const cards = ['rock', 'paper', 'scissors'];
+        const playerHP = document.getElementById('playerHP');
+        const botHP = document.getElementById('botHP');
+        const playerHPBar = document.getElementById('playerHPBar');
+        const botHPBar = document.getElementById('botHPBar');
+        const status = document.getElementById('status');
+        const result = document.getElementById('result');
+        const buttons = cards.map(card => document.getElementById(card));
+
+        let cooldowns = [0, 0, 0];
+        let botChoices = [];
+
+        function updateBotChoices() {
+            botChoices = [];
+            while (botChoices.length < 2) {
+                const choice = cards[Math.floor(Math.random() * 3)];
+                if (!botChoices.includes(choice)) {
+                    botChoices.push(choice);
+                }
+            }
+        }
+
+        function updateHPBar(bar, hp) {
+            bar.style.width = `${hp}%`;
+        }
+
+        function play(playerChoice) {
+            const botChoice = botChoices[Math.floor(Math.random() * 2)];
+            status.textContent = `You chose ${playerChoice}. Bot chose ${botChoice}.`;
+
+            if (playerChoice === botChoice) {
+                result.textContent = "It's a tie!";
+                document.getElementById("botImg").src = "./Elglador/ClothCustom/Evade.png";
+                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Evade.png";
+            } else if (
+                (playerChoice === 'rock' && botChoice === 'scissors') ||
+                (playerChoice === 'paper' && botChoice === 'rock') ||
+                (playerChoice === 'scissors' && botChoice === 'paper')
+            ) {
+                result.textContent = "You win this round!";
+                const newBotHP = Math.max(0, parseInt(botHP.textContent) - 10);
+                botHP.textContent = newBotHP;
+                updateHPBar(botHPBar, newBotHP);
+                document.getElementById("botImg").src = "./Elglador/ClothCustom/Damaged.png";
+                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Hit.png";
+                
+            } else {
+                result.textContent = "Bot wins this round!";
+                const newPlayerHP = Math.max(0, parseInt(playerHP.textContent) - 10);
+                playerHP.textContent = newPlayerHP;
+                updateHPBar(playerHPBar, newPlayerHP);
+                document.getElementById("botImg").src = "./Elglador/ClothCustom/Hit.png";
+                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Damaged.png";
+            }
+
+            if (parseInt(playerHP.textContent) === 0) {
+                endGame("Bot wins the game!");
+            } else if (parseInt(botHP.textContent) === 0) {
+                endGame("You win the game!");
+            } else {
+                updateCooldowns(playerChoice);
+                updateBotChoices();
+            }
+        }
+
+        function updateCooldowns(usedCard) {
+            cooldowns = cooldowns.map(cd => Math.max(0, cd - 1));
+            cooldowns[cards.indexOf(usedCard)] = 1;
+            buttons.forEach((button, index) => {
+                button.disabled = cooldowns[index] > 0;
+            });
+        }
+
+        function endGame(message) {
+            result.textContent = message;
+            buttons.forEach(button => button.disabled = true);
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => play(button.id));
+        });
+
+        updateBotChoices();
+
+        
+    </script>
+</body>
+</html>

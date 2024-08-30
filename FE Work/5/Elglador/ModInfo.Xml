@@ -1,0 +1,55 @@
+<ModInfo>
+  <ClothInfo>
+    <Name>Elglador</Name>
+    <Default>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="25.3" pivot_y="-393.1" />
+      <Head head_x="0" head_y="372.6" rotation="0" head_enable="False" />
+    </Default>
+    <Guard>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="29.9" pivot_y="-374.7" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Guard>
+    <Evade>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="27.6" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Evade>
+    <Damaged>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="25.3" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Damaged>
+    <Slash>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="13.8" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Slash>
+    <Penetrate>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="110.4" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Penetrate>
+    <Hit>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="-39.1" pivot_y="-413.8" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Hit>
+    <Move>
+      <Direction>Side</Direction>
+      <Pivot pivot_x="-2.3" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Move>
+    <Fire>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="177.1" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Fire>
+    <Aim>
+      <Direction>Front</Direction>
+      <Pivot pivot_x="27.6" pivot_y="-400" />
+      <Head head_x="0" head_y="0" rotation="0" head_enable="False" />
+    </Aim>
+  </ClothInfo>
+</ModInfo>
