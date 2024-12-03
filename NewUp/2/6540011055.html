@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6540011055</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Major (x)</th>
+        <td>
+          <input type="text" name="" id="x1" onkeyup="pullx('1')" value="IT" />
+        </td>
+        <td>
+          <input
+            type="text"
+            name=""
+            id="x2"
+            onkeyup="pullx('2')"
+            value="Chemistry"
+          />
+        </td>
+        <td>
+          <input type="text" name="" id="x3" onkeyup="pullx('3')" value="EBC" />
+        </td>
+        <td>
+          <input type="text" name="" id="x4" onkeyup="pullx('4')" value="BM" />
+        </td>
+        <td>
+          <input type="text" name="" id="x5" onkeyup="pullx('5')" value="วทก" />
+        </td>
+        <td>
+          <input
+            type="text"
+            name=""
+            id="x6"
+            onkeyup="pullx('6')"
+            value="Engineer"
+          />
+        </td>
+      </tr>
+      <tr>
+        <th>Total Student(y)</th>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y1"
+            onkeyup="pully('1')"
+            value="70"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y2"
+            onkeyup="pully('2')"
+            value="20"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y3"
+            onkeyup="pully('3')"
+            value="150"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y4"
+            onkeyup="pully('4')"
+            value="100"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y5"
+            onkeyup="pully('5')"
+            value="30"
+          />
+        </td>
+        <td>
+          <input
+            type="number"
+            name=""
+            id="y6"
+            onkeyup="pully('6')"
+            value="45"
+          />
+        </td>
+      </tr>
+    </table>
+    <!--canvas id="baringitAll" style="width: 100%; max-width: 700px"></!--canvas-->
+    <canvas id="baringitAll2" style="width: 100%; max-width: 700px"></canvas>
+    <canvas id="liningitAll" style="width: 100%; max-width: 700px"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script>
+      /*
+        let helper = 1;
+      var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yValues = [55, 49, 44, 24, 15];
+      var barColors = ["red", "green", "blue", "orange", "brown"];
+function uwu(){
+    new Chart("baringitAll", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: true,
+            text: "uwu",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+}
+      new Chart("baringitAll", {
+        type: "bar",
+        data: {
+          labels: xValues,
+          datasets: [
+            {
+              backgroundColor: barColors,
+              data: yValues,
+            },
+          ],
+        },
+        options: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: true,
+            text: "uwu",
+          },
+          scales: {
+            yAxes: [
+              {
+                ticks: {
+                  beginAtZero: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+
+      function looping() {
+        if (helper == 1) {
+          setTimeout(function () {
+            barColors = ["red", "green", "blue", "orange", "brown"];
+            helper++;
+            uwu();
+            looping();
+          }, 100);
+        } else if (helper == 2) {
+          setTimeout(function () {
+            barColors = ["brown", "red", "green", "blue", "orange"];
+            helper++;
+            uwu();
+            looping();
+          }, 100);
+        } else if (helper == 3) {
+          setTimeout(function () {
+            barColors = ["orange", "brown", "red", "green", "blue"];
+            helper++;
+            uwu();
+            looping();
+          }, 100);
+        } else if (helper == 4) {
+          setTimeout(function () {
+            barColors = ["blue", "orange", "brown", "red", "green"];
+            helper++;
+            uwu();
+            looping();
+          }, 100);
+        } else if (helper == 5) {
+          setTimeout(function () {
+            barColors = ["green", "blue", "orange", "brown", "red"];
+            helper = 1;
+            uwu();
+            looping();
+          }, 100);
+        }
+      }
+
+      window.onload = function () {
+looping();
+};
+    */
+      //IT 70, Chemistry 20 EBC 150 BM 100 วทก 30 Engineer 45
+      let x1, x2, x3, x4, x5, x6, y1, y2, y3, y4, y5, y6;
+      var xValues = ["", "", "", "", "", ""];
+      var yValues = ["", "", "", "", "", ""];
+      var barColors = ["red", "green", "blue", "orange", "brown"];
+
+      function pullx(digit) {
+        let name = "x" + digit;
+        xValues[digit - 1] = document.getElementById(name).value;
+        uwu();
+      }
+      function pully(digit) {
+        let namey = "y" + digit;
+        yValues[digit - 1] = document.getElementById(namey).value;
+        uwu();
+      }
+
+      function uwu() {
+        new Chart("baringitAll2", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: barColors,
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "uwu",
+            },
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
+        });
+
+        new Chart("liningitAll", {
+          type: "line",
+          data: {
+            labels: xValues,
+            datasets: [
+              {
+                backgroundColor: "rgba(0,0,255,0)",
+                borderColor: "rgba(0,0,0,1.0)",
+                data: yValues,
+              },
+            ],
+          },
+          options: {
+            legend: {
+              display: false,
+            },
+            title: {
+              display: true,
+              text: "uwu",
+            },
+            scales: {
+              yAxes: [
+                {
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                },
+              ],
+            },
+          },
+        });
+      }
+
+      window.onload = function () {
+        pullx("1");
+        pullx("2");
+        pullx("3");
+        pullx("4");
+        pullx("5");
+        pullx("6");
+        pully("1");
+        pully("2");
+        pully("3");
+        pully("4");
+        pully("5");
+        pully("6");
+      };
+    </script>
+  </body>
+</html>
