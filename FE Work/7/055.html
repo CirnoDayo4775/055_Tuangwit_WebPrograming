@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form input,
+      form select {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <label for="">ชื่อ :</label
+      ><input type="text" name="name" ondblclick="num1(this)" /><br />
+      <label for="">โทรศัพท์ :</label
+      ><input type="text" name="phone" ondblclick="num1(this)" /><br />
+      <label for="">เพศ :</label
+      ><input
+        type="radio"
+        name="gender"
+        value="m"
+        ondblclick="num1(this)"
+      /><label for="gender">Male</label>
+      <input
+        type="radio"
+        name="gender"
+        value="f"
+        ondblclick="num1(this)"
+      /><label for="gender">Female</label><br />
+      <label for="">สาขา :</label
+      ><select ondblclick="num1(this)" name="major">
+        <option value="none">&lt---- Please select one option ----&gt</option>
+        <option value="CiF">Chemistry for Industry</option>
+        <option value="PiMTIM">
+          Program in Material Technology and Industrial Management
+        </option>
+        <option value="EfS">Environment for Sustainability</option>
+        <option value="OHS">Occupational Health and Safety</option>
+        <option value="IT">Information Technology</option>
+        <option value="EM">Engineering Management</option></select
+      ><br />
+
+      <button>Sent</button>
+    </form>
+
+    <p id="tyuio"></p>
+
+    <button id="yuiop" onclick="okboomer()">ok</button>
+
+    <script>
+      function num1(element) {
+        test = element.value;
+        if (element.value == "") {
+          test = "none";
+        }
+        if (test == "none") {
+          window.alert("This can not be empty!");
+        } else if (
+          element.name == "phone" &&
+          !(!isNaN(test) && !isNaN(parseFloat(test)))
+        ) {
+          window.alert("This can be only number!");
+        } else {
+          console.log(
+            "For the [" + element.name + "] element, chose : " + element.value
+          );
+        }
+      }
+
+      /*window.onload = function () {
+
+
+        const qwer = '{"qwe":"wer","qwer":"wert", "qwert":"werty"}';
+        let obj = JSON.parse(qwer);
+        let textering = "";
+        for (const p in obj){
+          textering += p + ":" + '"' + obj[p] + '"' + ", ";
+        }
+  document.getElementById("tyuio").innerHTML = textering;
+  window.alert(textering)
+};*/
+
+      /*window.onload = function () {
+        const qwer =
+          '{"qwe":"wer","qwer":"wert", "qwert":"werty", "birth":"2003-10-25"}';
+        let obj = JSON.parse(qwer);
+        obj.birth = new Date(obj.birth);
+        let textering = "";
+        for (const p in obj) {
+          if (p == "birth") {
+          } else {
+            textering += p + ":" + '"' + obj[p] + '"' + ", ";
+          }
+        }
+        textering += "\n" + obj.birth;
+        document.getElementById("tyuio").innerHTML = textering;
+        window.alert(textering + Date(obj.birth));
+      };*/
+
+
+        const qwer =
+          '{"qwe":"wer","qwer":"wert", "qwert":"werty", "birth":"2003-10-25"}';
+        let obj = JSON.parse(qwer, function(key, value){
+          if(key == "birth"){
+            return new Date(value);
+          }else{
+            return value
+          }
+        });
+        let now = new Date();
+        diff = now - obj.birth;
+        dif_day = Math.floor(diff/(1000*60*60*24));
+        dif_yer = Math.floor(dif_day/365);
+        dif_mon = Math.floor((dif_day-(dif_yer*365))/30)
+        dif_dayleft = Math.floor(dif_day-(dif_yer*365)-(dif_mon * 30))
+        window.alert(dif_yer + " Years " + dif_mon + " Months " + dif_dayleft +" Days ");
+
+      function okboomer(){
+        window.location.href = "http://localhost/WebPrograming/HTML WARP STATION - Copy.php?Aun=" + qwer;
+      }
+
+
+    </script>
+  </body>
+</html>

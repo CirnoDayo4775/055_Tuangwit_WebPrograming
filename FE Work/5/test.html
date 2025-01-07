@@ -67,10 +67,24 @@
             justify-content: space-between;
             margin-bottom: 10px;
         }
+        .itembox,.itembox div {
+            display: flex;
+            margin-left: 3px;
+            justify-content: space-between;
+        }
     </style>
 </head>
 <body>
     <div class="game-container">
+        <div class="itembox">
+            <div>
+                Turn :<div id="turnnum">1</div>
+            </div>
+            <div>
+                Total Clashes Damage :<div id="clashdmgtxt">0</div>
+            </div>
+
+        </div>
         <div class="imgChar">
             <img id="playerImg" src="./Rosilia/ClothCustom/Default.png" style="transform:scaleX(-1); width: 50%;" alt="Player">
             <img id="botImg" src="./Elglador/ClothCustom/Default.png" style="width: 50%;" alt="Bot">
@@ -98,6 +112,8 @@
         <div class="result" id="result"></div>
     </div>
 
+    <audio id="audio" src="Parry_Atk.wav" preload="auto"></audio>
+
     <script>
         const cards = ['rock', 'paper', 'scissors'];
         const playerHP = document.getElementById('playerHP');
@@ -106,12 +122,17 @@
         const botHPBar = document.getElementById('botHPBar');
         const status = document.getElementById('status');
         const result = document.getElementById('result');
+        const clashdmgtxt = document.getElementById('clashdmgtxt');
+        const turnnum = document.getElementById('turnnum');
+        
         const buttons = cards.map(card => document.getElementById(card));
+        dmgmod = 0;
+        turn=1;
 
         let cooldowns = [0, 0, 0];
         let botChoices = [];
 
-        function updateBotChoices() {
+        function updateBot() {
             botChoices = [];
             while (botChoices.length < 2) {
                 const choice = cards[Math.floor(Math.random() * 3)];
@@ -121,7 +142,7 @@
             }
         }
 
-        function updateHPBar(bar, hp) {
+        function updateHP(bar, hp) {
             bar.style.width = `${hp}%`;
         }
 
@@ -130,38 +151,56 @@
             status.textContent = `You chose ${playerChoice}. Bot chose ${botChoice}.`;
 
             if (playerChoice === botChoice) {
-                result.textContent = "It's a tie!";
-                document.getElementById("botImg").src = "./Elglador/ClothCustom/Evade.png";
-                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Evade.png";
+                result.textContent = "Clash occured!";
+                document.getElementById("botImg").src = "./Elglador/ClothCustom/Slash.png";
+                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Penetrate.png";
+                dmgmod=dmgmod+(Math.floor((Math.random() * 6)+5));
+                playAudio("Parry_Atk.wav");
             } else if (
                 (playerChoice === 'rock' && botChoice === 'scissors') ||
                 (playerChoice === 'paper' && botChoice === 'rock') ||
                 (playerChoice === 'scissors' && botChoice === 'paper')
             ) {
-                result.textContent = "You win this round!";
-                const newBotHP = Math.max(0, parseInt(botHP.textContent) - 10);
+                dmg = (Math.floor((Math.random() * 6)+5))+dmgmod;
+                result.textContent = "It took ["+dmg+"] damage.";
+                const newBotHP = Math.max(0, parseInt(botHP.textContent) - dmg);
                 botHP.textContent = newBotHP;
-                updateHPBar(botHPBar, newBotHP);
+                updateHP(botHPBar, newBotHP);
                 document.getElementById("botImg").src = "./Elglador/ClothCustom/Damaged.png";
                 document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Hit.png";
+                dmgmod=0;
+                playAudio("Atk_Tamaki.wav");
                 
             } else {
-                result.textContent = "Bot wins this round!";
-                const newPlayerHP = Math.max(0, parseInt(playerHP.textContent) - 10);
+                dmg = (Math.floor((Math.random() * 6)+5))+dmgmod;
+                result.textContent = "You took ["+dmg+"] damage.";
+                const newPlayerHP = Math.max(0, parseInt(playerHP.textContent) - dmg);
                 playerHP.textContent = newPlayerHP;
-                updateHPBar(playerHPBar, newPlayerHP);
+                updateHP(playerHPBar, newPlayerHP);
                 document.getElementById("botImg").src = "./Elglador/ClothCustom/Hit.png";
                 document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Damaged.png";
+                dmgmod=0;
+                playAudio("Sword_Vert.wav");
             }
 
+            
+            clashdmgtxt.textContent = dmgmod;
+            
             if (parseInt(playerHP.textContent) === 0) {
-                endGame("Bot wins the game!");
+                endGame("Fatal blow! You Lost.");
             } else if (parseInt(botHP.textContent) === 0) {
-                endGame("You win the game!");
+                endGame("Got book of Traveller!");
             } else {
+                setTimeout(function () {
+                document.getElementById("botImg").src = "./Elglador/ClothCustom/Default.png";
+                document.getElementById("playerImg").src = "./Rosilia/ClothCustom/Default.png";
+
+            }, 500);
                 updateCooldowns(playerChoice);
-                updateBotChoices();
+                updateBot();
+                turn++;
             }
+            turnnum.textContent = turn;
         }
 
         function updateCooldowns(usedCard) {
@@ -175,13 +214,27 @@
         function endGame(message) {
             result.textContent = message;
             buttons.forEach(button => button.disabled = true);
+
+            setTimeout(function () {
+            window.location.reload();
+            },2000);
+
         }
 
         buttons.forEach(button => {
             button.addEventListener('click', () => play(button.id));
         });
 
-        updateBotChoices();
+        updateBot();
+
+        function playAudio(ssrc) {
+            var audio = document.getElementById('audio');
+            audio.currentTime = 0;
+            audio.src=ssrc;
+            audio.play();
+        }
+
+
 
         
     </script>
