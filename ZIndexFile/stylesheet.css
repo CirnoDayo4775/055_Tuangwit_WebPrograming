@@ -245,7 +245,7 @@ td img {
     width: 10%;
 }
 
-#midbut {
+#ut {
     position: fixed;
     transform: translateY(220%);
     border: 2px solid #ccc;
@@ -400,7 +400,7 @@ td img {
 
     #midbut {
         left: 48vw;
-        top: 40vh;
+        bottom: 10vh;
     }
 }
 
