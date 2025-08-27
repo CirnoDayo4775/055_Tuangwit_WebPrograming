@@ -17,234 +17,63 @@
   </head>
 
   <body>
-    <div class="">
+    <div>
       <div id="overallhaha"></div>
       <div id="fade-overlay"></div>
-      <!-- Simple calling -->
-
+      <!-- ID Card Section -->
       <div id="idcard">
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(255, 255, 255);
-            font-size: 20px;
-            margin-left: 70px;
-            margin-top: 0px;
-          "
-          >Tuangwit Tuangsitthinan</a
-        >
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(255, 255, 255);
-            font-size: 25px;
-            margin-left: 70px;
-            margin-top: 4px;
-          "
-          >______________________</a
-        >
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(1, 225, 255);
-            font-size: 25px;
-            margin-left: 70px;
-            margin-top: 4px;
-          "
-          >______</a
-        >
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(1, 225, 255);
-            font-size: 16px;
-            margin-left: 70px;
-            margin-top: 29px;
-          "
-          >61 / 365</a
-        >
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(255, 255, 255);
-            font-size: 40px;
-            margin-left: 20px;
-            margin-top: 6px;
-          "
-          >20</a
-        >
-        <a
-          style="
-            position: fixed;
-            font-style: italic;
-            color: rgb(247, 255, 1);
-            font-size: 20px;
-            margin-left: 31px;
-            margin-top: 1px;
-          "
-          >LV.</a
-        >
+        <span class="idcard-main">Tuangwit Tuangsitthinan</span>
+        <span class="idcard-line1"></span>
+        <span class="idcard-line2"></span>
+        <span class="idcard-progress"></span>
+        <span class="idcard-age"></span>
+        <span class="idcard-lv">LV.</span>
       </div>
 
-      <div id="logo" >
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/blogo.png"
-          alt="logoimg"
-          id="logoimg"
-          draggable="false"
-        />
+      <div id="logo">
+        <img src="Work 3.5 Profile webpage/image/instance/random/blogo.png" alt="logoimg" id="logoimg" draggable="false" />
       </div>
-      <!-- Logo here -->
 
-      <div
-        class=""
-        id="omgmid"
-        onmouseover="logoer()"
-        onmouseout="unlogoer()"
-        
-      >
+      <div id="omgmid" onmouseover="logoer()" onmouseout="unlogoer()">
         <!-- Attacher -->
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/c.jpg"
-          alt="image 1"
-          id="image1"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/d.png"
-          alt="image 2"
-          id="image2"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/e.png"
-          alt="image 3"
-          id="image3"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/g.png"
-          alt="image 4"
-          id="image4"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/h.png"
-          alt="image 5"
-          id="image5"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/k.png"
-          alt="image 6"
-          id="image6"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/s.png"
-          alt="image 7"
-          id="image7"
-          style="opacity: 0"
-          draggable="false"
-        />
-        <img
-          src="Work 3.5 Profile webpage/image/instance/random/u.png"
-          alt="image 8"
-          id="image8"
-          style="opacity: 0"
-          draggable="false"
-        />
+        <img src="Work 3.5 Profile webpage/image/instance/random/c.jpg" alt="image 1" id="image1" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/d.png" alt="image 2" id="image2" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/e.png" alt="image 3" id="image3" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/g.png" alt="image 4" id="image4" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/h.png" alt="image 5" id="image5" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/k.png" alt="image 6" id="image6" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/s.png" alt="image 7" id="image7" class="img-hidden" draggable="false" />
+        <img src="Work 3.5 Profile webpage/image/instance/random/u.png" alt="image 8" id="image8" class="img-hidden" draggable="false" />
       </div>
-      <div class="">
-        <div id="menuTab" ></div>
-
-        <div id="menuIcon" >
+      <div>
+        <div id="menuTab"></div>
+        <div id="menuIcon">
           <table>
             <tr>
-              <td class="">
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png"
-                  onclick="changebgm()"
-                /><br />Cafe
-              </td>
-
-              <td class="disableonsmol">
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png"
-                  onmouseover="schON()"
-                  onmouseout="schOFF()"
-                /><br />Schedule
-              </td>
-
-              <td class="disableonsmol">
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png"
-                  onmouseover="profON()"
-                  onmouseout="profOFF()"
-                /><br />Student
-              </td>
-              <td>
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/3/3e/MP_Circle.png"
-                /><br />Club
-              </td>
-
-              <td>
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/3/3c/MP_Crafting.png"
-                /><br />Crafting
-              </td>
-
-              <td>
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/3/35/MP_Shop.png"
-                /><br />Shop
-              </td>
-
-              <td>
-                <img
-                  src="https://static.wikia.nocookie.net/blue-archive/images/6/6d/MP_Gacha.png"
-                /><br />Recruit
-              </td>
+              <td><img src="https://static.wikia.nocookie.net/blue-archive/images/b/ba/MP_Cafe.png" onclick="changebgm()" /><br />Cafe</td>
+              <td class="disableonsmol"><img src="https://static.wikia.nocookie.net/blue-archive/images/4/46/MP_Schedule.png" onmouseover="schON()" onmouseout="schOFF()" /><br />Schedule</td>
+              <td class="disableonsmol"><img src="https://static.wikia.nocookie.net/blue-archive/images/5/5e/MP_Student.png" onmouseover="profON()" onmouseout="profOFF()" /><br />Student</td>
+              <td><img src="https://static.wikia.nocookie.net/blue-archive/images/3/3e/MP_Circle.png" /><br />Club</td>
+              <td><img src="https://static.wikia.nocookie.net/blue-archive/images/3/3c/MP_Crafting.png" /><br />Crafting</td>
+              <td><img src="https://static.wikia.nocookie.net/blue-archive/images/3/35/MP_Shop.png" /><br />Shop</td>
+              <td><img src="https://static.wikia.nocookie.net/blue-archive/images/6/6d/MP_Gacha.png" /><br />Recruit</td>
             </tr>
           </table>
         </div>
       </div>
-      <div id="midbut" >
-        <!-- "Close" button -->
+      <div id="midbut">
         <button onclick="loadingfinisher()">Close</button>
       </div>
 
-      <div class="hiddenonsmol" id="textleft" >
-        <!-- Text box on the left -->
+      <div class="hiddenonsmol" id="textleft">
         <h1>Profile</h1>
-        <table border="3px" style="padding: 5px">
+        <table border="3" style="padding: 5px">
           <tr>
-            <td>
-              <span style="font-size: 25px"> Name </span>
-            </td>
-            <td>
-              <span style="font-size: 25px"> Student ID </span>
-            </td>
-            <td>
-              <span style="font-size: 25px"> Age </span>
-            </td>
-            <td>
-              <span style="font-size: 25px"> Birth date </span>
-            </td>
-            <td>
-              <span style="font-size: 25px"> Major </span>
-            </td>
+            <td><span class="profile-label">Name</span></td>
+            <td><span class="profile-label">Student ID</span></td>
+            <td><span class="profile-label">Age</span></td>
+            <td><span class="profile-label">Birth date</span></td>
+            <td><span class="profile-label">Major</span></td>
           </tr>
           <tr>
             <td>Tuangwit Tuangsitthinan</td>
@@ -254,241 +83,61 @@
             <td>Information Technology</td>
           </tr>
         </table>
-
         <br />
-        <span style="font-size: 25px"> Note </span><br />
+        <span class="profile-label">Note</span><br />
         Hi, and welcome to my website! My strongest language is C#<br />
         This website is made with code from stackoverflow that teach me some.<br />
-        I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL, All Mobile
-        Gacha game.
-        <br />Take a look at this page! I made a BIG ref of the game I loved
-        most! <br /><img
-          src="Work 3.5 Profile webpage/image/instance/102_20231012150921.png"
-          width="250px"
-          draggable="false"
-        /><br />
+        I can code CSS. I'm sort of "Gamer". I play DotA 2, LoL, All Mobile Gacha game.<br />
+        <br />Take a look at this page! I made a BIG ref of the game I loved most!<br />
+        <img src="Work 3.5 Profile webpage/image/instance/102_20231012150921.png" width="250px" draggable="false" /><br />
         I don't have image of myself.
       </div>
 
-      <div id="scheduletable" >
-        <img
-          src="img asset/ClassSchedule_6540011055_2_2566.jpg"
-          alt=""
-          width="80%"
-        />
+      <div id="scheduletable">
+        <img src="img asset/ClassSchedule_6540011055_2_2566.jpg" alt="Class Schedule" width="80%" />
       </div>
 
-      <div class="" id="textright" >
-        <!-- Text box on the right -->
-        <h1 style="color: grey">Navigator</h1>
-        <!--button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 1 (food things)/index.html')"
-        >
-          Work 1 อาหาร</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 2/index.html')"
-        >
-          Work 2 Test ground</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 3/index.html')"
-        >
-          Work 3 idk what is this</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 3.5 Profile webpage/startup.html')"
-        >
-          Work 3.5<br />index page prototype</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 4/main.html')"
-        >
-          Work 4 form Test</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 4 SEND/main.html')"
-        >
-          Work 4 Form (ส่งงาน)</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Work 5 Flex/main.html')"
-        >
-          Work 5 Flex</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Quiz5/055_quiz5.html')"
-        >
-          Quiz 5</button
-        ><br />
-        <button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Testing/testing4.html')"
-        >
-          Bootstrap Test</button
-        ><br /-->
-        <button
-        id=""
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('ActualPort/main.html')"
-        >
-          Port</button
-        ><br />
-        <!--button
-        id="hiddenonsmol"
-          type="button"
-          class="btn btn-secondary"
-          onclick="warp('Testing/boxgame.html')"
-        >
-          Test Playground</button
-      ><br /-->
-        <button
-        type="button"
-        class="btn btn-info"
-        onclick="warp('HTML WARP STATION.html')"
-      >
-        List ลิ้งก์หน้า Page ทั้งหมด</button
-      ><br />
-
-        
+      <div id="textright">
+        <h1 class="navigator-title">Navigator</h1>
+        <button type="button" class="btn btn-secondary" onclick="warp('ActualPort/main.html')">Port</button><br />
+        <button type="button" class="btn btn-info" onclick="warp('HTML WARP STATION.html')">List ลิ้งก์หน้า Page ทั้งหมด</button><br />
       </div>
 
       <div id="midTitle" onclick="loadingfinisher()">
-        <!-- Title at start -->
         <h1>Welcome to Tuangwit's website</h1>
-        Please wait while loading. . .<br />Please noted that, using in portrait or small screen device will disable some function. Please consider using our website on PC browser or bigger screen.
+        Please wait while loading...<br />
+        <span class="note">Please note: Using a portrait or small screen device will disable some functions. Please consider using our website on a PC browser or larger screen.</span>
       </div>
 
       <video id="realshit" autoplay loop>
-        <!-- Background Video -->
         <source src="Work 3.5 Profile webpage/video/background/Reisa.mp4" />
       </video>
 
       <div class="navigtors" id="navigtor">
-        <!-- Background Changer & Navigator for going to home page -->
-        <!-- h3>Character</h3>
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Alice.mp4')">Alice</button>
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Koyuki_noint.mp4')">Koyuki</button>
-        <button onclick="changebgvid('Work 3.5 Profile webpage/video/background/Reisa.mp4')">Reisa</button-->
-        <h3>volume</h3>
-
-        <div class=""></div>
+        <h3>Volume</h3>
         <table>
           <tr>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(1)"
-              >
-                100%
-              </button>
-            </td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(0.8)"
-              >
-                80%
-              </button>
-            </td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(0.6)"
-              >
-                60%
-              </button>
-            </td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(1)">100%</button></td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(0.8)">80%</button></td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(0.6)">60%</button></td>
           </tr>
           <tr>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(0.4)"
-              >
-                40%
-              </button>
-            </td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(0.2)"
-              >
-                20%
-              </button>
-            </td>
-            <td>
-              <button
-                type="button"
-                class="btn btn-secondary"
-                onclick="changevolumebg(0)"
-              >
-                0%
-              </button>
-            </td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(0.4)">40%</button></td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(0.2)">20%</button></td>
+            <td><button type="button" class="btn btn-secondary" onclick="changevolumebg(0)">0%</button></td>
           </tr>
         </table>
       </div>
 
-      <div id="hahaha" >
-        <img
-          src="Work 3.5 Profile webpage/image/instance/Untitled.png"
-          
-          onmouseover="unbruh()"
-          onmouseout="bruh()"
-          draggable="false"
-        />
+      <div id="hahaha">
+        <img src="Work 3.5 Profile webpage/image/instance/Untitled.png" onmouseover="unbruh()" onmouseout="bruh()" draggable="false" />
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-
-    <script src="ZIndexFile/command.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="ZIndexFile/command.js"></script>
+</div>
   </body>
 </html>

@@ -11,15 +11,8 @@
 }
 
 body {
-    display: fixed;
-    align-items: center;
-    justify-content: center;
-
-    height: 100vh;
-
-
     overflow: hidden;
-    font-family: 'printable4uregular'
+    font-family: 'printable4uregular', sans-serif;
 }
 
 .navigtors {
@@ -377,7 +370,7 @@ td img {
     }
 
     #hahaha img {
-        width: 50;
+        width: 50px;
         height: 50px;
     }
 
@@ -511,11 +504,11 @@ td img {
         /*top: -3000vw;*/
     }
 
-    #hiddenonsmol,.hiddenonsmol,#scheduletable,#logoimg,#navigtor{
+    #hiddenonsmol, .hiddenonsmol, #scheduletable, #logoimg, #navigtor {
         display: none;
     }
 
-    .disableonsmol{
+    .disableonsmol {
         opacity: 0.2;
     }
 }
@@ -523,3 +516,66 @@ td img {
 .container-fluid {
     padding: 0 !important;
 }
+
+/* Optimized styles for repeated inline styles */
+  .idcard-main {
+    position: fixed;
+    font-style: italic;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 70px;
+    margin-top: 0;
+  }
+  .idcard-line1 {
+    position: fixed;
+    font-style: italic;
+    color: #fff;
+    font-size: 25px;
+    margin-left: 70px;
+    margin-top: 4px;
+  }
+  .idcard-line2 {
+    position: fixed;
+    font-style: italic;
+    color: #01e1ff;
+    font-size: 25px;
+    margin-left: 70px;
+    margin-top: 4px;
+  }
+  .idcard-progress {
+    position: fixed;
+    font-style: italic;
+    color: #01e1ff;
+    font-size: 16px;
+    margin-left: 70px;
+    margin-top: 29px;
+  }
+  .idcard-age {
+    position: fixed;
+    font-style: italic;
+    color: #fff;
+    font-size: 40px;
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+  .idcard-lv {
+    position: fixed;
+    font-style: italic;
+    color: #f7ff01;
+    font-size: 20px;
+    margin-left: 31px;
+    margin-top: 1px;
+  }
+  .img-hidden {
+    opacity: 0;
+  }
+  .profile-label {
+    font-size: 25px;
+  }
+  .navigator-title {
+    color: grey;
+  }
+  .note {
+    font-size: 1rem;
+    color: #888;
+  }
